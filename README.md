@@ -2,5 +2,7 @@ SGP_Q03
 =======
 
 Apache/2.2.22
-Sencha Ext JS 4.2.x
+
+Instalar
 django 1.6.2
+pip install django-admin-bootstrapped
