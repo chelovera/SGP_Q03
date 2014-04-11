@@ -7,12 +7,14 @@ inicio
 {% block content %}
 
 <div class="span5">
+    {% if user.is_authenticated %}
+    Bienvenido {{user.username|capfirst}}
+    <a href="/cerrar/">Salir</a>
+    {% else %}
     <div class="span8 registrar">
         <legend align="center">Entrar</legend>
-        {% if user.is_authenticated %}
-        Bienvenidooo {{user.username|capfirst}}
-        <a href="/cerrar/">Salir</a>
-        {% else %}
+
+
         <form class="form-horizontal alinear" method="POST">{% csrf_token %}
             <div class="control-group">
                 <label class="control-label" for="inputEmail">Usuario</label>
