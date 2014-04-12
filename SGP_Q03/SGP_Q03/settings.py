@@ -70,11 +70,11 @@ WSGI_APPLICATION = 'SGP_Q03.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sgp_q03',
-	    'USER': 'postgres',
-	    'HOST': 'localhost',
+        'NAME': 'postgres',
+        'USER': 'postgres',
 	    'PASSWORD': 'postgres',
-	    'PORT':'5432',
+        'HOST': 'localhost',
+        'PORT':'5432',
     }
 }
 

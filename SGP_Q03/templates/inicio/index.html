@@ -11,13 +11,13 @@ inicio
     Bienvenido {{user.username|capfirst}}
     <a href="/cerrar/">Salir</a>
     {% else %}
-    <div class="span8 registrar">
+    <div style=" margin:0 auto;" class="span8 registrar">
         <legend align="center">Entrar</legend>
 
 
         <form class="form-horizontal alinear" method="POST">{% csrf_token %}
             <div class="control-group">
-                <label class="control-label" for="inputEmail">Usuario</label>
+                <label class="control-label" for="inputEmail" style="""text-aling: left;">Usuario</label>
 
                 <div class="controls">
                     <input name="username" type="text" id="inputEmail" placeholder="Usuario">
@@ -25,10 +25,10 @@ inicio
             </div>
 
             <div class="control-group">
-                <label class="control-label" for="inputPassword">Contraseña</label>
+                <label class="control-label" for="inputPassword">Password</label>
 
                 <div class="controls">
-                    <input name="password" type="password" id="inputPassword" placeholder="Contraseña">
+                    <input name="password" type="password" id="inputPassword" placeholder="Password">
                 </div>
             </div>
 
