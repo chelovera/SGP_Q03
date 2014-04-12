@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 """Prueba de Autenticacion
 
     Este test devuelve OK en el caso que no ocurran errores,
@@ -6,7 +8,6 @@
 
 from django.test import TestCase, Client
 from django.contrib.auth.models import User
-
 
 class TestLogin(TestCase):
     """
@@ -17,7 +18,6 @@ class TestLogin(TestCase):
         email: test@test.com
         password: prueba
     """
-
     def setUp(self):
         self.client = Client()
         self.username = 'prueba'
@@ -28,7 +28,6 @@ class TestLogin(TestCase):
     """ test_login_exitoso
         Con el usuario creado (username y password correctos) probamos si se loguea correctamente
     """
-
     def test_login_exitoso(self):
         login = self.client.login(username=self.username, password=self.password)
         self.assertEqual(login, True, 'el sistema de login no esta funcionando correctamente')
@@ -36,7 +35,6 @@ class TestLogin(TestCase):
     """ test_usuario_incorrecto
         Se prueba un usuario incorrecto con el password del usuario 'prueba' creado recientemente
     """
-
     def test_usuario_incorrecto(self):
         login = self.client.login(username='ola que ase', password=self.password)
         self.assertEqual(login, False, 'un usuario incorrecto realizo un login')
@@ -56,7 +54,6 @@ class TestLogin(TestCase):
 
 
     def test_usuario_vacio(self):
-        """probando este super comentario"""
         login = self.client.login(username='', password=self.password)
         self.assertEqual(login, False, 'un usuario vacio realizo un login')
 
@@ -68,4 +65,28 @@ class TestLogin(TestCase):
     def test_password_vacio(self):
         login = self.client.login(username=self.username, password='')
         self.assertEqual(login, False, 'un password vacio realizo un login')
+=======
+# Create your tests here.
+"""
+This file demonstrates writing tests using the unittest module. These will pass
+when you run "manage.py test".
 
+Replace this with more appropriate tests for your application.
+"""
+
+from django.test import TestCase
+
+
+class SimpleTest(TestCase):
+    def test_basic_addition(self):
+        """
+        Tests that 1 + 1 always equals 2.
+        """
+        self.assertEqual(1 + 1, 2)
+
+        #login exitoso
+        #password incorrecto
+        #usuario incorrecto
+        #password vacio
+        #usuario vacio
+>>>>>>> origin/master
