@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 """Prueba de Autenticacion
 
@@ -64,3 +65,28 @@ class TestLogin(TestCase):
     def test_password_vacio(self):
         login = self.client.login(username=self.username, password='')
         self.assertEqual(login, False, 'un password vacio realizo un login')
+=======
+# Create your tests here.
+"""
+This file demonstrates writing tests using the unittest module. These will pass
+when you run "manage.py test".
+
+Replace this with more appropriate tests for your application.
+"""
+
+from django.test import TestCase
+
+
+class SimpleTest(TestCase):
+    def test_basic_addition(self):
+        """
+        Tests that 1 + 1 always equals 2.
+        """
+        self.assertEqual(1 + 1, 2)
+
+        #login exitoso
+        #password incorrecto
+        #usuario incorrecto
+        #password vacio
+        #usuario vacio
+>>>>>>> origin/master
