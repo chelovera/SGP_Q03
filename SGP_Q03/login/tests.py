@@ -1,3 +1,6 @@
+from django.test import TestCase
+
+# Create your tests here.
 """Prueba de Autenticacion
 
     Este test devuelve OK en el caso que no ocurran errores,

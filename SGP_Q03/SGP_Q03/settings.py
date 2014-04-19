@@ -15,7 +15,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 from django.core.urlresolvers import reverse_lazy
 
 LOGIN_URL = reverse_lazy('login')
-LOGIN_REDIRECT_URL = reverse_lazy('login')
+LOGIN_REDIRECT_URL = reverse_lazy('proyectos')
 LOGOUT_URL = reverse_lazy('logout')
 
 # Quick-start development settings - unsuitable for production
@@ -44,8 +44,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'login',
     'proyectos',
-    'inicio',
 )
 
 MIDDLEWARE_CLASSES = (
