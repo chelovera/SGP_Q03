@@ -1,7 +1,6 @@
 __author__ = 'penagonzalez'
-
-from prueba_uno.models import UserProfile
 from django.contrib.auth.models import User
+from .models import UserProfile
 from django import forms
 
 # Se establecen dos instancias ModelForm diferentes
