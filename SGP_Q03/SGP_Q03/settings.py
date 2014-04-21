@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login',
+    'usuarios',
     'proyectos',
     'guardian',
     'roles_y_permisos',
