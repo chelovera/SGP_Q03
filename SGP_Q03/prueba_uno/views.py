@@ -1,9 +1,11 @@
+# coding=utf-8
+# coding=utf-8
 """ También establecemos un vínculo entre las dos instancias de modelo que creamos.
     Después de crear una nueva instancia de modelo de usuario, hacemos referencia en la instancia UserProfile
     con la línea profile.user = Usuario."""
 
 from django.shortcuts import *
-from prueba_uno.forms import UserForm, UserProfileForm
+from .forms import UserForm, UserProfileForm
 
 def register(request):
     # Obtenemos el contexto de la solicitud
@@ -62,3 +64,5 @@ def register(request):
             'prueba_uno/register.html',
             {'user_form': user_form, 'profile_form': profile_form, 'registered': registered},
             context)
+
+
