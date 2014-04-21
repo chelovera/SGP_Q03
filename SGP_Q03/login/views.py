@@ -16,13 +16,16 @@ def login(request):
         # Correct password, and the user is marked "active"
         auth.login(request, user)
         # Redirect to a success page.
-        return render_to_response('proyectos/index.html')
+        return HttpResponseRedirect('proyectos/index.html')
     else:
         # Show an error page
         return HttpResponse("loco hiciste algo mal")
 
 
 def logout(request):
+    """
+    @param request: recibe un resquest para el logout
+    """
     auth.logout(request)
     # Redirect to a success page.
-    return HttpResponse("no se que onda pero ya saliste kp")
+    #return HttpResponse("no se que onda pero ya saliste kp")

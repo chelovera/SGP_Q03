@@ -9,8 +9,7 @@ urlpatterns = patterns('',
                        # url(r'^$', 'SGP_Q03.views.home', name='home'),
                        # url(r'^blog/', include('blog.urls')),
                        url(r'^proyectos/', include('proyectos.urls')),
-                       url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^', include('login.urls')),
-
+                       url(r'^eventos/', include('events.urls')),
 )

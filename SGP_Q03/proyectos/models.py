@@ -1,5 +1,7 @@
 from django.db import models
-# Create your models here.
+from django.contrib.auth.models import User
+
+
 class Proyecto(models.Model):
     #estos son estados de prueba
     ESTADOS = (
@@ -12,7 +14,21 @@ class Proyecto(models.Model):
     estado = models.CharField(max_length=1,
                               choices=ESTADOS,
                               default='A')
-    #    idLider
+    lider = models.ForeignKey(User)
+
+    class Meta:
+        permissions = (
+            ('ver_proyecto', 'Ver proyecto'),
+        )
+
+    class Meta:
+        permissions = (
+            ('crear_proyecto', 'Crear proyecto'),
+            ('ver_proyecto', 'Ver proyecto'),
+            ('modificar_proyecto', 'Modificar proyecto'),
+            ('eliminar_proyecto', 'Eliminar proyecto'),
+        )
+
     def __unicode__(self):  # Python 3: def __str__(self):
         return self.nombre
 

@@ -1,0 +1,13 @@
+{% load guardian_tags %}
+
+{% get_obj_perms request.user for request.session.event as 'perms' %}
+
+{% if 'change_event' in perms %}
+
+show something
+
+{% else %}
+
+dont show something
+
+{% endif %}
