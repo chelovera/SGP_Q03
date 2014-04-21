@@ -46,7 +46,7 @@ INSTALLED_APPS = (
     'proyectos',
     'guardian',
     'roles_y_permisos',
-    'prueba',
+    
 )
 
 MIDDLEWARE_CLASSES = (
