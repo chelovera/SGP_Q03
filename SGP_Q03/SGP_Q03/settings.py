@@ -15,7 +15,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 from django.core.urlresolvers import reverse_lazy
 
 LOGIN_URL = reverse_lazy('login')
-LOGIN_REDIRECT_URL = reverse_lazy('login')
+LOGIN_REDIRECT_URL = reverse_lazy('proyectos')
 LOGOUT_URL = reverse_lazy('logout')
 
 # Quick-start development settings - unsuitable for production
@@ -36,16 +36,17 @@ SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admindocs',
-    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'login',
     'proyectos',
-    'inicio',
+    'guardian',
+    'roles_y_permisos',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -96,9 +97,25 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'statics')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
+
+#Para el django-guardian que nos va a permitir tener permisos sobre objetos y no solo sobre los modelos
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',  # default
+    'guardian.backends.ObjectPermissionBackend',
+)
+
+GUARDIAN_RENDER_403 = True
+
+ANONYMOUS_USER_ID = -1
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'alfa.alvaro.rodriguez@gmail.com'
+EMAIL_HOST_PASSWORD = '$alvaroLevel23$'
