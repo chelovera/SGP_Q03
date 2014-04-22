@@ -11,12 +11,12 @@ class Proyecto(models.Model):
     codigo= models.AutoField(primary_key= True)
     nombre = models.CharField(max_length=50)
     numero_fase=models.PositiveIntegerField(default=1)
-    usuarios= models.ManyToManyField(Usuario, related_name='UsuarioBase')
+    #usuarios= models.ManyToManyField(Usuario, related_name='UsuarioBase')
     descripcion = models.CharField(max_length=200)
     estado = models.CharField(max_length=1,
                               choices=ESTADOS,
                               default='P')
-    lider = models.ForeignKey(Usuario)
+    #lider = models.ForeignKey(Usuario)
     fecha_ini=models.DateTimeField(null=True)
     fecha_fin=models.DateTimeField(null=True)
     costo_temporal= models.PositiveIntegerField(default=0, null=True)
