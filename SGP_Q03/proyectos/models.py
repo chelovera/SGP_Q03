@@ -1,5 +1,5 @@
 from django.db import models
-from usuarios.models import Usuario
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 class Proyecto(models.Model):
@@ -25,3 +25,5 @@ class Proyecto(models.Model):
     def __unicode__(self):
         return self.nombre
 
+    def get_absolute_url(self):
+        return reverse('editar_proyecto', kwargs={'pk': self.pk})

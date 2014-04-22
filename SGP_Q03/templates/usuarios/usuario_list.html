@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% if user.is_authenticated %}
+
 <h1>Usuarios</h1>
 <ul>
     {% for usuario in object_list %}
     <li>{{ usuario.username }}  :
-    <a href="{% url "editar_usuario" usuario.id %}">{{ usuario.ip }}</a>
-    <a href="{% url "borrar_usuario" usuario.id %}">borrar</a>
+    <a href="{% url "editar_usuario" usuario.id %}" class="btn btn-primary btn-sm" >editar</a>
+    <a href="{% url "borrar_usuario" usuario.id %}" class="btn btn-sm btn-danger">borrar</a>
+
     </li>
     {% endfor %}
 </ul>
 
-<a href="{% url "nuevo_usuario" %}">Nuevo</a>
-{% endif %}
+<a href="{% url "nuevo_usuario" %}" class="btn btn-sm btn-success"> agregar</a>
 {% endblock %}
 
 
