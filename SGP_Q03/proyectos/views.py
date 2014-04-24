@@ -2,8 +2,21 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
 from .models import Proyecto
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit, Button
+
 
 class ProyectoForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ProyectoForm, self).__init__(*args, **kwargs)
+
+        # If you pass FormHelper constructor a form instance
+        # It builds a default layout with all its fields
+        self.helper = FormHelper(self)
+        self.helper.help_text_inline = True
+        # You can dynamically adjust your layout
+        self.helper.layout.append(Submit('guardar', 'guardar', css_class='btn btn-large btn-success pull-left'))
+        self.helper.add_input(Button('cancelar', 'cancelar', css_class='btn btn-large btn-danger', onclick='window.location.href="/proyectos/"'))
     class Meta:
         model = Proyecto
 

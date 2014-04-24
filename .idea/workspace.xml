@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04522db-fd6f-4e5d-b469-0b69b9ce6315" name="Default" comment="Solucionando conflictos">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_list.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/index.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_confirm_delete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/templates/usuarios/search_form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/templates/usuarios/search_results.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/base.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/proyectos/models.py" afterPath="$PROJECT_DIR$/SGP_Q03/proyectos/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_form.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_list.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py" afterPath="$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/SGP_Q03/urls.py" afterPath="$PROJECT_DIR$/SGP_Q03/SGP_Q03/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/proyectos/urls.py" afterPath="$PROJECT_DIR$/SGP_Q03/proyectos/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/usuarios/urls.py" afterPath="$PROJECT_DIR$/SGP_Q03/usuarios/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_confirm_delete.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_confirm_delete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_form.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_list.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/proyectos/views.py" afterPath="$PROJECT_DIR$/SGP_Q03/proyectos/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/usuarios/views.py" afterPath="$PROJECT_DIR$/SGP_Q03/usuarios/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -39,13 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/models.py">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="65" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state line="18" column="34" selection-start="775" selection-end="921" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="1062">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,25 +47,45 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="12" selection-start="449" selection-end="449" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1458">
+            <state line="31" column="92" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1458">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/login/index.html">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="432">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usuario_list.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_list.html">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="81" selection-start="318" selection-end="318" vertical-scroll-proportion="0.48734176" vertical-offset="8" max-vertical-offset="504">
+            <state line="18" column="60" selection-start="713" selection-end="713" vertical-scroll-proportion="1.2134831" vertical-offset="108" max-vertical-offset="1350">
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="33" selection-start="3194" selection-end="3194" vertical-scroll-proportion="0.0" vertical-offset="1960" max-vertical-offset="2376">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="proyecto_form.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="18" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
@@ -80,58 +94,7 @@
       <file leaf-file-name="usuario_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="39" selection-start="143" selection-end="143" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="324">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.bk" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html.bk">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="76" selection-start="340" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-              <folding>
-                <element signature="e#23#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-              <folding>
-                <element signature="e#23#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="18" selection-start="29" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+            <state line="0" column="0" selection-start="0" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
               <folding />
             </state>
           </provider>
@@ -167,30 +130,33 @@
         <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_lista.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_confirmar_borrado.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/usuarios/models.py" />
-        <option value="$PROJECT_DIR$/SGP_Q03/usuarios/urls.py" />
-        <option value="$PROJECT_DIR$/SGP_Q03/usuarios/views.py" />
-        <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_form.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_confirm_delete.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/proyectos/index.html" />
-        <option value="$PROJECT_DIR$/SGP_Q03/proyectos/views.py" />
         <option value="$PROJECT_DIR$/SGP_Q03/proyectos/urls.py" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/proyectos/usuario_list.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_confirm_delete.html" />
-        <option value="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_form.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/SGP_Q03/urls.py" />
-        <option value="$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py" />
-        <option value="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_list.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/proyectos/models.py" />
-        <option value="$PROJECT_DIR$/SGP_Q03/templates/base.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/login/index.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_list.html" />
+        <option value="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_list.html" />
+        <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/search_results.html" />
+        <option value="$PROJECT_DIR$/SGP_Q03/usuarios/urls.py" />
+        <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/search_form.html" />
+        <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_form.html" />
+        <option value="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_form.html" />
+        <option value="$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py" />
+        <option value="$PROJECT_DIR$/SGP_Q03/proyectos/views.py" />
+        <option value="$PROJECT_DIR$/SGP_Q03/templates/base.html" />
+        <option value="$PROJECT_DIR$/SGP_Q03/usuarios/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="54" />
-    <option name="width" value="1360" />
-    <option name="height" value="690" />
+    <option name="x" value="-1" />
+    <option name="y" value="23" />
+    <option name="width" value="1362" />
+    <option name="height" value="723" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -264,28 +230,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="usuarios" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -304,29 +248,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proyectos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,6 +265,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../form-bootstrap" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -542,24 +465,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="54" width="1360" height="690" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="23" width="1362" height="723" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49241146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5851602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28658536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="-23" y="262" width="1160" height="490" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5649241" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -585,6 +509,35 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html.bk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="76" selection-start="340" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="864" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="828">
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="324" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="18" selection-start="29" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="522" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="4" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="2286">
@@ -594,16 +547,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="522">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="522" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/SGP_Q03/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="414">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="414" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/views.py">
@@ -617,41 +566,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="342">
-          <folding>
-            <element signature="e#23#65#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="11" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="342" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0" vertical-offset="149" max-vertical-offset="594">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/fases/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="216">
-          <folding />
-        </state>
+        <state line="5" column="10" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="216" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py">
@@ -668,24 +605,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="396">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="396" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/fases/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="216">
-          <folding />
-        </state>
+        <state line="5" column="10" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="216" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="29" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="594">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -736,151 +667,132 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/fases/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
-          <folding />
-        </state>
+        <state line="5" column="10" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html.bk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="76" selection-start="340" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/SGP_Q03/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="70" selection-start="592" selection-end="592" vertical-scroll-proportion="0.401487" vertical-offset="0" max-vertical-offset="538">
-          <folding />
-        </state>
+        <state line="14" column="70" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_form.html">
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/login/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.38747555" vertical-offset="0" max-vertical-offset="511">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_confirm_delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="48" selection-start="132" selection-end="132" vertical-scroll-proportion="0.13432837" vertical-offset="0" max-vertical-offset="536">
-          <folding />
-        </state>
+        <state line="0" column="25" selection-start="0" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="511" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_confirm_delete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="218" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="46" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="66" selection-start="401" selection-end="431" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="504" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/search_results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/search_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="18" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="288" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="319" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_confirm_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="306" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="76" selection-start="219" selection-end="219" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="49" selection-start="517" selection-end="517" vertical-scroll-proportion="0.54915255" vertical-offset="144" max-vertical-offset="2286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="417" selection-end="417" vertical-scroll-proportion="0.359375" vertical-offset="119" max-vertical-offset="828">
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="8" column="88" selection-start="201" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="396" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="29" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+        <state line="23" column="0" selection-start="856" selection-end="856" vertical-scroll-proportion="0.8871473" vertical-offset="131" max-vertical-offset="522" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="79" selection-start="145" selection-end="145" vertical-scroll-proportion="0.169279" vertical-offset="0" max-vertical-offset="360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="159" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="342">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="65" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html.bk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="76" selection-start="340" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/urls.py">
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="533">
-          <folding>
-            <element signature="e#23#65#0" expanded="true" />
-          </folding>
+        <state line="6" column="18" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="270">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/urls.py">
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-          <folding>
-            <element signature="e#23#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
+        <state line="125" column="33" selection-start="3194" selection-end="3194" vertical-scroll-proportion="0.0" vertical-offset="1960" max-vertical-offset="2376">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="449" selection-end="449" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1458">
+        <state line="31" column="92" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1458">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/login/index.html">
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/proyectos/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="432">
+        <state line="18" column="34" selection-start="775" selection-end="921" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="1062">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_form.html">
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="39" selection-start="143" selection-end="143" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="81" selection-start="318" selection-end="318" vertical-scroll-proportion="0.48734176" vertical-offset="8" max-vertical-offset="504">
-          <folding />
+        <state line="18" column="60" selection-start="713" selection-end="713" vertical-scroll-proportion="1.2134831" vertical-offset="108" max-vertical-offset="1350">
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

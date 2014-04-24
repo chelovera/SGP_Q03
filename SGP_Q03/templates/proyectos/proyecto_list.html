@@ -6,11 +6,11 @@
 <ul>
     {% for proyecto in object_list %}
     <li>{{ proyecto.nombre }}  :
-    <a href="{% url "editar_proyecto" proyecto.codigo %}">{{ proyecto.codigo }}</a>
-    <a href="{% url "borrar_proyecto" proyecto.codigo %}">borrar</a>
+    <a href="{% url "editar_proyecto" proyecto.codigo %}" class="btn btn-primary btn-sm" >editar</a>
+    <a href="{% url "borrar_proyecto" proyecto.codigo %}" class="btn btn-sm btn-danger" >borrar</a>
     </li>
     {% endfor %}
 </ul>
 
-<a href="{% url "nuevo_proyecto" %}">Nuevo</a>
+<a href="{% url "nuevo_proyecto" %}" class="btn btn-sm btn-success">agregar</a>
 {% endblock %}

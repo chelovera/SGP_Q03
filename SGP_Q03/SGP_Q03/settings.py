@@ -47,9 +47,9 @@ INSTALLED_APPS = (
     'usuarios',
     'guardian',
     'roles_y_permisos',
+    'crispy_forms',
 
 )
-
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -120,3 +120,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'alfa.alvaro.rodriguez@gmail.com'
 EMAIL_HOST_PASSWORD = '$alvaroLevel23$'
+
+#variables de configuracion para django-crispy
+
+CRISPY_TEMPLATE_PACK ='bootstrap3'
+CRISPY_FAIL_SILENTLY = not DEBUG
