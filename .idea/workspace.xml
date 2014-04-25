@@ -2,78 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04522db-fd6f-4e5d-b469-0b69b9ce6315" name="Default" comment="Heredando User de django-admin, asignando rol de Administrador, se agrego calendario de jquery para el form de Proyecto.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/animated-overlay.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/animated-overlay.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-bg_flat_10_000000_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-icons_222222_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-icons_222222_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-icons_228ef1_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-icons_228ef1_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-icons_ef8c08_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-icons_ef8c08_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-icons_ffd27a_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-icons_ffd27a_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/images/ui-icons_ffffff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/images/ui-icons_ffffff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/ui/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.accordion.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.accordion.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.all.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.autocomplete.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.autocomplete.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.button.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.button.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.core.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/ui/jquery.ui.core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.core.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.datepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/ui/jquery.ui.datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.datepicker.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.dialog.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.menu.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.progressbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.progressbar.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.resizable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.resizable.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.selectable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.selectable.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.slider.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.spinner.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.spinner.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.tabs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.tabs.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.tooltip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/themes/ui-lightness/minified/jquery.ui.tooltip.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SGP_Q03/static/jquery-ui-1.10.4/development-bundle/ui/jquery.ui.widget.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/templates/base.html.bk" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/base.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/proyectos/models.py" afterPath="$PROJECT_DIR$/SGP_Q03/proyectos/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/usuarios/models.py" afterPath="$PROJECT_DIR$/SGP_Q03/usuarios/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SGP_Q03.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,7 +57,7 @@
       <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="82" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.35306555" vertical-offset="859" max-vertical-offset="1692">
+            <state line="57" column="82" selection-start="2098" selection-end="2098" vertical-scroll-proportion="-2.3857143" vertical-offset="859" max-vertical-offset="1692">
               <folding />
             </state>
           </provider>
@@ -294,122 +223,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="usuarios" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-1.10.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="development-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-1.10.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SGP_Q03" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -630,12 +443,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="54" width="1360" height="690" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="54" width="1360" height="690" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5649241" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07251265" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.9376054" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -985,7 +798,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="82" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.35306555" vertical-offset="859" max-vertical-offset="1692">
+        <state line="57" column="82" selection-start="2098" selection-end="2098" vertical-scroll-proportion="-2.3857143" vertical-offset="859" max-vertical-offset="1692">
           <folding />
         </state>
       </provider>
