@@ -1,9 +1,10 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
-from .models import Proyecto
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Button
+
+from .models import Proyecto
 
 
 class ProyectoForm(ModelForm):
@@ -17,8 +18,10 @@ class ProyectoForm(ModelForm):
         # You can dynamically adjust your layout
         self.helper.layout.append(Submit('guardar', 'guardar', css_class='btn btn-large btn-success pull-left'))
         self.helper.add_input(Button('cancelar', 'cancelar', css_class='btn btn-large btn-danger', onclick='window.location.href="/proyectos/"'))
+
     class Meta:
         model = Proyecto
+
 
 @login_required
 def proyecto_list(request, template_name='proyectos/proyecto_list.html'):
@@ -46,8 +49,8 @@ def  proyecto_update(request, pk, template_name='proyectos/proyecto_form.html'):
 
 @login_required
 def proyecto_delete(request, pk, template_name='proyectos/proyecto_confirm_delete.html'):
-    server = get_object_or_404(Usuario, pk=pk)
+    server = get_object_or_404(Proyecto, pk=pk)
     if request.method=='POST':
         server.delete()
-        return redirect('proyecto_usuario')
+        return redirect('lista_proyecto')
     return render(request, template_name, {'object':server})
