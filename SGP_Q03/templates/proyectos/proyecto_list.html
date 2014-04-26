@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1>Proyectos</h1>
-<!div>
+
     <!table class=" TABLE-BORDERED table-responsive table table-hover">
     <table class="table table-striped table-bordered">
     <tbody>
@@ -15,11 +15,13 @@
             <th>Finalización</th>
             <th>Estado</th>
             <th>Lider</th>
+            <th>Ingresar</th>
+            <th>Configurar</th>
         </tr>
 
         <ul>
         {% for proyecto in object_list %}
-            <li>
+
             <tr>
                 <td>{{ proyecto.codigo }}</td>
                 <td>{{ proyecto.nombre }}</td>
@@ -28,16 +30,19 @@
                 <td>{{ proyecto.fecha_fin}}</td>
                 <td>{{ proyecto.estado}}</td>
                 <td>{{ proyecto.lider }}</td>
+                <td><a href="{% url "editar_proyecto" proyecto.codigo %}"class="btn btn-primary btn-sm" >editar</a></td>
+                <td><a href="#" class="btn btn-primary btn-sm" >configurar</a></td>
+
+
             </tr>
-            <a href="{% url "editar_proyecto" proyecto.codigo %}">{{ proyecto.codigo }}</a>
-            <a href="{% url "borrar_proyecto" proyecto.codigo %}">borrar</a>
-            </li>
+
+
 
             {% endfor %}
         </ul>
     </table>
     </tbody>
-    <!/div>
 
-<a href="{% url "nuevo_proyecto" %}">Nuevo</a>
+
+<a href="{% url "nuevo_proyecto" %}"class="btn btn-sm btn-success">Agregar</a>
 {% endblock %}

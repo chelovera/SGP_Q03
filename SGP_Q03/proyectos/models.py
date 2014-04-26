@@ -6,16 +6,16 @@ from usuarios.models import Usuario
 class Proyecto(models.Model):
     #estos son estados de prueba
     ESTADOS = (
-        ('P', 'pendiente'),
-        ('F', 'finalizado'),
+        ('Pendiente', 'pendiente'),
+        ('Finalizado', 'finalizado'),
     )
     codigo= models.AutoField(primary_key= True)
     nombre = models.CharField(max_length=50)
     numero_fase=models.PositiveIntegerField(default=1)
     descripcion = models.CharField(max_length=200)
-    estado = models.CharField(max_length=1,
+    estado = models.CharField(max_length=10,
                               choices=ESTADOS,
-                              default='P')
+                              default='Pendiente')
     fecha_ini=models.DateField(null=True)
     fecha_fin=models.DateField(null=True)
     costo_temporal= models.PositiveIntegerField(default=0, null=True)
