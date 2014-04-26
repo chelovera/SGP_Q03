@@ -1,0 +1,5 @@
+$ cat .gitignore
+# Podemos especificar archivos individuales
+.idea
+# O usar comodines
+*~ *pyc
