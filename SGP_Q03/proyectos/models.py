@@ -11,7 +11,6 @@ class Proyecto(models.Model):
     )
     codigo= models.AutoField(primary_key= True)
     nombre = models.CharField(max_length=50)
-    numero_fase=models.PositiveIntegerField(default=1)
     descripcion = models.CharField(max_length=200)
     estado = models.CharField(max_length=10,
                               choices=ESTADOS,
@@ -19,10 +18,14 @@ class Proyecto(models.Model):
     fecha_ini=models.DateField(null=True)
     fecha_fin=models.DateField(null=True)
     costo_temporal= models.PositiveIntegerField(default=0, null=True)
-    costo_monetario= models.PositiveIntegerField(null=True) # solo enteros positivos nada mas
+    costo_monetario= models.PositiveIntegerField(default=0, null=True) # solo enteros positivos nada mas
     lider = models.ForeignKey(Usuario)
+    miembros = models.ManyToManyField(Usuario, related_name='miembros_proyecto')
     def __unicode__(self):
         return self.nombre
 
     def get_absolute_url(self):
         return reverse('editar_proyecto', kwargs={'pk': self.pk})
+
+    class Meta:
+        ordering=('codigo',)
