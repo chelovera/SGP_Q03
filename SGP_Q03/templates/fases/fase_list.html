@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Fases</h1>
+
+    <!table class=" TABLE-BORDERED table-responsive table table-hover">
+    <table class="table table-striped table-bordered">
+    <tbody>
+         <tr>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Inicio</th>
+            <th>Finalización</th>
+            <th>Estado</th>
+            <th>Editar</th>
+
+        </tr>
+
+        <ul>
+        {% for fases in object_list %}
+
+            <tr>
+                <td>{{ fases.codigo }}</td>
+                <td>{{ fases.nombre }}</td>
+                <td>{{ fases.fecha_ini}}</td>
+                <td>{{ fases.fecha_fin}}</td>
+                <td>{{ fases.estado}}</td>
+                <td><a href="#" class="btn btn-primary btn-sm" >Editar</a></td>
+
+            </tr>
+
+
+
+            {% endfor %}
+        </ul>
+    </table>
+    </tbody>
+
+{% endblock %}

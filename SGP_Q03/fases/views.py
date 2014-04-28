@@ -25,8 +25,9 @@ class FaseForm(ModelForm):
 
 
 @login_required
-def fase_list(request, template_name='fases/fases_list.html'):
+def fase_list(request, template_name='fases/fase_list.html'):
     fases = Fase.objects.all()
+    #fases = Fase.objects.filter(proyecto=self.proyecto)
     data = {}
     data['object_list'] = fases
     return render(request, template_name, data)

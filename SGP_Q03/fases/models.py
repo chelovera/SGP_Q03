@@ -1,9 +1,10 @@
 from django.core.urlresolvers import reverse
 from django.db import models
 from proyectos.models import Proyecto
-from .models import Fase
 
-# Create your models here.
+
+
+
 class Fase(models.Model):
     #estos son estados de prueba
     ESTADOS = (
@@ -24,8 +25,10 @@ class Fase(models.Model):
     costo_temporal= models.PositiveIntegerField(default=0, null=True)
     costo_monetario= models.PositiveIntegerField(null=True)
     #lineas_base=models.ForeignKey(LineaBase)
-    predecesor=models.ForeignKey(Fase)
-    sucesor=models.ForeignKey(Fase)
+    predecesor=models.ForeignKey('self', related_name='fase_predecesor')
+    sucesor=models.ForeignKey('self', related_name='fase_sucesor')
+    #fases= models.('self', related_name='')
+
 
     def __unicode__(self):
         return self.nombre
