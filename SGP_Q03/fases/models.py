@@ -20,14 +20,13 @@ class Fase(models.Model):
     proyecto = models.ForeignKey(Proyecto)
     #tipos_de_items = models.ForeignKey(TipoItem)
     #items= models.ForeignKey(Item)
-    fecha_ini=models.DateField(null=True)
-    fecha_fin=models.DateField(null=True)
-    costo_temporal= models.PositiveIntegerField(default=0, null=True)
-    costo_monetario= models.PositiveIntegerField(null=True)
+    fecha_ini = models.DateField(null=True)
+    fecha_fin = models.DateField(null=True)
+    costo_temporal = models.PositiveIntegerField(default=0, null=True)
+    costo_monetario = models.PositiveIntegerField(null=True)
     #lineas_base=models.ForeignKey(LineaBase)
-    predecesor=models.ForeignKey('self', related_name='fase_predecesor')
-    sucesor=models.ForeignKey('self', related_name='fase_sucesor')
-    #fases= models.('self', related_name='')
+    predecesor = models.ForeignKey('self', related_name='fase_predecesor', null=True, blank=True, default=None)
+    sucesor = models.ForeignKey('self', related_name='fase_sucesor', null=True, blank=True, default=None)
 
 
     def __unicode__(self):
