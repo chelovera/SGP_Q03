@@ -45,15 +45,3 @@ def  rol_update(request, pk, template_name='roles/rol_form.html'):
         form.save()
         return redirect('lista_fase')
     return render(request, template_name, {'form':form})
-
-@login_required
-<<<<<<< HEAD
-def proyecto_delete(request, pk, template_name='roles/rol_confirm_delete.html'):
-=======
-def rol_delete(request, pk, template_name='roles/rol_confirm_delete.html'):
->>>>>>> 136eae0af3cccbe5b25a9b34cc142a4795ccddd8
-    server = get_object_or_404(Rol, pk=pk)
-    if request.method=='POST':
-        server.delete()
-        return redirect('lista_fase')
-    return render(request, template_name, {'object':server})
