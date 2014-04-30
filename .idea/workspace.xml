@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04522db-fd6f-4e5d-b469-0b69b9ce6315" name="Default" comment="Heredando User de django-admin, asignando rol de Administrador, se agrego calendario de jquery para el form de Proyecto.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/SGP_Q03.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/login/index.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/login/index.html" />
     </list>
     <ignored path="SGP_Q03.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,15 +29,6 @@
         <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="proyecto_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/roles/proyecto_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="17" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="972">
               <folding />
             </state>
           </provider>
@@ -71,10 +61,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/login/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.5202312" vertical-offset="36" max-vertical-offset="972">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="19" selection-start="1344" selection-end="1344" vertical-scroll-proportion="2.2162163" vertical-offset="530" max-vertical-offset="1728">
+            <state line="34" column="19" selection-start="1344" selection-end="1344" vertical-scroll-proportion="-3.0370371" vertical-offset="530" max-vertical-offset="1728">
               <folding />
             </state>
           </provider>
@@ -151,7 +150,6 @@
         <option value="$PROJECT_DIR$/SGP_Q03/proyectos/urls.py" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/proyectos/usuario_list.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_confirm_delete.html" />
-        <option value="$PROJECT_DIR$/SGP_Q03/templates/login/index.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/search_results.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_form.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/usuarios/urls.py" />
@@ -183,6 +181,7 @@
         <option value="$PROJECT_DIR$/SGP_Q03/templates/roles/proyecto_list.html" />
         <option value="$PROJECT_DIR$/SGP_Q03/SGP_Q03/settings.py" />
         <option value="$PROJECT_DIR$/SGP_Q03/proyectos/models.py" />
+        <option value="$PROJECT_DIR$/SGP_Q03/templates/login/index.html" />
       </list>
     </option>
   </component>
@@ -263,7 +262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="usuarios" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -282,6 +281,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -507,10 +510,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="54" width="1360" height="690" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="1.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.693086" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19392918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -680,11 +683,6 @@
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/login/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="0" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="511" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/login/tests.py">
@@ -865,7 +863,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="19" selection-start="1344" selection-end="1344" vertical-scroll-proportion="2.2162163" vertical-offset="530" max-vertical-offset="1728">
+        <state line="34" column="19" selection-start="1344" selection-end="1344" vertical-scroll-proportion="-3.0370371" vertical-offset="530" max-vertical-offset="1728">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.5202312" vertical-offset="36" max-vertical-offset="972">
           <folding />
         </state>
       </provider>
