@@ -13,5 +13,5 @@ urlpatterns = patterns('',
                        url(r'^usuarios/', include('usuarios.urls')),
                        url(r'^proyectos/', include('proyectos.urls')),
                        url(r'^proyectos/fases/', include('fases.urls')),
-                       url(r'^proyectos/fases/roles',include('roles_y_permisos.urls')),
+                       url(r'^roles/', include('roles_y_permisos.urls')),
 )

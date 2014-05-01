@@ -34,7 +34,7 @@ def rol_create(request, template_name='roles/rol_form.html'):
     form = RolForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('lista_fase')
+        return redirect('lista_rol')
     return render(request, template_name, {'form':form})
 
 @login_required
@@ -43,5 +43,13 @@ def  rol_update(request, pk, template_name='roles/rol_form.html'):
     form = RolForm(request.POST or None, instance=rol)
     if form.is_valid():
         form.save()
-        return redirect('lista_fase')
+        return redirect('lista_rol')
     return render(request, template_name, {'form':form})
+
+@login_required
+def rol_delete(request, pk, template_name='roles/rol_confirm_delete.html'):
+    server = get_object_or_404(Rol, pk=pk)
+    if request.method=='POST':
+        server.delete()
+        return redirect('lista_rol')
+    return render(request, template_name, {'object':server})
