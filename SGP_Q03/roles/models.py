@@ -1,6 +1,6 @@
 from django.core.urlresolvers import reverse
 from django.db import models
-
+from usuarios.models import Usuario
 # Create your models here.
 
 class Rol(models.Model):
@@ -19,6 +19,7 @@ class Rol(models.Model):
     reversionar=models.BooleanField()
     asignar_padre=models.BooleanField()
     asignar_antecesor=models.BooleanField()
+    miembros = models.ManyToManyField(Usuario, related_name='miembros_proyecto')
     def __unicode__(self):
         return self.nombre
 

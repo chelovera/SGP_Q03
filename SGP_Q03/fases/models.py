@@ -1,6 +1,7 @@
 from django.core.urlresolvers import reverse
 from django.db import models
 from proyectos.models import Proyecto
+from roles.models import Rol
 """
 Django fases/models
 
@@ -53,11 +54,11 @@ class Fase(models.Model):
     )
     codigo= models.AutoField(primary_key= True)
     nombre = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=200)
+    descripcion = models.CharField(max_length=200, blank= True)
     estado = models.CharField(max_length=7,
                               choices=ESTADOS,
                               default='Abierta')
-    proyecto = models.ForeignKey(Proyecto)
+    proyecto = models.ForeignKey(Proyecto, related_name= 'proyecto')
     #tipos_de_items = models.ForeignKey(TipoItem)
     #items= models.ForeignKey(Item)
     fecha_ini = models.DateField(null=True)
@@ -67,7 +68,7 @@ class Fase(models.Model):
     #lineas_base=models.ForeignKey(LineaBase)
     predecesor = models.ForeignKey('self', related_name='fase_predecesor', null=True, blank=True, default=None)
     sucesor = models.ForeignKey('self', related_name='fase_sucesor', null=True, blank=True, default=None)
-
+    roles = models.ManyToManyField(Rol, related_name='roles_de_fase')
 
     def __unicode__(self):
         return self.nombre

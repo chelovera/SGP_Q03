@@ -49,11 +49,12 @@ class Proyecto(models.Model):
     #estos son estados de prueba
     ESTADOS = (
         ('Pendiente', 'pendiente'),
+        ('Iniciado', 'iniciado'),
         ('Finalizado', 'finalizado'),
     )
     codigo= models.AutoField(primary_key= True)
     nombre = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=200)
+    descripcion = models.CharField(max_length=200, blank=True)
     estado = models.CharField(max_length=10,
                               choices=ESTADOS,
                               default='Pendiente')
@@ -61,8 +62,8 @@ class Proyecto(models.Model):
     fecha_fin=models.DateField(null=True)
     costo_temporal= models.PositiveIntegerField(default=0, null=True)
     costo_monetario= models.PositiveIntegerField(default=0, null=True) # solo enteros positivos nada mas
-    lider = models.ForeignKey(Usuario)
-    miembros = models.ManyToManyField(Usuario, related_name='miembros_proyecto')
+    lider = models.ForeignKey(Usuario, related_name='lider')
+    #miembros = models.ManyToManyField(Usuario, related_name='miembros_proyecto')
     def __unicode__(self):
         return self.nombre
 
