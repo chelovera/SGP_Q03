@@ -1,53 +1,78 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<h1>Proyectos</h1>
-
-    <!table class=" TABLE-BORDERED table-responsive table table-hover">
-    <table class="table table-striped table-bordered">
-    <tbody>
-         <tr>
-            <th>Nro</th>
-            <th>Nombre</th>
-            <th>Fases </th>
-            <th>Inicio</th>
-            <th>Finalización</th>
-            <th>Estado</th>
-            <th>Lider</th>
-            <th>Editar</th>
-            <th>Configurar</th>
-            <th>Eliminar</th>
-        </tr>
-
-        <ul>
-        {% for proyecto in object_list %}
-
-            <tr>
-                <td>{{ proyecto.codigo }}</td>
-                <td>{{ proyecto.nombre }}</td>
-                <td>{{ proyecto.numero_fase}}</td>
-                <td>{{ proyecto.fecha_ini}}</td>
-                <td>{{ proyecto.fecha_fin}}</td>
-                <td>{{ proyecto.estado}}</td>
-                <td>{{ proyecto.lider }}</td>
-                <td><a href="{% url "editar_proyecto" proyecto.codigo %}" class="btn btn-primary btn-sm" >editar</a></td>
-
-                <td><a href="{% url 'fases.views.fase_list' proyecto.codigo %}" class="btn btn-primary btn-sm " >configurar</a></td>
-                <td><a href="#" class="btn btn-primary btn-sm btn-warning" >Eliminar</a></td>
+      <div class="row">
 
 
 
-            </tr>
+
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+            <br><br><br><br>
+            <li class="active"><a href="#">Agregar Proyecto</a></li>
+
+
+          </ul>
+
+        </div>
+
+        <div class="col-sm-9  col-md-10  main">
+
+            <h1 class="page-header">Proyectos</h1>
+            <div class="row placeholders">
+                <div >
+                <table class="table table-striped table-bordered">
+                <tbody>
+                     <tr>
+                        <th>Nro</th>
+                        <th>Nombre</th>
+                        <th>Fases </th>
+                        <th>Inicio</th>
+                        <th>Finalización</th>
+                        <th>Estado</th>
+                        <th>Lider</th>
+                        <th>Editar</th>
+                        <th>Configurar</th>
+                        <th>Eliminar</th>
+                    </tr>
+
+                    <ul>
+                    {% for proyecto in object_list %}
+
+                        <tr>
+                            <td>{{ proyecto.codigo }}</td>
+                            <td>{{ proyecto.nombre }}</td>
+                            <td>{{ proyecto.numero_fase}}</td>
+                            <td>{{ proyecto.fecha_ini}}</td>
+                            <td>{{ proyecto.fecha_fin}}</td>
+                            <td>{{ proyecto.estado}}</td>
+                            <td>{{ proyecto.lider }}</td>
+                            <td><a href="{% url "editar_proyecto" proyecto.codigo %}" class="btn btn-primary btn-sm" >editar</a></td>
+
+                            <td><a href="{% url 'fases.views.fase_list' proyecto.codigo %}" class="btn btn-primary btn-sm " >configurar</a></td>
+                            <td><a href="#" class="btn btn-primary btn-sm btn-warning" >Eliminar</a></td>
+
+
+    
+                        </tr>
 
 
 
-            {% endfor %}
-        </ul>
-    </table>
-    </tbody>
+                        {% endfor %}
+                    </ul>
+                </tbody>
+            </table>
 
-{% if user.is_superuser %}
-<a href="{% url "nuevo_proyecto" %}"class="btn btn-sm btn-success">Agregar</a>
-{% endif %}
-{% endblock %}
+                </div>
+              </div>
+{% comment %}
+          <ul class="pager">
+            <li class="previous"><a href="#">&larr; Anterior</a></li>
+            <li class="next"><a href="#">Siguiente &rarr;</a></li>
+          </ul>
+{% endcomment %}
+
+
+      </div>
+
+ {% endblock %}
