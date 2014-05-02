@@ -6,7 +6,8 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Button
 
 from .models import Fase
-
+from usuarios.models import Usuario
+from proyectos.models import Proyecto
 
 class FaseForm(ModelForm):
     def __init__(self, *args, **kwargs):
@@ -29,10 +30,19 @@ def fase_list(request, pk ,  template_name='fases/fase_list.html'):
     fases = Fase.objects.filter(proyecto=pk)
     data = {}
     data['object_list'] = fases
-    return render(request, template_name, data)
+    #arreglo temporal
+    #recuperamos el proyecto, ahi usamos el lider para que pueda ver las opciones de configurar fases y demas
+    proyecto=Proyecto.objects.get(pk=pk)
+    usuario = Usuario.objects.get(pk=proyecto.lider.pk)
+    request_user= Usuario.objects.get(nombre=request.user.username)
+    if request_user.pk == usuario.pk:
+        return render(request, template_name, data)
+    else:
+        return render(request, 'fases/fase_list.html', {})
+
 
 @login_required
-def fase_create(request, template_name='fases/fase_form.html'):
+def fase_create(request, pk,  template_name='fases/fase_form.html'):
     form = FaseForm(request.POST or None)
     if form.is_valid():
         form.save()

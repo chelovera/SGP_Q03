@@ -1,5 +1,5 @@
 # Podemos especificar archivos individuales
-.idea
+.idea/
 # O usar comodines
 *~
 *pyc

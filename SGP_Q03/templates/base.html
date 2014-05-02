@@ -31,10 +31,12 @@
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Proyectos</a>
               <ul class="dropdown-menu">
                 <li><a href="{% url 'proyectos.views.proyecto_list' %}">ver proyectos</a></li>
+                {% if user.is_superuser %}
                 <li><a href="{% url 'proyectos.views.proyecto_create' %}"> agregar proyectos</a></li>
+                {% endif %}
               </ul>
         </li>
-        {% if user.is_superuser == True %}
+        {% if user.is_superuser %}
         <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios</a>
               <ul class="dropdown-menu">
@@ -43,8 +45,9 @@
               </ul>
         </li>
 
-        <li><a href="/">Logout</a></li>
+
         {% endif %}
+            <li><a href="logout/">Logout</a></li>
         </ul>
 
 		</div>

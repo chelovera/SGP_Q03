@@ -47,6 +47,7 @@
     </table>
     </tbody>
 
-
+{% if user.is_superuser %}
 <a href="{% url "nuevo_proyecto" %}"class="btn btn-sm btn-success">Agregar</a>
+{% endif %}
 {% endblock %}
