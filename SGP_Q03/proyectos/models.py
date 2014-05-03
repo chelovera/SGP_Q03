@@ -1,9 +1,9 @@
 # -*- coding: ISO-8859-1
-""" Sistema de Gestión de Proyectos SGP
+""" Sistema de Gestiï¿½n de Proyectos SGP
 Grupo Q03
-Ingeniería de Software II
-@author: Mabel Peña - Alvaro Rodríguez
-Año: 2014
+Ingenierï¿½a de Software II
+@author: Mabel Peï¿½a - Alvaro Rodrï¿½guez
+Aï¿½o: 2014
 """
 
 from django.db import models
@@ -77,3 +77,10 @@ class Proyecto(models.Model):
 
     class Meta:
         ordering=('codigo',)
+
+class Comite(models.Model):
+    proyecto = models.ForeignKey(Proyecto , related_name='proyecto_comite')
+    miembros = models.ManyToManyField(Usuario)
+    #solicitudes
+    def __unicode__(self):
+        return self.nombre

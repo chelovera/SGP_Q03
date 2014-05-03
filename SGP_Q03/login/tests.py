@@ -1,21 +1,14 @@
-# -*- coding: ISO-8859-1
-""" Sistema de Gestión de Proyectos SGP
-Grupo Q03
-Ingeniería de Software II
-@author: Mabel Peña - Alvaro Rodríguez
-Año: 2014
-"""
 
+# Create your tests here.
+"""Prueba de Autenticacion
+
+    Este test devuelve OK en el caso que no ocurran errores,
+    En caso contrario devuelve una descripcion del error ocurrido, seguido de la linea y la clase
+    en la que ocurrio el error"""
 
 from django.test import TestCase, Client
 from django.contrib.auth.models import User
 
-""" login/tests
-Prueba de Autenticación
-
-Este test devuelve OK en el caso que no ocurran errores,
-En caso contrario devuelve una descripcion del error ocurrido, seguido de la linea y la clase
-en la que ocurrio el error"""
 
 class TestLogin(TestCase):
     """
@@ -41,7 +34,7 @@ class TestLogin(TestCase):
     def test_login_exitoso(self):
         login = self.client.login(username=self.username, password=self.password)
         self.assertEqual(login, True, 'el sistema de login no esta funcionando correctamente')
-
+        print('ejecutando test 1 login exitoso')
     """ test_usuario_incorrecto
         Se prueba un usuario incorrecto con el password del usuario 'prueba' creado recientemente
     """
@@ -49,7 +42,7 @@ class TestLogin(TestCase):
     def test_usuario_incorrecto(self):
         login = self.client.login(username='ola que ase', password=self.password)
         self.assertEqual(login, False, 'un usuario incorrecto realizo un login')
-
+        print('ejecutando test 2 usuario incorrecto')
     """ test_password_incorrecto
         Se prueba un usuario correcto con el password incorrecto
     """
@@ -58,7 +51,7 @@ class TestLogin(TestCase):
     def test_password_incorrecto(self):
         login = self.client.login(username=self.username, password='ola que ase password')
         self.assertEqual(login, False, 'un password incorrecto realizo un login')
-
+        print('ejecutando test 3 password incorrecto')
     """ test_usuario_vacio
         Se prueba un usuario vacio con el password del usuario 'prueba' creado recientemente
     """
@@ -67,7 +60,7 @@ class TestLogin(TestCase):
     def test_usuario_vacio(self):
         login = self.client.login(username='', password=self.password)
         self.assertEqual(login, False, 'un usuario vacio realizo un login')
-
+        print('ejecutando test 4 usuario vacio')
     """ test_password_vacio
         Probamos con el usuario correcto con el password vacio
     """
@@ -76,3 +69,4 @@ class TestLogin(TestCase):
     def test_password_vacio(self):
         login = self.client.login(username=self.username, password='')
         self.assertEqual(login, False, 'un password vacio realizo un login')
+        print('ejecutando test 5 password vacio')

@@ -1,2 +1,2 @@
 #!/bin/bash
-python manage.py test login roles_y_permisos
+python manage.py test login usuarios proyectos roles

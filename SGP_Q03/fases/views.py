@@ -42,11 +42,11 @@ def fase_list(request, pk ,  template_name='fases/fase_list.html'):
 
 
 @login_required
-def fase_create(request, pk,  template_name='fases/fase_form.html'):
+def fase_create(request, template_name='fases/fase_form.html'):
     form = FaseForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('lista_fase')
+        return redirect('lista_proyecto')
     return render(request, template_name, {'form':form})
 
 @login_required
