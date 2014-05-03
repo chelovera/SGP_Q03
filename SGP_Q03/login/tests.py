@@ -1,15 +1,21 @@
-from django.test import TestCase
+# -*- coding: ISO-8859-1
+""" Sistema de Gestión de Proyectos SGP
+Grupo Q03
+Ingeniería de Software II
+@author: Mabel Peña - Alvaro Rodríguez
+Año: 2014
+"""
 
-# Create your tests here.
-"""Prueba de Autenticacion
-
-    Este test devuelve OK en el caso que no ocurran errores,
-    En caso contrario devuelve una descripcion del error ocurrido, seguido de la linea y la clase
-    en la que ocurrio el error"""
 
 from django.test import TestCase, Client
 from django.contrib.auth.models import User
 
+""" login/tests
+Prueba de Autenticación
+
+Este test devuelve OK en el caso que no ocurran errores,
+En caso contrario devuelve una descripcion del error ocurrido, seguido de la linea y la clase
+en la que ocurrio el error"""
 
 class TestLogin(TestCase):
     """

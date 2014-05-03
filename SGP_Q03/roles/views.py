@@ -1,3 +1,10 @@
+# -*- coding: ISO-8859-1
+""" Sistema de Gestión de Proyectos SGP
+Grupo Q03
+Ingeniería de Software II
+@author: Mabel Peña - Alvaro Rodríguez
+Año: 2014
+"""
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
@@ -5,6 +12,10 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Button
 
 from .models import Rol
+
+
+""" roles/views
+Se controla lo que va a ser enviado al template para ser mostrado"""
 
 class RolForm(ModelForm):
     def __init__(self, *args, **kwargs):

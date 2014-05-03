@@ -1,11 +1,11 @@
-"""
-Django settings for SGP_Q03 project.
+# -*- coding: ISO-8859-1
+""" Sistema de Gestión de Proyectos SGP
+Grupo Q03
+Ingeniería de Software II
+@author: Mabel Peña - Alvaro Rodríguez
+Profesor: Guillermo González
+Año: 2014
 
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)

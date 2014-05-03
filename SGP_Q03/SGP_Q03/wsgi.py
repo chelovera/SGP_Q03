@@ -1,4 +1,11 @@
-"""
+# -*- coding: ISO-8859-1
+
+""" Sistema de Gestión de Proyectos SGP
+Grupo Q03
+Ingeniería de Software II
+@author: Mabel Peña - Alvaro Rodríguez
+Año: 2014
+
 WSGI config for SGP_Q03 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.

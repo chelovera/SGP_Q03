@@ -1,9 +1,19 @@
+# -*- coding: ISO-8859-1
+""" Sistema de Gestión de Proyectos SGP
+Grupo Q03
+Ingeniería de Software II
+@author: Mabel Peña - Alvaro Rodríguez
+Año: 2014
+"""
+
+
 from django.shortcuts import render_to_response
 from django.contrib import auth
 from django.http import HttpResponse, HttpResponseRedirect
 
-# Create your views here.
-
+""" login/views
+Se controla lo que va a ser enviado al template para ser mostrado
+"""
 def login(request):
     """
     @param request: recibe un request
@@ -19,7 +29,7 @@ def login(request):
         return render_to_response('proyectos/index.html')
     else:
         # Show an error page
-        return HttpResponse("loco hiciste algo mal")
+        return HttpResponse("hiciste algo mal")
 
 
 def logout(request):

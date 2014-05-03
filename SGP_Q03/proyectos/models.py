@@ -1,3 +1,11 @@
+# -*- coding: ISO-8859-1
+""" Sistema de Gestión de Proyectos SGP
+Grupo Q03
+Ingeniería de Software II
+@author: Mabel Peña - Alvaro Rodríguez
+Año: 2014
+"""
+
 from django.db import models
 from django.core.urlresolvers import reverse
 from usuarios.models import Usuario
@@ -11,37 +19,34 @@ Django proyectos/models
 class Proyecto(models.Model):
 
     """
-        Estos son los campos que contiene proyectos/models.py
+    Estos son los campos que contiene proyectos/models.py
 
-        @param codigo: Es el primary key, se genera automaticamente
-        @type codigo: models.AutoField(primary_key= True)
+    @param codigo: Es el primary key, se genera automaticamente
+    @type codigo: models.AutoField(primary_key= True)
 
-        @param nombre: Es el nombre del proyecto
-        @type nombre: models.CharField(max_length=50)
+    @param nombre: Es el nombre del proyecto
+    @type nombre: models.CharField(max_length=50)
 
-        @param descripcion: en este campo se indican las caracteristicas mas resaltantes del proyecto
-        @type descripcion : models.CharField(max_length=200)
+    @param descripcion: en este campo se indican las caracteristicas mas resaltantes del proyecto
+    @type descripcion : models.CharField(max_length=200)
 
-        @param estado: indica que el proyecto puede estar en estado Pendiente o Finalizado
-        @type estado: models.CharField(max_length=10, choices=ESTADOS, default='Pendiente')
+    @param estado: indica que el proyecto puede estar en estado Pendiente o Finalizado
+    @type estado: models.CharField(max_length=10, choices=ESTADOS, default='Pendiente')
 
-        @param fecha_ini: es la fecha de inicio del proyecto
-        @type fecha_ini: models.DateField(null=True)
+    @param fecha_ini: es la fecha de inicio del proyecto
+    @type fecha_ini: models.DateField(null=True)
 
-        @param fecha_fin:  es la fecha de finalizacion del proyecto
-        @type fecha_fin : models.DateField(null=True)
+    @param fecha_fin:  es la fecha de finalizacion del proyecto
+    @type fecha_fin : models.DateField(null=True)
 
-        @param costo_temporal: es el tiempo estimativo que llevara realizar el proyecto
-        @type costo_temporal : models.PositiveIntegerField(default=0, null=True)
+    @param costo_temporal: es el tiempo estimativo que llevara realizar el proyecto
+    @type costo_temporal : models.PositiveIntegerField(default=0, null=True)
 
-        @param costo_monetario : son los recursos monetarios estimativos a utilizarse para realizar el proyecto
-        @type costo_monetario : models.PositiveIntegerField(null=True)
+    @param costo_monetario : son los recursos monetarios estimativos a utilizarse para realizar el proyecto
+    @type costo_monetario : models.PositiveIntegerField(null=True)
 
-        @param lider : se establece el lider del proyecto
-        @type lider : models.ForeignKey(Usuario)
-
-
-
+    @param lider : se establece el lider del proyecto
+    @type lider : models.ForeignKey(Usuario)
     """
 
 

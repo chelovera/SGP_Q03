@@ -1,5 +1,10 @@
-__author__ = 'alfaro'
-
+# -*- coding: ISO-8859-1
+""" Sistema de Gestión de Proyectos SGP
+Grupo Q03
+Ingeniería de Software II
+@author: Mabel Peña - Alvaro Rodríguez
+Año: 2014
+"""
 from django.core.urlresolvers import reverse
 from django.conf.urls import patterns, url
 from django.contrib.auth.forms import UserCreationForm
@@ -8,7 +13,9 @@ from django.views.generic import CreateView
 from .views import usuario_list, usuario_create, usuario_delete, usuario_update, search
 from .models import Usuario
 
-
+""" usuarios/urls
+Se establecen las distintas urls que se manejan desde usuarios
+"""
 urlpatterns = patterns('',
                        url(r'^$', usuario_list, name='lista_usuario'),
                        url(r'^nuevo$', usuario_create, name='nuevo_usuario'),

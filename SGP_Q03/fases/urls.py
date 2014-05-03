@@ -1,7 +1,18 @@
-__author__ = 'alfaro'
+# -*- coding: ISO-8859-1
+""" Sistema de Gestión de Proyectos SGP
+Grupo Q03
+Ingeniería de Software II
+@author: Mabel Peña - Alvaro Rodríguez
+Año: 2014
+"""
 
 from django.conf.urls import patterns, url
 from .views import fase_create, fase_delete, fase_list, fase_update
+
+
+""" fases/urls
+Se establecen los urls asociados a fases
+"""
 
 urlpatterns = patterns('',
   url(r'^(?P<pk>\d+)$', fase_list, name='lista_fase'),

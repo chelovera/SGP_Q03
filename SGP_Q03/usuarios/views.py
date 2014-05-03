@@ -1,3 +1,11 @@
+# -*- coding: ISO-8859-1
+""" Sistema de Gestión de Proyectos SGP
+Grupo Q03
+Ingeniería de Software II
+@author: Mabel Peña - Alvaro Rodríguez
+Año: 2014
+"""
+
 from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.forms import UserCreationForm
@@ -8,7 +16,8 @@ from crispy_forms.layout import Submit, Button
 
 from .models import Usuario
 
-
+""" usuarios/views
+Se controla lo que va a ser enviado al template para ser mostrado"""
 class UsuarioForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super(UsuarioForm, self).__init__(*args, **kwargs)
