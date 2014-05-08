@@ -68,7 +68,6 @@ class Proyecto(models.Model):
     costo_temporal= models.PositiveIntegerField(default=0, null=True)
     costo_monetario= models.PositiveIntegerField(default=0, null=True) # solo enteros positivos nada mas
     lider = models.ForeignKey(Usuario, related_name='lider')
-    #miembros = models.ManyToManyField(Usuario, related_name='miembros_proyecto')
     def __unicode__(self):
         return self.nombre
 
@@ -77,10 +76,3 @@ class Proyecto(models.Model):
 
     class Meta:
         ordering=('codigo',)
-
-class Comite(models.Model):
-    proyecto = models.ForeignKey(Proyecto , related_name='proyecto_comite')
-    miembros = models.ManyToManyField(Usuario)
-    #solicitudes
-    def __unicode__(self):
-        return self.nombre

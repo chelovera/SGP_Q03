@@ -9,6 +9,8 @@ Año: 2014
 from django.core.urlresolvers import reverse
 from django.db import models
 from usuarios.models import Usuario
+from fases.models import Fase
+
 """ MODEL/ROL
 Estos campos representan los permisos que se podran utilizar dentro de cada Proyecto.
 @param crear_tipo_item
@@ -71,7 +73,9 @@ class Rol(models.Model):
     reversionar=models.BooleanField()
     asignar_padre=models.BooleanField()
     asignar_antecesor=models.BooleanField()
-    miembros = models.ManyToManyField(Usuario, related_name='miembros_proyecto')
+    usuario=models.ManyToManyField(Usuario, related_name='usuario_rol')
+    fase = models.ForeignKey(Fase, related_name='fase_rol')
+
     def __unicode__(self):
         return self.nombre
 

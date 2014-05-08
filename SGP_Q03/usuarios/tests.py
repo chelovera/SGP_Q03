@@ -14,7 +14,7 @@ from django.core.urlresolvers import reverse
 
 class TestUsuarioView(TestCase):
 
-    def crear_usuario(self, username='test',nombre= 'test', apellido='test', cedula='12345', email='test@test.com',password= 'test', is_superuser=False):
+    def crear_usuario(self, username='test',nombre= 'test', apellido='test', cedula='12345', email='test@test.com',password='test', is_superuser=False):
         return Usuario.objects.create(username=username ,nombre= nombre, apellido=apellido, cedula=cedula, email=email,password= password, is_superuser=is_superuser)
 
 

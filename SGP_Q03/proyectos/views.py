@@ -31,6 +31,15 @@ class ProyectoForm(ModelForm):
 
     class Meta:
         model = Proyecto
+        fields = (
+            "nombre",
+            "descripcion",
+            "fecha_ini",
+            "fecha_fin",
+            "costo_temporal",
+            "costo_monetario",
+            "lider",
+        )
 
 """ proyecto_list es la funcion que llama al template proyecto_list y se encarga de listar
 todos los proyectos existentes"""

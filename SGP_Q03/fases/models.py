@@ -8,7 +8,6 @@ Año: 2014
 from django.core.urlresolvers import reverse
 from django.db import models
 from proyectos.models import Proyecto
-from roles.models import Rol
 
 """
 Django fases/models
@@ -64,16 +63,11 @@ class Fase(models.Model):
                               choices=ESTADOS,
                               default='Abierta')
     proyecto = models.ForeignKey(Proyecto, related_name= 'proyecto')
-    #tipos_de_items = models.ForeignKey(TipoItem)
-    #items= models.ForeignKey(Item)
     fecha_ini = models.DateField(null=True)
     fecha_fin = models.DateField(null=True)
     costo_temporal = models.PositiveIntegerField(default=0, null=True)
-    costo_monetario = models.PositiveIntegerField(null=True)
-    #lineas_base=models.ForeignKey(LineaBase)
-    predecesor = models.ForeignKey('self', related_name='fase_predecesor', null=True, blank=True, default=None)
-    sucesor = models.ForeignKey('self', related_name='fase_sucesor', null=True, blank=True, default=None)
-    roles = models.ManyToManyField(Rol, related_name='roles_de_fase')
+    costo_monetario = models.PositiveIntegerField(default=0, null=True)
+    orden = models.PositiveIntegerField(auto_created=True,default=0)
 
     def __unicode__(self):
         return self.nombre

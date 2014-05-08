@@ -15,7 +15,6 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Button
 
 from .models import Usuario
-from proyectos.models import Comite
 
 """ usuarios/views
 Se controla lo que va a ser enviado al template para ser mostrado"""
@@ -59,21 +58,6 @@ class UsuarioEditForm(ModelForm):
         "is_active", "is_superuser",)
 
 
-
-class ComiteForm(ModelForm):
-     #name = forms.ModelMultipleChoiceField(queryset=Usuario.objects.all())
-     def __init__(self, *args, **kwargs):
-        super(ComiteForm, self).__init__(*args, **kwargs)
-
-        # If you pass FormHelper constructor a form instance
-        # It builds a default layout with all its fields
-        self.helper = FormHelper(self)
-        # You can dynamically adjust your layout
-        self.helper.layout.append(Submit('guardar', 'guardar', css_class='btn btn-large btn-primary pull-left'))
-        self.helper.add_input(Button('cancelar', 'cancelar', css_class='btn btn-large btn-danger',
-                                     onclick='window.history.go(-1);'))
-     class Meta:
-        model = Comite
 
 @login_required
 def usuario_list(request, template_name='usuarios/usuario_list.html'):

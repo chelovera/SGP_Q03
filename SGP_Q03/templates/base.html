@@ -73,12 +73,12 @@
        <script src="{{STATIC_URL}}jquery-ui-1.10.4/development-bundle/ui/jquery.ui.datepicker.js"></script>
        <script>
            $(function () {
-               $("#id_fecha_ini").datepicker();
+               $("#id_fecha_ini").datepicker({ dateFormat: 'dd/mm/yy' }).val();
            });
        </script>
        <script>
            $(function () {
-               $("#id_fecha_fin").datepicker();
+               $("#id_fecha_fin").datepicker({ dateFormat: 'dd/mm/yy' }).val();
            });
        </script>
        {% endblock %}
