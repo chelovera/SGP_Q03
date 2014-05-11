@@ -9,6 +9,7 @@ from .models import Fase
 from usuarios.models import Usuario
 from proyectos.models import Proyecto
 
+
 class FaseForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(FaseForm, self).__init__(*args, **kwargs)
@@ -28,8 +29,8 @@ class FaseForm(ModelForm):
         @param self: se ejecuta sobre un formulario para asignarle un proyecto
         @return: se retorna el proyecto de la fase
         """
-        proyecto=self.cleaned_data['proyecto']
-        proyecto=Proyecto.objects.get(codigo=proyecto.codigo)
+        proyecto = self.cleaned_data['proyecto']
+        proyecto = Proyecto.objects.get(codigo=proyecto.codigo)
         return proyecto
 
     class Meta:
@@ -37,24 +38,24 @@ class FaseForm(ModelForm):
         fields = (
             "nombre",
             "descripcion",
-            #"proyecto",
             "fecha_ini",
             "fecha_fin",
             "costo_temporal",
             "costo_monetario",
         )
 
+
 @login_required
-def fase_list(request, pk ,  template_name='fases/fase_list.html'):
-    fases = Fase.objects.filter(proyecto=pk)
+def fase_list(request, pk, template_name='fases/fase_list.html'):
+    fases = Fase.objects.filter(proyecto=pk).order_by('codigo')
     data = {}
     data['object_list'] = fases
     #arreglo temporal
     #recuperamos el proyecto, ahi usamos el lider para que pueda ver las opciones de configurar fases y demas
     proyecto = Proyecto.objects.get(pk=pk)
     usuario = Usuario.objects.get(pk=proyecto.lider.pk)
-    request_user= Usuario.objects.get(nombre=request.user.username)
-    data['proyecto']=proyecto
+    request_user = Usuario.objects.get(username=request.user.username)
+    data['proyecto'] = proyecto
     if request_user.pk == usuario.pk:
         return render(request, template_name, data)
     else:
@@ -62,7 +63,7 @@ def fase_list(request, pk ,  template_name='fases/fase_list.html'):
 
 
 @login_required
-def fase_create(request,pk, template_name='fases/fase_form.html'):
+def fase_create(request, pk, template_name='fases/fase_form.html'):
     """
 
     :param request:
@@ -70,21 +71,21 @@ def fase_create(request,pk, template_name='fases/fase_form.html'):
     :param template_name:
     :return:
     """
-    request.POST=request.POST.copy()
-    request.POST.__setitem__('proyecto',pk)
-    proyecto=Proyecto.objects.get(pk=pk)
+    request.POST = request.POST.copy()
+    request.POST.__setitem__('proyecto', pk)
+    proyecto = Proyecto.objects.get(pk=pk)
     form = FaseForm(request.POST or None)
 
     if form.is_valid():
         #form.save()
-        f = Fase(nombre=request.POST['nombre'], descripcion=request.POST['descripcion'],proyecto=proyecto,)
+        f = Fase(nombre=request.POST['nombre'], descripcion=request.POST['descripcion'], proyecto=proyecto, )
         f.save()
-        return redirect('lista_proyecto')
-    return render(request, template_name, {'form':form})
+        return redirect('/proyectos/fases/' + pk)
+    return render(request, template_name, {'form': form})
 
 
 @login_required
-def  fase_update(request, pk, template_name='fases/fase_form.html'):
+def fase_update(request, pk, template_name='fases/fase_form.html'):
     """
 
     :param request:
@@ -97,12 +98,13 @@ def  fase_update(request, pk, template_name='fases/fase_form.html'):
     if form.is_valid():
         form.save()
         return redirect('lista_proyecto')
-    return render(request, template_name, {'form':form})
+    return render(request, template_name, {'form': form})
+
 
 @login_required
 def fase_delete(request, pk, template_name='fases/fase_confirm_delete.html'):
     server = get_object_or_404(Fase, pk=pk)
-    if request.method=='POST':
+    if request.method == 'POST':
         server.delete()
         return redirect('lista_fase')
-    return render(request, template_name, {'object':server})
+    return render(request, template_name, {'object': server})

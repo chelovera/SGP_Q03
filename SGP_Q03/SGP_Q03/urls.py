@@ -17,13 +17,14 @@ Se establecen los urls asociados de cada modulo del proyecto
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'SGP_Q03.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('login.urls')),
-    url(r'^usuarios/', include('usuarios.urls')),
-    url(r'^proyectos/', include('proyectos.urls')),
-    url(r'^proyectos/fases/', include('fases.urls')),
-    url(r'^proyectos/fases/roles',include('roles.urls')),
+                       # Examples:
+                       # url(r'^$', 'SGP_Q03.views.home', name='home'),
+                       # url(r'^blog/', include('blog.urls')),
+                       url(r'^admin/', include(admin.site.urls)),
+                       url(r'^', include('login.urls')),
+                       url(r'^usuarios/', include('usuarios.urls')),
+                       url(r'^proyectos/', include('proyectos.urls')),
+                       url(r'^proyectos/fases/', include('fases.urls')),
+                       url(r'^proyectos/fases/roles', include('roles.urls')),
+                       url(r'^proyectos/fases/tipo_item/', include('tipo_item.urls')),
 )

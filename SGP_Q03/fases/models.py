@@ -8,13 +8,15 @@ Año: 2014
 from django.core.urlresolvers import reverse
 from django.db import models
 from proyectos.models import Proyecto
+from datetime import date
 
 """
 Django fases/models
 
 """
-class Fase(models.Model):
 
+
+class Fase(models.Model):
     """ Estos son los campos que contiene fase/models.py
     @param codigo: Es el primary key, se genera automaticamente
     @type codigo: models.AutoField(primary_key= True)
@@ -51,26 +53,26 @@ class Fase(models.Model):
     @type roles : models.ManyToManyField(Rol, related_name='roles_de_fase')
     """
 
-
     ESTADOS = (
-        ('Abierta', 'abierta'),#estos son estados de prueba
+        ('Abierta', 'abierta'),  #estos son estados de prueba
         ('Cerrada', 'cerrada'),
     )
-    codigo= models.AutoField(primary_key= True)
+    codigo = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=200, blank= True)
+    descripcion = models.CharField(max_length=200, blank=True)
     estado = models.CharField(max_length=7,
                               choices=ESTADOS,
                               default='Abierta')
-    proyecto = models.ForeignKey(Proyecto, related_name= 'proyecto')
-    fecha_ini = models.DateField(null=True)
-    fecha_fin = models.DateField(null=True)
+    proyecto = models.ForeignKey(Proyecto, related_name='proyecto')
+    fecha_ini = models.DateField(default=date.today, null=True)
+    fecha_fin = models.DateField(default=date.today, null=True)
     costo_temporal = models.PositiveIntegerField(default=0, null=True)
     costo_monetario = models.PositiveIntegerField(default=0, null=True)
-    orden = models.PositiveIntegerField(auto_created=True,default=0)
+    orden = models.PositiveIntegerField(auto_created=True, default=0)
 
     def __unicode__(self):
         return self.nombre
 
     def get_absolute_url(self):
         return reverse('editar_fase', kwargs={'pk': self.pk})
+

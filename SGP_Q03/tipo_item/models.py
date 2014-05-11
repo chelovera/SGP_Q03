@@ -1,23 +1,28 @@
 from django.db import models
 from fases.models import Fase
+import eav
 # Create your models here.
 
-class Tipo_Item(models.Model):
-    codigo=models.AutoField(primary_key=True)
-    nombre=models.CharField(max_length=30)
-    descripcion = models.TextField(max_length=100)
-    fase=models.ForeignKey(Fase,related_name='fase_tipo_item')
 
-class Atributos(models.Model):
-    TIPOS = (
-        ('Fecha',models.DateTimeField()),#estos son estados de prueba
-        ('Email', models.EmailField()),
-        ('Numerico', models.IntegerField()),
-        ('Boolean', models.BooleanField()),
-    )
+class Tipo_Item(models.Model):
     codigo = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=30)
-    tipo = models.CharField(max_length=10,
-                              choices=TIPOS,
-                              default='Fecha')
+    descripcion = models.TextField(max_length=100)
+    fase = models.ForeignKey(Fase, related_name='fase_tipo_item')
 
+
+#eav.register(Tipo_Item)
+
+
+class Atributo(models.Model):
+    TIPOS = (
+        ('Numerico', 'numerico'),  #estos son estados de prueba
+        ('Logico', 'logico'),
+        ('Cadena', 'cadena'),
+        ('Fecha', 'fecha'),
+    )
+    nombre = models.CharField(max_length=30)
+    tipo = models.CharField(max_length=8,
+                            choices=TIPOS,
+                            default='Numerico')
+    tipo_item = models.ForeignKey(Tipo_Item)

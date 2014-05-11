@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
+            <br><br><br><br>
+            <li class="active"><a href="#">Agregar Tipo de Item</a></li>
+            <li class="active"><a href="#">Importar Tipo de Item</a></li>
+        </ul>
+
+    </div>
+    <div class="col-sm-9  col-md-10  main">
+        <h1 class="page-header">{{ fase }}</h1>
+        <h1 class="page-header">Tipos de Items</h1>
+
+        <div class="row placeholders">
+            <div>
+                <table class="table table-striped table-bordered">
+                    <tbody>
+                    <tr>
+                        <th>Nro</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                    </tr>
+                    <ul>
+                        {% if not user.is_superuser %}
+                        {% for tipo in object_list %}
+                        <tr>
+                            <td>{{ tipo.codigo }}</td>
+                            <td>{{ tipo.nombre }}</td>
+                            <td>{{ tipo.descripcion }}</td>
+                        </tr>
+                        {% endfor %}
+                        {% endif%}
+                    </ul>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
