@@ -45,7 +45,7 @@ class Usuario(User):
     telefono = models.PositiveIntegerField(default=0, blank=True)
     cedula = models.PositiveIntegerField(default=0)
     direccion = models.CharField(max_length=50, null=False, blank=True)
-    #estado = models.BooleanField(default=True)
+
 
     def __unicode__(self):
         return self.nombre

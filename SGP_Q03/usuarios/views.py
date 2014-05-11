@@ -103,15 +103,8 @@ def search(request):
         if not busqueda:
             error = True
         else:
-            usuarios = Usuario.objects.filter(username=busqueda)
-            return render(request, 'usuarios/search_results.html',
-                          {'usuarios': usuarios, 'query': busqueda})
-    return render(request, 'usuarios/search_form.html',
-                  {'error': error})
-
-def configurar_comite(request, template_name='usuarios/comite.html'):
-    form = ComiteForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        return redirect('/proyectos')
-    return render(request, template_name, {'form': form})
+            usuarios = Usuario.objects.filter(nombre=busqueda)
+            return render(request, 'usuarios/usuario_list.html',
+                          {'object_list': usuarios, 'query': busqueda})
+    return render(request, 'usuarios/usuario_list.html',
+                  {'object_list':{}, 'error': error})

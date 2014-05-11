@@ -45,7 +45,6 @@ INSTALLED_APPS = (
     'login',
     'proyectos',
     'usuarios',
-    'guardian',
     'roles',
     'crispy_forms',
     'fases',
