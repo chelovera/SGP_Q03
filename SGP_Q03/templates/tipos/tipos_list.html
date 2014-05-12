@@ -5,7 +5,7 @@
     <div class="col-sm-3 col-md-2 sidebar">
         <ul class="nav nav-sidebar">
             <br><br><br><br>
-            <li class="active"><a href="#">Agregar Tipo de Item</a></li>
+            <li class="active"><a href="{% url 'tipo_item.views.tipo_create' fase.codigo %}">Agregar Tipo de Item</a></li>
             <li class="active"><a href="#">Importar Tipo de Item</a></li>
         </ul>
 
@@ -22,6 +22,7 @@
                         <th>Nro</th>
                         <th>Nombre</th>
                         <th>Descripcion</th>
+                        <th>Configuracion</th>
                     </tr>
                     <ul>
                         {% if not user.is_superuser %}
@@ -30,6 +31,11 @@
                             <td>{{ tipo.codigo }}</td>
                             <td>{{ tipo.nombre }}</td>
                             <td>{{ tipo.descripcion }}</td>
+                            <td>
+                                <ul class="nav nav-sidebar"><a
+                                        href="{% url 'tipo_item.views.tipo_create' fase.codigo %}"> Configuracion </a></li>
+                                </ul>
+                            </td>
                         </tr>
                         {% endfor %}
                         {% endif%}

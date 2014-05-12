@@ -24,13 +24,18 @@ class TipoForm(ModelForm):
 
     class Meta:
         model = Tipo_Item
+        exclude=("fase",)
+
 
 
 @login_required
 def tipo_create(request, pk, template_name='tipos/tipo_form.html'):
+    fase=Fase.objects.get(pk=pk)
     form = TipoForm(request.POST or None)
+
     if form.is_valid():
-        form.save()
+        tipo_item = Tipo_Item(nombre=request.POST['nombre'], descripcion=request.POST['descripcion'], fase=fase,)
+        tipo_item.save()
         return redirect('/proyectos/fases/tipo_item/'+pk)
     return render(request, template_name, {'form': form})
 
