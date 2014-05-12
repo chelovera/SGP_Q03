@@ -5,14 +5,13 @@
     <div class="col-sm-3 col-md-2 sidebar">
         <ul class="nav nav-sidebar">
             <br><br><br><br>
-            <li class="active"><a href="{% url 'tipo_item.views.tipo_create' fase.codigo %}">Agregar Tipo de Item</a></li>
-            <li class="active"><a href="#">Importar Tipo de Item</a></li>
+            <li class="active"><a href="{% url 'tipo_item.views.atributo_create' tipo.codigo %}">Agregar Atributo</a></li>
         </ul>
 
     </div>
     <div class="col-sm-9  col-md-10  main">
-        <h1 class="page-header">{{ fase }}</h1>
-        <h1 class="page-header">Tipos de Items</h1>
+        <h1 class="page-header">{{ tipo.nombre }}</h1>
+        <h1 class="page-header">Atributos</h1>
 
         <div class="row placeholders">
             <div>
@@ -21,19 +20,19 @@
                     <tr>
                         <th>Nro</th>
                         <th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th>Atributos</th>
+                        <th>Tipo</th>
+                        <th>Editar</th>
                     </tr>
                     <ul>
                         {% if not user.is_superuser %}
-                        {% for tipo in object_list %}
+                        {% for atributo in object_list %}
                         <tr>
-                            <td>{{ tipo.codigo }}</td>
-                            <td>{{ tipo.nombre }}</td>
-                            <td>{{ tipo.descripcion }}</td>
+                            <td>{{ atributo.codigo }}</td>
+                            <td>{{ atributo.nombre }}</td>
+                            <td>{{ atributo.tipo }}</td>
                             <td>
                                 <ul class="nav nav-sidebar"><a
-                                        href="{% url 'tipo_item.views.atributo_list' tipo.codigo %}"> configurar </a></li>
+                                        href="#"> configurar </a></li>
                                 </ul>
                             </td>
                         </tr>

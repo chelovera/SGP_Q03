@@ -48,7 +48,7 @@ INSTALLED_APPS = (
     'roles',
     'crispy_forms',
     'fases',
-
+    'tipo_item',
 )
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

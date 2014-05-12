@@ -21,6 +21,7 @@ class Atributo(models.Model):
         ('Cadena', 'cadena'),
         ('Fecha', 'fecha'),
     )
+    codigo = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=30)
     tipo = models.CharField(max_length=8,
                             choices=TIPOS,

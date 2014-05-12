@@ -1,12 +1,14 @@
 from usuarios.models import Usuario
 from proyectos.models import Proyecto
 from fases.models import Fase
-
+from tipo_item.models import Tipo_Item
 #Proyecto.objects.all().delete()
 #ejecutar asi ./manage.py shell < cargar_db.py
 Usuario.objects.all().delete()
+Tipo_Item.objects.all().delete()
 Fase.objects.all().delete()
 Proyecto.objects.all().delete()
+
 usuario1 = Usuario.objects.create_user(username='alvaro_user', nombre='Alvaro', apellido='Rodriguez',
                                        telefono='0961940704', cedula='4617510',
                                        direccion='Calle Rio Negro esq. Rio Jejui 315',
@@ -52,3 +54,15 @@ fase2.save()
 fase3.save()
 fase4.save()
 fase5.save()
+
+tipo1= Tipo_Item(nombre='requerimiento funcional',descripcion='representa un requerimiento funcional para la fase',fase=fase1)
+tipo2= Tipo_Item(nombre='requerimiento no funcional',descripcion='representa un requerimiento no funcional para la fase',fase=fase1)
+tipo3= Tipo_Item(nombre='caso de uso',descripcion='representa casos de uso para la fase',fase=fase1)
+tipo4= Tipo_Item(nombre='diagrama',descripcion='representa cualquier tipo de diagrama',fase=fase1)
+tipo5= Tipo_Item(nombre='requerimiento de hardware',descripcion='representa una configuracion de hardware',fase=fase1)
+
+tipo1.save()
+tipo2.save()
+tipo3.save()
+tipo4.save()
+tipo5.save()
