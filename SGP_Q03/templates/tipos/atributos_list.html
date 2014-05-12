@@ -22,6 +22,7 @@
                         <th>Nombre</th>
                         <th>Tipo</th>
                         <th>Editar</th>
+                        <th>Eliminar</th>
                     </tr>
                     <ul>
                         {% if not user.is_superuser %}
@@ -35,6 +36,8 @@
                                         href="#"> configurar </a></li>
                                 </ul>
                             </td>
+                            <td><a href="{% url "borrar_atributo" atributo.codigo %}" class="btn btn-primary btn-sm btn-warning" >Eliminar</a></td>
+
                         </tr>
                         {% endfor %}
                         {% endif%}

@@ -39,7 +39,7 @@
                         <th>Estado</th>
                         <th>Tipos de Items</th>
                         <th>Items</th>
-
+                        <th>Eliminar</th>
                     </tr>
 
                     <ul>
@@ -59,6 +59,7 @@
                             <td>
                                 <ul class="nav nav-sidebar"><a href="#"> Configurar </a></li></ul>
                             </td>
+                            <td><a href="{% url "borrar_fase" fases.codigo %}" class="btn btn-primary btn-sm btn-warning" >Eliminar</a></td>
                         </tr>
                         {% endfor %}
                     </ul>

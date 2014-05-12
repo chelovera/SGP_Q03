@@ -104,7 +104,8 @@ def fase_update(request, pk, template_name='fases/fase_form.html'):
 @login_required
 def fase_delete(request, pk, template_name='fases/fase_confirm_delete.html'):
     server = get_object_or_404(Fase, pk=pk)
+    proyecto = get_object_or_404(Proyecto,pk=server.proyecto.codigo)
     if request.method == 'POST':
         server.delete()
-        return redirect('lista_fase')
+        return redirect('/proyectos/fases/'+str(proyecto.pk))
     return render(request, template_name, {'object': server})

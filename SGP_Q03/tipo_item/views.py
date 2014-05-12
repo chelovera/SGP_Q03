@@ -96,3 +96,21 @@ def atributo_create(request, pk, template_name='tipos/atributo_form.html'):
         atributo.save()
         return redirect('/proyectos/fases/tipo_item/atributos/'+pk)
     return render(request, template_name, {'form': form})
+
+@login_required
+def tipo_delete(request, pk, template_name='tipos/tipo_confirm_delete.html'):
+    server = get_object_or_404(Tipo_Item, pk=pk)
+    fase = get_object_or_404(Fase, pk=server.fase.codigo)
+    if request.method == 'POST':
+        server.delete()
+        return redirect('/proyectos/fases/tipo_item/'+str(fase.pk))
+    return render(request, template_name, {'object': server})
+
+@login_required
+def atributo_delete(request, pk, template_name='tipos/tipo_confirm_delete.html'):
+    server = get_object_or_404(Atributo, pk=pk)
+    tipo_item = get_object_or_404(Tipo_Item, pk=server.tipo_item.codigo)
+    if request.method == 'POST':
+        server.delete()
+        return redirect('/proyectos/fases/tipo_item/atributos/'+str(tipo_item.pk))
+    return render(request, template_name, {'object': server})

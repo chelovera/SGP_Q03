@@ -5,6 +5,7 @@ Ingenier�a de Software II
 @author: Mabel Pe�a - Alvaro Rodr�guez
 A�o: 2014
 """
+from datetime import date
 
 from django.db import models
 from django.core.urlresolvers import reverse
@@ -63,8 +64,8 @@ class Proyecto(models.Model):
     estado = models.CharField(max_length=10,
                               choices=ESTADOS,
                               default='Pendiente')
-    fecha_ini=models.DateField(null=True)
-    fecha_fin=models.DateField(null=True)
+    fecha_ini=models.DateField(null=True,default = date.today)
+    fecha_fin=models.DateField(null=True, default = date.today)
     costo_temporal= models.PositiveIntegerField(default=0, null=True)
     costo_monetario= models.PositiveIntegerField(default=0, null=True) # solo enteros positivos nada mas
     lider = models.ForeignKey(Usuario, related_name='lider')

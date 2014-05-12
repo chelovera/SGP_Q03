@@ -23,6 +23,7 @@
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Atributos</th>
+                        <th>Eliminar</th>
                     </tr>
                     <ul>
                         {% if not user.is_superuser %}
@@ -36,6 +37,9 @@
                                         href="{% url 'tipo_item.views.atributo_list' tipo.codigo %}"> configurar </a></li>
                                 </ul>
                             </td>
+
+                               <td><a href="{% url "borrar_tipo" tipo.codigo %}" class="btn btn-primary btn-sm btn-warning" >Eliminar</a></td>
+
                         </tr>
                         {% endfor %}
                         {% endif%}
