@@ -7,7 +7,7 @@ Año: 2014
 """
 
 from django.conf.urls import patterns, url
-from .views import fase_create, fase_delete, fase_list, fase_update
+from .views import fase_create, fase_delete, fase_list, fase_update, fase_search
 
 
 """ fases/urls
@@ -19,4 +19,6 @@ urlpatterns = patterns('',
                        url(r'^nuevo/(?P<pk>\d+)$', fase_create, name='nuevo_fase'),
                        url(r'^editar/(?P<pk>\d+)$', fase_update, name='editar_fase'),
                        url(r'^borrar/(?P<pk>\d+)$', fase_delete, name='borrar_fase'),
+                       url(r'^search/(?P<pk>\d+)$', fase_search, name='buscar_fase'),
+
 )

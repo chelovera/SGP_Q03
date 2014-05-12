@@ -109,3 +109,23 @@ def fase_delete(request, pk, template_name='fases/fase_confirm_delete.html'):
         server.delete()
         return redirect('/proyectos/fases/'+str(proyecto.pk))
     return render(request, template_name, {'object': server})
+
+@login_required
+def fase_search(request, pk):
+    error = False
+    proyecto = Proyecto.objects.get(pk=pk)
+    data={}
+    data['proyecto'] = proyecto
+    data['object_list']={}
+    if 'busqueda' in request.GET:
+        busqueda = request.GET['busqueda']
+
+        if not busqueda:
+            error = True
+        else:
+            fases= Fase.objects.filter(nombre=busqueda, proyecto = proyecto)
+            data['object_list']=fases
+            data['query']=busqueda
+            return render(request, 'fases/fase_list.html', data)
+
+    return render(request, 'fases/fase_list.html',{'proyecto':proyecto})
