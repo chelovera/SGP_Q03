@@ -1,6 +1,6 @@
 from django.db import models
 from fases.models import Fase
-import eav
+
 # Create your models here.
 
 

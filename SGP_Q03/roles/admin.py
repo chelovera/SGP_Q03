@@ -7,5 +7,8 @@ Año: 2014
 """
 
 from django.contrib import admin
-
-# Register your models here.
+from roles.models import Rol
+"""
+ Proyectos
+"""
+admin.site.register(Rol)

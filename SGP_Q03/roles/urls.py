@@ -11,8 +11,10 @@ from .views import rol_create, rol_update, rol_list, rol_delete
 Se establecen los distintos url que le pertenecen al modulo roles
 """
 urlpatterns = patterns('',
-  url(r'^$', rol_list, name='lista_rol'),
-  url(r'^nuevo$', rol_create, name='nuevo_rol'),
-  url(r'^editar/(?P<pk>\d+)$', rol_update, name='editar_rol'),
-  url(r'^borrar/(?P<pk>\d+)$', rol_delete, name='borrar_rol')
+   url(r'^(?P<pk>\d+)$', rol_list, name='lista_rol'),
+   url(r'^nuevo/(?P<pk>\d+)$', rol_create, name='nuevo_rol'),
+   url(r'^editar/(?P<pk>\d+)$', rol_update, name='editar_rol'),
+   url(r'^borrar/(?P<pk>\d+)$', rol_delete, name='borrar_rol'),
+
+
 )

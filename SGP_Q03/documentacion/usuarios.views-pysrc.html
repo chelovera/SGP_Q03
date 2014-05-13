@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>usuarios.views</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="usuarios-module.html">Package&nbsp;usuarios</a> ::
+        Module&nbsp;views
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="usuarios.views-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="usuarios.views-module.html">Module usuarios.views</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: ISO-8859-1</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">""" Sistema de Gesti&#239;&#191;&#189;n de Proyectos SGP</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">Grupo Q03</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">Ingenier&#239;&#191;&#189;a de Software II</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">@author: Mabel Pe&#239;&#191;&#189;a - Alvaro Rodr&#239;&#191;&#189;guez</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">A&#239;&#191;&#189;o: 2014</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">contrib</tt><tt class="py-op">.</tt><tt class="py-name">auth</tt><tt class="py-op">.</tt><tt class="py-name">decorators</tt> <tt class="py-keyword">import</tt> <tt class="py-name">login_required</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">contrib</tt><tt class="py-op">.</tt><tt class="py-name">auth</tt><tt class="py-op">.</tt><tt class="py-name">forms</tt> <tt class="py-keyword">import</tt> <tt class="py-name">UserCreationForm</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">forms</tt> <tt class="py-keyword">import</tt> <tt class="py-name">ModelForm</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">shortcuts</tt> <tt class="py-keyword">import</tt> <tt class="py-name">render</tt><tt class="py-op">,</tt> <tt class="py-name">redirect</tt><tt class="py-op">,</tt> <tt class="py-name">get_object_or_404</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">crispy_forms</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt> <tt class="py-keyword">import</tt> <tt class="py-name">FormHelper</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">crispy_forms</tt><tt class="py-op">.</tt><tt class="py-name">layout</tt> <tt class="py-keyword">import</tt> <tt class="py-name">Submit</tt><tt class="py-op">,</tt> <tt class="py-name">Button</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Module fases.models=fases.models-module.html,Module login.models=login.models-module.html,Module proyectos.models=proyectos.models-module.html,Module roles.models=roles.models-module.html,Module usuarios.models=usuarios.models-module.html"><a title="fases.models
+login.models
+proyectos.models
+roles.models
+usuarios.models" class="py-name" href="#" onclick="return doclink('link-0', 'models', 'link-0');">models</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class usuarios.models.Usuario=usuarios.models.Usuario-class.html"><a title="usuarios.models.Usuario" class="py-name" href="#" onclick="return doclink('link-1', 'Usuario', 'link-1');">Usuario</a></tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Package proyectos=proyectos-module.html"><a title="proyectos" class="py-name" href="#" onclick="return doclink('link-2', 'proyectos', 'link-2');">proyectos</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name"><a title="fases.models
+login.models
+proyectos.models
+roles.models
+usuarios.models" class="py-name" href="#" onclick="return doclink('link-3', 'models', 'link-0');">models</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Class proyectos.models.Comite=proyectos.models.Comite-class.html"><a title="proyectos.models.Comite" class="py-name" href="#" onclick="return doclink('link-4', 'Comite', 'link-4');">Comite</a></tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-string">""" usuarios/views</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-string">Se controla lo que va a ser enviado al template para ser mostrado"""</tt> </tt>
+<a name="UsuarioForm"></a><div id="UsuarioForm-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="UsuarioForm-toggle" onclick="return toggle('UsuarioForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="usuarios.views.UsuarioForm-class.html">UsuarioForm</a><tt class="py-op">(</tt><tt class="py-base-class">UserCreationForm</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="UsuarioForm-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="UsuarioForm-expanded"><a name="UsuarioForm.__init__"></a><div id="UsuarioForm.__init__-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="UsuarioForm.__init__-toggle" onclick="return toggle('UsuarioForm.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="usuarios.views.UsuarioForm-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">*</tt><tt class="py-param">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="UsuarioForm.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="UsuarioForm.__init__-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-5" class="py-name" targets="Class usuarios.views.UsuarioForm=usuarios.views.UsuarioForm-class.html"><a title="usuarios.views.UsuarioForm" class="py-name" href="#" onclick="return doclink('link-5', 'UsuarioForm', 'link-5');">UsuarioForm</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method fases.views.FaseForm.__init__()=fases.views.FaseForm-class.html#__init__,Method proyectos.views.ProyectoForm.__init__()=proyectos.views.ProyectoForm-class.html#__init__,Method roles.views.RolForm.__init__()=roles.views.RolForm-class.html#__init__,Method usuarios.views.ComiteForm.__init__()=usuarios.views.ComiteForm-class.html#__init__,Method usuarios.views.UsuarioEditForm.__init__()=usuarios.views.UsuarioEditForm-class.html#__init__,Method usuarios.views.UsuarioForm.__init__()=usuarios.views.UsuarioForm-class.html#__init__"><a title="fases.views.FaseForm.__init__
+proyectos.views.ProyectoForm.__init__
+roles.views.RolForm.__init__
+usuarios.views.ComiteForm.__init__
+usuarios.views.UsuarioEditForm.__init__
+usuarios.views.UsuarioForm.__init__" class="py-name" href="#" onclick="return doclink('link-6', '__init__', 'link-6');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-op">*</tt><tt class="py-name">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">        <tt class="py-comment"># If you pass FormHelper constructor a form instance</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">        <tt class="py-comment"># It builds a default layout with all its fields</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt> <tt class="py-op">=</tt> <tt class="py-name">FormHelper</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-comment"># You can dynamically adjust your layout</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt><tt class="py-op">.</tt><tt class="py-name">layout</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">Submit</tt><tt class="py-op">(</tt><tt class="py-string">'guardar'</tt><tt class="py-op">,</tt> <tt class="py-string">'guardar'</tt><tt class="py-op">,</tt> <tt class="py-name">css_class</tt><tt class="py-op">=</tt><tt class="py-string">'btn btn-large btn-primary pull-left'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt><tt class="py-op">.</tt><tt class="py-name">add_input</tt><tt class="py-op">(</tt><tt class="py-name">Button</tt><tt class="py-op">(</tt><tt class="py-string">'cancelar'</tt><tt class="py-op">,</tt> <tt class="py-string">'cancelar'</tt><tt class="py-op">,</tt> <tt class="py-name">css_class</tt><tt class="py-op">=</tt><tt class="py-string">'btn btn-large btn-danger'</tt><tt class="py-op">,</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">                                     <tt class="py-name">onclick</tt><tt class="py-op">=</tt><tt class="py-string">'window.location.href="/usuarios/"'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="UsuarioForm.Meta"></a><div id="UsuarioForm.Meta-def"><a name="L35"></a><tt class="py-lineno"> 35</tt> <a class="py-toggle" href="#" id="UsuarioForm.Meta-toggle" onclick="return toggle('UsuarioForm.Meta');">-</a><tt class="py-line">    <tt class="py-keyword">class</tt> <a class="py-def-name" href="usuarios.views.UsuarioForm.Meta-class.html">Meta</a><tt class="py-op">:</tt> </tt>
+</div><div id="UsuarioForm.Meta-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="UsuarioForm.Meta-expanded"><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt id="link-7" class="py-name" targets="Variable fases.views.FaseForm.Meta.model=fases.views.FaseForm.Meta-class.html#model,Variable proyectos.views.ProyectoForm.Meta.model=proyectos.views.ProyectoForm.Meta-class.html#model,Variable roles.views.RolForm.Meta.model=roles.views.RolForm.Meta-class.html#model,Variable usuarios.views.ComiteForm.Meta.model=usuarios.views.ComiteForm.Meta-class.html#model,Variable usuarios.views.UsuarioEditForm.Meta.model=usuarios.views.UsuarioEditForm.Meta-class.html#model,Variable usuarios.views.UsuarioForm.Meta.model=usuarios.views.UsuarioForm.Meta-class.html#model"><a title="fases.views.FaseForm.Meta.model
+proyectos.views.ProyectoForm.Meta.model
+roles.views.RolForm.Meta.model
+usuarios.views.ComiteForm.Meta.model
+usuarios.views.UsuarioEditForm.Meta.model
+usuarios.views.UsuarioForm.Meta.model" class="py-name" href="#" onclick="return doclink('link-7', 'model', 'link-7');">model</a></tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name"><a title="usuarios.models.Usuario" class="py-name" href="#" onclick="return doclink('link-8', 'Usuario', 'link-1');">Usuario</a></tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt id="link-9" class="py-name" targets="Variable usuarios.views.UsuarioEditForm.Meta.fields=usuarios.views.UsuarioEditForm.Meta-class.html#fields,Variable usuarios.views.UsuarioForm.Meta.fields=usuarios.views.UsuarioForm.Meta-class.html#fields"><a title="usuarios.views.UsuarioEditForm.Meta.fields
+usuarios.views.UsuarioForm.Meta.fields" class="py-name" href="#" onclick="return doclink('link-9', 'fields', 'link-9');">fields</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-string">"username"</tt><tt class="py-op">,</tt> <tt class="py-string">"password1"</tt><tt class="py-op">,</tt> <tt class="py-string">"password2"</tt><tt class="py-op">,</tt> <tt class="py-string">"nombre"</tt><tt class="py-op">,</tt> <tt class="py-string">"apellido"</tt><tt class="py-op">,</tt> <tt class="py-string">"telefono"</tt><tt class="py-op">,</tt> <tt class="py-string">"cedula"</tt><tt class="py-op">,</tt> <tt class="py-string">"email"</tt><tt class="py-op">,</tt> <tt class="py-string">"direccion"</tt><tt class="py-op">,</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-string">"is_active"</tt><tt class="py-op">,</tt> <tt class="py-string">"is_superuser"</tt><tt class="py-op">,</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"> </tt>
+<a name="UsuarioEditForm"></a><div id="UsuarioEditForm-def"><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="UsuarioEditForm-toggle" onclick="return toggle('UsuarioEditForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="usuarios.views.UsuarioEditForm-class.html">UsuarioEditForm</a><tt class="py-op">(</tt><tt class="py-base-class">ModelForm</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="UsuarioEditForm-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="UsuarioEditForm-expanded"><a name="UsuarioEditForm.__init__"></a><div id="UsuarioEditForm.__init__-def"><a name="L43"></a><tt class="py-lineno"> 43</tt> <a class="py-toggle" href="#" id="UsuarioEditForm.__init__-toggle" onclick="return toggle('UsuarioEditForm.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="usuarios.views.UsuarioEditForm-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">*</tt><tt class="py-param">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="UsuarioEditForm.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="UsuarioEditForm.__init__-expanded"><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-10" class="py-name" targets="Class usuarios.views.UsuarioEditForm=usuarios.views.UsuarioEditForm-class.html"><a title="usuarios.views.UsuarioEditForm" class="py-name" href="#" onclick="return doclink('link-10', 'UsuarioEditForm', 'link-10');">UsuarioEditForm</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="fases.views.FaseForm.__init__
+proyectos.views.ProyectoForm.__init__
+roles.views.RolForm.__init__
+usuarios.views.ComiteForm.__init__
+usuarios.views.UsuarioEditForm.__init__
+usuarios.views.UsuarioForm.__init__" class="py-name" href="#" onclick="return doclink('link-11', '__init__', 'link-6');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-op">*</tt><tt class="py-name">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-comment"># If you pass FormHelper constructor a form instance</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-comment"># It builds a default layout with all its fields</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt> <tt class="py-op">=</tt> <tt class="py-name">FormHelper</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-comment"># You can dynamically adjust your layout</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt><tt class="py-op">.</tt><tt class="py-name">layout</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">Submit</tt><tt class="py-op">(</tt><tt class="py-string">'guardar'</tt><tt class="py-op">,</tt> <tt class="py-string">'guardar'</tt><tt class="py-op">,</tt> <tt class="py-name">css_class</tt><tt class="py-op">=</tt><tt class="py-string">'btn btn-large btn-primary pull-left'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt><tt class="py-op">.</tt><tt class="py-name">add_input</tt><tt class="py-op">(</tt><tt class="py-name">Button</tt><tt class="py-op">(</tt><tt class="py-string">'cancelar'</tt><tt class="py-op">,</tt> <tt class="py-string">'cancelar'</tt><tt class="py-op">,</tt> <tt class="py-name">css_class</tt><tt class="py-op">=</tt><tt class="py-string">'btn btn-large btn-danger'</tt><tt class="py-op">,</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                                     <tt class="py-name">onclick</tt><tt class="py-op">=</tt><tt class="py-string">'window.location.href="/usuarios/"'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="UsuarioEditForm.Meta"></a><div id="UsuarioEditForm.Meta-def"><a name="L55"></a><tt class="py-lineno"> 55</tt> <a class="py-toggle" href="#" id="UsuarioEditForm.Meta-toggle" onclick="return toggle('UsuarioEditForm.Meta');">-</a><tt class="py-line">    <tt class="py-keyword">class</tt> <a class="py-def-name" href="usuarios.views.UsuarioEditForm.Meta-class.html">Meta</a><tt class="py-op">:</tt> </tt>
+</div><div id="UsuarioEditForm.Meta-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="UsuarioEditForm.Meta-expanded"><a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt id="link-12" class="py-name"><a title="fases.views.FaseForm.Meta.model
+proyectos.views.ProyectoForm.Meta.model
+roles.views.RolForm.Meta.model
+usuarios.views.ComiteForm.Meta.model
+usuarios.views.UsuarioEditForm.Meta.model
+usuarios.views.UsuarioForm.Meta.model" class="py-name" href="#" onclick="return doclink('link-12', 'model', 'link-7');">model</a></tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="usuarios.models.Usuario" class="py-name" href="#" onclick="return doclink('link-13', 'Usuario', 'link-1');">Usuario</a></tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt id="link-14" class="py-name"><a title="usuarios.views.UsuarioEditForm.Meta.fields
+usuarios.views.UsuarioForm.Meta.fields" class="py-name" href="#" onclick="return doclink('link-14', 'fields', 'link-9');">fields</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-string">"username"</tt><tt class="py-op">,</tt><tt class="py-string">"nombre"</tt><tt class="py-op">,</tt> <tt class="py-string">"apellido"</tt><tt class="py-op">,</tt> <tt class="py-string">"telefono"</tt><tt class="py-op">,</tt> <tt class="py-string">"cedula"</tt><tt class="py-op">,</tt> <tt class="py-string">"email"</tt><tt class="py-op">,</tt> <tt class="py-string">"direccion"</tt><tt class="py-op">,</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-string">"is_active"</tt><tt class="py-op">,</tt> <tt class="py-string">"is_superuser"</tt><tt class="py-op">,</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"> </tt>
+<a name="ComiteForm"></a><div id="ComiteForm-def"><a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt> <a class="py-toggle" href="#" id="ComiteForm-toggle" onclick="return toggle('ComiteForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="usuarios.views.ComiteForm-class.html">ComiteForm</a><tt class="py-op">(</tt><tt class="py-base-class">ModelForm</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComiteForm-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ComiteForm-expanded"><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">     <tt class="py-comment">#name = forms.ModelMultipleChoiceField(queryset=Usuario.objects.all())</tt> </tt>
+<a name="ComiteForm.__init__"></a><div id="ComiteForm.__init__-def"><a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="ComiteForm.__init__-toggle" onclick="return toggle('ComiteForm.__init__');">-</a><tt class="py-line">     <tt class="py-keyword">def</tt> <a class="py-def-name" href="usuarios.views.ComiteForm-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">*</tt><tt class="py-param">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComiteForm.__init__-collapsed" style="display:none;" pad="+++" indent="+++++++++"></div><div id="ComiteForm.__init__-expanded"><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-15" class="py-name" targets="Class usuarios.views.ComiteForm=usuarios.views.ComiteForm-class.html"><a title="usuarios.views.ComiteForm" class="py-name" href="#" onclick="return doclink('link-15', 'ComiteForm', 'link-15');">ComiteForm</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="fases.views.FaseForm.__init__
+proyectos.views.ProyectoForm.__init__
+roles.views.RolForm.__init__
+usuarios.views.ComiteForm.__init__
+usuarios.views.UsuarioEditForm.__init__
+usuarios.views.UsuarioForm.__init__" class="py-name" href="#" onclick="return doclink('link-16', '__init__', 'link-6');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-op">*</tt><tt class="py-name">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-comment"># If you pass FormHelper constructor a form instance</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-comment"># It builds a default layout with all its fields</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt> <tt class="py-op">=</tt> <tt class="py-name">FormHelper</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-comment"># You can dynamically adjust your layout</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt><tt class="py-op">.</tt><tt class="py-name">layout</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">Submit</tt><tt class="py-op">(</tt><tt class="py-string">'guardar'</tt><tt class="py-op">,</tt> <tt class="py-string">'guardar'</tt><tt class="py-op">,</tt> <tt class="py-name">css_class</tt><tt class="py-op">=</tt><tt class="py-string">'btn btn-large btn-primary pull-left'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt><tt class="py-op">.</tt><tt class="py-name">add_input</tt><tt class="py-op">(</tt><tt class="py-name">Button</tt><tt class="py-op">(</tt><tt class="py-string">'cancelar'</tt><tt class="py-op">,</tt> <tt class="py-string">'cancelar'</tt><tt class="py-op">,</tt> <tt class="py-name">css_class</tt><tt class="py-op">=</tt><tt class="py-string">'btn btn-large btn-danger'</tt><tt class="py-op">,</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                                     <tt class="py-name">onclick</tt><tt class="py-op">=</tt><tt class="py-string">'window.history.go(-1);'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="ComiteForm.Meta"></a><div id="ComiteForm.Meta-def"><a name="L75"></a><tt class="py-lineno"> 75</tt> <a class="py-toggle" href="#" id="ComiteForm.Meta-toggle" onclick="return toggle('ComiteForm.Meta');">-</a><tt class="py-line">     <tt class="py-keyword">class</tt> <a class="py-def-name" href="usuarios.views.ComiteForm.Meta-class.html">Meta</a><tt class="py-op">:</tt> </tt>
+</div><div id="ComiteForm.Meta-collapsed" style="display:none;" pad="+++" indent="+++++++++"></div><div id="ComiteForm.Meta-expanded"><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt id="link-17" class="py-name"><a title="fases.views.FaseForm.Meta.model
+proyectos.views.ProyectoForm.Meta.model
+roles.views.RolForm.Meta.model
+usuarios.views.ComiteForm.Meta.model
+usuarios.views.UsuarioEditForm.Meta.model
+usuarios.views.UsuarioForm.Meta.model" class="py-name" href="#" onclick="return doclink('link-17', 'model', 'link-7');">model</a></tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="proyectos.models.Comite" class="py-name" href="#" onclick="return doclink('link-18', 'Comite', 'link-4');">Comite</a></tt> </tt>
+</div></div><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="usuario_list"></a><div id="usuario_list-def"><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">login_required</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt> <a class="py-toggle" href="#" id="usuario_list-toggle" onclick="return toggle('usuario_list');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="usuarios.views-module.html#usuario_list">usuario_list</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">template_name</tt><tt class="py-op">=</tt><tt class="py-string">'usuarios/usuario_list.html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="usuario_list-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="usuario_list-expanded"><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">    <tt id="link-19" class="py-name" targets="Package usuarios=usuarios-module.html"><a title="usuarios" class="py-name" href="#" onclick="return doclink('link-19', 'usuarios', 'link-19');">usuarios</a></tt> <tt class="py-op">=</tt> <tt id="link-20" class="py-name"><a title="usuarios.models.Usuario" class="py-name" href="#" onclick="return doclink('link-20', 'Usuario', 'link-1');">Usuario</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method fases.models.Fase.objects()=fases.models.Fase-class.html#objects,Method proyectos.models.Comite.objects()=proyectos.models.Comite-class.html#objects,Method proyectos.models.Proyecto.objects()=proyectos.models.Proyecto-class.html#objects,Method roles.models.Rol.objects()=roles.models.Rol-class.html#objects,Method usuarios.models.Usuario.objects()=usuarios.models.Usuario-class.html#objects"><a title="fases.models.Fase.objects
+proyectos.models.Comite.objects
+proyectos.models.Proyecto.objects
+roles.models.Rol.objects
+usuarios.models.Usuario.objects" class="py-name" href="#" onclick="return doclink('link-21', 'objects', 'link-21');">objects</a></tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">    <tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-string">'object_list'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-22" class="py-name"><a title="usuarios" class="py-name" href="#" onclick="return doclink('link-22', 'usuarios', 'link-19');">usuarios</a></tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">template_name</tt><tt class="py-op">,</tt> <tt class="py-name">data</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="usuario_create"></a><div id="usuario_create-def"><a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">login_required</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt> <a class="py-toggle" href="#" id="usuario_create-toggle" onclick="return toggle('usuario_create');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="usuarios.views-module.html#usuario_create">usuario_create</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">template_name</tt><tt class="py-op">=</tt><tt class="py-string">'usuarios/usuario_form.html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="usuario_create-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="usuario_create-expanded"><a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="usuarios.views.UsuarioForm" class="py-name" href="#" onclick="return doclink('link-23', 'UsuarioForm', 'link-5');">UsuarioForm</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt> <tt class="py-keyword">or</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">is_valid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">save</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">redirect</tt><tt class="py-op">(</tt><tt class="py-string">'lista_usuario'</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">template_name</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'form'</tt><tt class="py-op">:</tt> <tt class="py-name">form</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="usuario_update"></a><div id="usuario_update-def"><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">login_required</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt> <a class="py-toggle" href="#" id="usuario_update-toggle" onclick="return toggle('usuario_update');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="usuarios.views-module.html#usuario_update">usuario_update</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">pk</tt><tt class="py-op">,</tt> <tt class="py-param">template_name</tt><tt class="py-op">=</tt><tt class="py-string">'usuarios/usuario_form.html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="usuario_update-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="usuario_update-expanded"><a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt class="py-name">usuario</tt> <tt class="py-op">=</tt> <tt class="py-name">get_object_or_404</tt><tt class="py-op">(</tt><tt id="link-24" class="py-name"><a title="usuarios.models.Usuario" class="py-name" href="#" onclick="return doclink('link-24', 'Usuario', 'link-1');">Usuario</a></tt><tt class="py-op">,</tt> <tt class="py-name">pk</tt><tt class="py-op">=</tt><tt class="py-name">pk</tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">    <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt id="link-25" class="py-name"><a title="usuarios.views.UsuarioEditForm" class="py-name" href="#" onclick="return doclink('link-25', 'UsuarioEditForm', 'link-10');">UsuarioEditForm</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt> <tt class="py-keyword">or</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-name">instance</tt><tt class="py-op">=</tt><tt class="py-name">usuario</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">is_valid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">save</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">redirect</tt><tt class="py-op">(</tt><tt class="py-string">'lista_usuario'</tt><tt class="py-op">)</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">template_name</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'form'</tt><tt class="py-op">:</tt> <tt class="py-name">form</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="usuario_delete"></a><div id="usuario_delete-def"><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">login_required</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt> <a class="py-toggle" href="#" id="usuario_delete-toggle" onclick="return toggle('usuario_delete');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="usuarios.views-module.html#usuario_delete">usuario_delete</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">pk</tt><tt class="py-op">,</tt> <tt class="py-param">template_name</tt><tt class="py-op">=</tt><tt class="py-string">'usuarios/usuario_confirm_delete.html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="usuario_delete-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="usuario_delete-expanded"><a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-name">server</tt> <tt class="py-op">=</tt> <tt class="py-name">get_object_or_404</tt><tt class="py-op">(</tt><tt id="link-26" class="py-name"><a title="usuarios.models.Usuario" class="py-name" href="#" onclick="return doclink('link-26', 'Usuario', 'link-1');">Usuario</a></tt><tt class="py-op">,</tt> <tt class="py-name">pk</tt><tt class="py-op">=</tt><tt class="py-name">pk</tt><tt class="py-op">)</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">method</tt> <tt class="py-op">==</tt> <tt class="py-string">'POST'</tt><tt class="py-op">:</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-name">server</tt><tt class="py-op">.</tt><tt class="py-name">delete</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">redirect</tt><tt class="py-op">(</tt><tt class="py-string">'lista_usuario'</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">template_name</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'object'</tt><tt class="py-op">:</tt> <tt class="py-name">server</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="search"></a><div id="search-def"><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">login_required</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt> <a class="py-toggle" href="#" id="search-toggle" onclick="return toggle('search');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="usuarios.views-module.html#search">search</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="search-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="search-expanded"><a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">    <tt class="py-name">error</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-string">'busqueda'</tt> <tt class="py-keyword">in</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">GET</tt><tt class="py-op">:</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">        <tt class="py-name">busqueda</tt> <tt class="py-op">=</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">GET</tt><tt class="py-op">[</tt><tt class="py-string">'busqueda'</tt><tt class="py-op">]</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">busqueda</tt><tt class="py-op">:</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">            <tt class="py-name">error</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">            <tt id="link-27" class="py-name"><a title="usuarios" class="py-name" href="#" onclick="return doclink('link-27', 'usuarios', 'link-19');">usuarios</a></tt> <tt class="py-op">=</tt> <tt id="link-28" class="py-name"><a title="usuarios.models.Usuario" class="py-name" href="#" onclick="return doclink('link-28', 'Usuario', 'link-1');">Usuario</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="fases.models.Fase.objects
+proyectos.models.Comite.objects
+proyectos.models.Proyecto.objects
+roles.models.Rol.objects
+usuarios.models.Usuario.objects" class="py-name" href="#" onclick="return doclink('link-29', 'objects', 'link-21');">objects</a></tt><tt class="py-op">.</tt><tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-name">username</tt><tt class="py-op">=</tt><tt class="py-name">busqueda</tt><tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-string">'usuarios/search_results.html'</tt><tt class="py-op">,</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">                          <tt class="py-op">{</tt><tt class="py-string">'usuarios'</tt><tt class="py-op">:</tt> <tt id="link-30" class="py-name"><a title="usuarios" class="py-name" href="#" onclick="return doclink('link-30', 'usuarios', 'link-19');">usuarios</a></tt><tt class="py-op">,</tt> <tt class="py-string">'query'</tt><tt class="py-op">:</tt> <tt class="py-name">busqueda</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-string">'usuarios/search_form.html'</tt><tt class="py-op">,</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">                  <tt class="py-op">{</tt><tt class="py-string">'error'</tt><tt class="py-op">:</tt> <tt class="py-name">error</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"> </tt>
+<a name="configurar_comite"></a><div id="configurar_comite-def"><a name="L128"></a><tt class="py-lineno">128</tt> <a class="py-toggle" href="#" id="configurar_comite-toggle" onclick="return toggle('configurar_comite');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="usuarios.views-module.html#configurar_comite">configurar_comite</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">template_name</tt><tt class="py-op">=</tt><tt class="py-string">'usuarios/comite.html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="configurar_comite-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="configurar_comite-expanded"><a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">    <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt id="link-31" class="py-name"><a title="usuarios.views.ComiteForm" class="py-name" href="#" onclick="return doclink('link-31', 'ComiteForm', 'link-15');">ComiteForm</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt> <tt class="py-keyword">or</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">is_valid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">        <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">save</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">redirect</tt><tt class="py-op">(</tt><tt class="py-string">'/proyectos'</tt><tt class="py-op">)</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">template_name</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'form'</tt><tt class="py-op">:</tt> <tt class="py-name">form</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat May  3 14:01:10 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

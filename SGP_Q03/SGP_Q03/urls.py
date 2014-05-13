@@ -25,6 +25,6 @@ urlpatterns = patterns('',
                        url(r'^usuarios/', include('usuarios.urls')),
                        url(r'^proyectos/', include('proyectos.urls')),
                        url(r'^proyectos/fases/', include('fases.urls')),
-                       url(r'^proyectos/fases/roles', include('roles.urls')),
+                       url(r'^proyectos/fases/roles/', include('roles.urls')),
                        url(r'^proyectos/fases/tipo_item/', include('tipo_item.urls')),
 )

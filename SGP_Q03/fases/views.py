@@ -59,18 +59,12 @@ def fase_list(request, pk, template_name='fases/fase_list.html'):
     if request_user.pk == usuario.pk:
         return render(request, template_name, data)
     else:
-        return render(request, 'fases/fase_list.html', {})
+        return render(request, 'fases/fase_list_sin_permisos.html', {})
 
 
 @login_required
 def fase_create(request, pk, template_name='fases/fase_form.html'):
-    """
-
-    :param request:
-    :param pk:
-    :param template_name:
-    :return:
-    """
+   
     request.POST = request.POST.copy()
     request.POST.__setitem__('proyecto', pk)
     proyecto = Proyecto.objects.get(pk=pk)
@@ -86,13 +80,7 @@ def fase_create(request, pk, template_name='fases/fase_form.html'):
 
 @login_required
 def fase_update(request, pk, template_name='fases/fase_form.html'):
-    """
-
-    :param request:
-    :param pk:
-    :param template_name:
-    :return:
-    """
+   
     fase = get_object_or_404(Fase, pk=pk)
     form = FaseForm(request.POST or None, instance=fase)
     if form.is_valid():

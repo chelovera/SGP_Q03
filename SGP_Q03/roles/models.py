@@ -59,22 +59,24 @@ Estos campos representan los permisos que se podran utilizar dentro de cada Proy
 
 class Rol(models.Model):
 
-    nombre= models.CharField(max_length=25)
-    crear_tipo_item = models.BooleanField()
-    editar_tipo_item = models.BooleanField()
-    eliminar_tipo_item = models.BooleanField()
-    crear_linea_base= models.BooleanField()
-    abrir_linea_base= models.BooleanField()
-    crear_item=models.BooleanField()
-    editar_item=models.BooleanField()
-    eliminar_item=models.BooleanField()
-    aprobar=models.BooleanField()
-    revivir=models.BooleanField()
-    reversionar=models.BooleanField()
-    asignar_padre=models.BooleanField()
-    asignar_antecesor=models.BooleanField()
-    usuario=models.ManyToManyField(Usuario, related_name='usuario_rol')
-    fase = models.ForeignKey(Fase, related_name='fase_rol')
+    nombre=models.CharField(max_length=25)
+    #usuario=models.ForeignKey(Usuario, related_name='usuario_rol')      #!!!
+    fase = models.ForeignKey(Fase, related_name='fase')
+    usuario=models.ManyToManyField(Usuario, related_name='usuario', blank=True, null=True)
+    crear_tipo_item = models.NullBooleanField(null=True, blank=True)
+    editar_tipo_item = models.NullBooleanField(null=True, blank=True)
+    eliminar_tipo_item = models.NullBooleanField(null=True, blank=True)
+    crear_linea_base = models.NullBooleanField(null=True, blank=True)
+    abrir_linea_base = models.NullBooleanField(null=True, blank=True)
+    crear_item = models.NullBooleanField(null=True, blank=True)
+    editar_item=models.NullBooleanField(null=True, blank=True)
+    eliminar_item=models.NullBooleanField(null=True, blank=True)
+    aprobar=models.NullBooleanField(null=True, blank=True)
+    revivir=models.NullBooleanField(null=True, blank=True)
+    reversionar=models.NullBooleanField(null=True, blank=True)
+    asignar_padre=models.NullBooleanField(null=True, blank=True)
+    asignar_antecesor=models.NullBooleanField(null=True, blank=True)
+
 
     def __unicode__(self):
         return self.nombre

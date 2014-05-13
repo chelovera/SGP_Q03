@@ -9,7 +9,8 @@
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
             <br><br><br><br>
-            <li class="active"><a href="{% url 'proyectos.views.proyecto_create' %}">Agregar Proyecto</a></li>
+
+                <li class="active"><a href="{% url 'proyectos.views.proyecto_create' %}">Agregar Proyecto</a></li>
 
 
           </ul>
@@ -34,26 +35,26 @@
                         <th>Configurar</th>
                         <th>Editar</th>
                         <th>Eliminar</th>
-
-
                     </tr>
 
                     <ul>
 
-                {% if not user.is_superuser %}
+
                     {% for proyecto in object_list %}
 
                         <tr>
                             <td>{{ proyecto.codigo }}</td>
                             <td>{{ proyecto.nombre }}</td>
-
                             <td>{{ proyecto.fecha_ini}}</td>
                             <td>{{ proyecto.fecha_fin}}</td>
                             <td>{{ proyecto.estado}}</td>
                             <td>{{ proyecto.lider }}</td>
-
+                            {% if not user.is_superuser %}
 
                             <td><a href="{% url 'fases.views.fase_list' proyecto.codigo %}" class="btn btn-primary btn-sm " >configurar</a></td>
+                            {% else %}
+                            <td></td>
+                            {% endif%}
 
                                 {% ifequal proyecto.estado "Pendiente" %}
 
@@ -68,38 +69,8 @@
                         </tr>
                     {% endfor %}
 
-                {% else %}
 
 
-                     {% for proyecto in object_list %}
-
-                        <tr>
-                            <td>{{ proyecto.codigo }}</td>
-                            <td>{{ proyecto.nombre }}</td>
-
-                            <td>{{ proyecto.fecha_ini}}</td>
-                            <td>{{ proyecto.fecha_fin}}</td>
-                            <td>{{ proyecto.estado}}</td>
-                            <td>{{ proyecto.lider }}</td>
-
-
-                            <td></td>
-
-                                {% ifequal proyecto.estado "Pendiente" %}
-
-                                    <td><a href="{% url "editar_proyecto" proyecto.codigo %}" class="btn btn-primary btn-sm" >editar</a></td>
-
-                                    <td><a href="{% url "borrar_proyecto" proyecto.codigo %}" class="btn btn-primary btn-sm btn-warning" >Eliminar</a></td>
-                                {% else %}
-                                   <td> </td>
-                                   <td> </td>
-                                {% endifequal %}
-
-
-
-                        </tr>
-                        {% endfor %}
-                     {% endif%}
                     </ul>
 
                 </tbody>
@@ -107,7 +78,15 @@
 
                 </div>
               </div>
+{% comment %}
+          <ul class="pager">
+            <li class="previous"><a href="#">&larr; Anterior</a></li>
+            <li class="next"><a href="#">Siguiente &rarr;</a></li>
+          </ul>
+{% endcomment %}
+
 
       </div>
+          </div>
 
  {% endblock %}

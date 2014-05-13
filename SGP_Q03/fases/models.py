@@ -76,3 +76,4 @@ class Fase(models.Model):
     def get_absolute_url(self):
         return reverse('editar_fase', kwargs={'pk': self.pk})
 
+

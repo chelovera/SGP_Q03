@@ -57,16 +57,16 @@ def proyecto_create(request, template_name='proyectos/proyecto_form.html'):
     if form.is_valid():
         form.save()
         return redirect('lista_proyecto')
-    return render(request, template_name, {'form':form})
+    return render(request, template_name, {'form': form})
 
 @login_required
-def  proyecto_update(request, pk, template_name='proyectos/proyecto_form.html'):
+def proyecto_update(request, pk, template_name='proyectos/proyecto_form.html'):
     proyecto = get_object_or_404(Proyecto, pk=pk)
     form = ProyectoForm(request.POST or None, instance=proyecto)
     if form.is_valid():
         form.save()
         return redirect('lista_proyecto')
-    return render(request, template_name, {'form':form})
+    return render(request, template_name, {'form': form})
 
 @login_required
 def proyecto_delete(request, pk, template_name='proyectos/proyecto_confirm_delete.html'):
@@ -74,4 +74,4 @@ def proyecto_delete(request, pk, template_name='proyectos/proyecto_confirm_delet
     if request.method=='POST':
         server.delete()
         return redirect('lista_proyecto')
-    return render(request, template_name, {'object':server})
+    return render(request, template_name, {'object': server})

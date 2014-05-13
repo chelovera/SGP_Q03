@@ -7,5 +7,8 @@ Año: 2014
 
 """
 from django.contrib import admin
-
-# Register your models here.
+from fases.models import Fase
+"""
+ Proyectos
+"""
+admin.site.register(Fase)
