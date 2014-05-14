@@ -8,8 +8,6 @@
             <ul class="nav nav-sidebar">
             <br><br><br><br>
             <li class="active"><a href="{% url 'roles.views.rol_create' fase.codigo %}"> Agregar Rol</a></li>
-
-
           </ul>
 
         </div>
@@ -40,9 +38,9 @@
             <tr>
                 <td>{{ rol.nombre }}</td>
 
-                <td><ul class="nav nav-sidebar"><a href="{% url "editar_rol" rol.id %}">  Editar  </a></li></ul></td>
-                <td><ul class="nav nav-sidebar"><a href="#">  Asignar  </a></li></ul></td>
-                <td><a href="{% url "borrar_rol" rol.id %}" class="btn btn-primary btn-sm btn-warning" >Eliminar</a></td>
+                <td><ul class="nav nav-sidebar"><a href="{% url "editar_rol" rol.codigo %}">  Editar  </a></ul></td>
+                <td><ul class="nav nav-sidebar"><a href="{% url "asignar_rol" rol.codigo %}">  Asignar  </a></ul></td>
+                <td><a href="{% url "borrar_rol" rol.codigo %}" class="btn btn-primary btn-sm btn-warning" >Eliminar</a></td>
 
 
 

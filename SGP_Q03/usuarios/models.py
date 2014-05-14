@@ -39,7 +39,7 @@ class Usuario(User):
 
     """
 
-
+    codigo = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50, null=False)
     apellido = models.CharField(max_length=50, null=False)
     telefono = models.PositiveIntegerField(default=0, blank=True)

@@ -58,11 +58,11 @@ Estos campos representan los permisos que se podran utilizar dentro de cada Proy
 """
 
 class Rol(models.Model):
-
+    codigo = models.AutoField(primary_key=True)
     nombre=models.CharField(max_length=25)
     #usuario=models.ForeignKey(Usuario, related_name='usuario_rol')      #!!!
     fase = models.ForeignKey(Fase, related_name='fase')
-    usuario=models.ManyToManyField(Usuario, related_name='usuario', blank=True, null=True)
+    #usuario=models.ManyToManyField(Usuario, related_name='usuario', blank=True, null=True)
     crear_tipo_item = models.NullBooleanField(null=True, blank=True)
     editar_tipo_item = models.NullBooleanField(null=True, blank=True)
     eliminar_tipo_item = models.NullBooleanField(null=True, blank=True)
@@ -76,10 +76,19 @@ class Rol(models.Model):
     reversionar=models.NullBooleanField(null=True, blank=True)
     asignar_padre=models.NullBooleanField(null=True, blank=True)
     asignar_antecesor=models.NullBooleanField(null=True, blank=True)
-
-
     def __unicode__(self):
         return self.nombre
 
     def get_absolute_url(self):
         return reverse('editar_rol', kwargs={'pk': self.pk})
+
+
+class RolAsignar (models.Model):
+    codigo = models.AutoField(primary_key=True)
+    #usuarios = models.ManyToManyField(Usuario)
+    usuario = models.ForeignKey(Usuario)
+    rol = models.ForeignKey(Rol)
+    confirmar = models.BooleanField(max_length=50)
+
+    def __unicode__(self):
+        return self.codigo

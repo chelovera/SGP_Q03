@@ -46,7 +46,7 @@ todos los proyectos existentes"""
 
 @login_required
 def proyecto_list(request, template_name='proyectos/proyecto_list.html'):
-    proyectos = Proyecto.objects.all()
+    proyectos = Proyecto.objects.all().order_by('codigo')
     data = {}
     data['object_list'] = proyectos
     return render(request, template_name, data)

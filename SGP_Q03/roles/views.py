@@ -10,10 +10,12 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Button
+from django.views.generic import TemplateView
+from usuarios.models import Usuario
 from fases.models import Fase
-from .models import Rol
+from .models import Rol, RolAsignar
 #from proyectos.models import Proyecto
-#from usarios.models import Usuario
+
 
 """ roles/views
 Se controla lo que va a ser enviado al template para ser mostrado"""
@@ -31,27 +33,7 @@ class RolForm(ModelForm):
 
     class Meta:
         model = Rol
-        fields = (
-            "nombre",
-            #"fase",
-            #"usuario",
-            "crear_tipo_item",
-            "editar_tipo_item",
-            "eliminar_tipo_item",
-            "crear_linea_base",
-            "abrir_linea_base",
-            "crear_item",
-            "editar_item",
-            "eliminar_item",
-            "aprobar",
-            "revivir",
-            "reversionar",
-            "asignar_padre",
-            "asignar_antecesor",
-        )
-
-
-"""
+        exclude = ("fase", "usuario",)
 
 class RolFormAsignar(ModelForm):
     def __init__(self, *args, **kwargs):
@@ -66,44 +48,68 @@ class RolFormAsignar(ModelForm):
         self.helper.add_input(Button('cancelar', 'cancelar', css_class='btn btn-large btn-danger', onclick='window.history.back()'))
 
     class Meta:
-        model = Rol
+        model = RolAsignar
         fields = (
             #"nombre",
             #"fase",
-            "usuario",
-            "crear_tipo_item",
-            "editar_tipo_item",
-            "eliminar_tipo_item",
-            "crear_linea_base",
-            "abrir_linea_base",
-            "crear_item",
-            "editar_item",
-            "eliminar_item",
-            "aprobar",
-            "revivir",
-            "reversionar",
-            "asignar_padre",
-            "asignar_antecesor",
+            "codigo",
+            #"usuario",
+            "confirmar",
+
         )
 
 @login_required
-def asignar_rol(request, pk, template_name='roles/asignar_rol'):
+def rol_asignar(request, pk, template_name='roles/roles_asignar.html'):
+    """
+    pk= es el primary key del rol
+    """
+    usuarios = Usuario.objects.all().order_by('codigo')       # traigo a todos los usuarios para poder asignarles el rol elegido
     data = {}
-    fase = Fase.objects.get(pk=pk)
+    data['object_list'] = usuarios
+    fase = Fase.objects.all()
     data['fase'] = fase
-    request.POST = request.POST.copy()
-    request.POST.__setitem__('fase', pk)
-    fase = Fase.objects.get(pk=pk)
-    form = RolFormAsignar(request.POST or None)
+    rol = Rol.objects.get(pk=pk)
+    data['rol'] = rol
+    #proyecto = fase.proyecto.nombre
+    #data['proyecto'] = proyecto
+    return render(request, template_name, data)  #falta setear usuario y rol
+
+
+
+@login_required
+def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/rol_form.html'):
+    """
+     pk= primary key de rol
+     codigo=primary key de usuario
+    """
+    rol = Rol.objects.get(pk=pk)
+    usuario = Usuario.objects.get(codigo=codigo)
+    form=RolFormAsignar(request.POST or None)
     if form.is_valid():
-        f = Rol(fase=fase,)
-        f.save()
-        return redirect('lista_proyecto')               # si necesitamos pasar a la direccion 'lista_rol' necesito pasar un parametro y eso no se como hacer....creo que tiene algo que ver con crispy osea enviar el pk con el boton guardar en form
+        asignar = RolAsignar(rol=rol, usuario=usuario, confirmar=request.POST['confirmar'])
+        asignar.save()
+        #return redirect('lista_proyecto')
+        return redirect('/proyectos/fases/roles/asignar/'+str(pk))
     return render(request, template_name, {'form': form})
 
+
+""" def atributo_create(request, pk, template_name='tipos/atributo_form.html'):
+    tipo_item = Tipo_Item.objects.get(pk=pk)
+    form = AtributoForm(request.POST or None)
+
+    if form.is_valid():
+        atributo = Atributo(nombre=request.POST['nombre'], tipo=request.POST['tipo'], tipo_item=tipo_item,)
+        atributo.save()
+        return redirect('/proyectos/fases/tipo_item/atributos/'+pk)
+    return render(request, template_name, {'form': form})
 """
+
+
+
 @login_required
 def rol_list(request, pk, template_name='roles/rol_list.html'):
+    """ pk= es el primary key de la fase
+    """
     roles = Rol.objects.filter(fase=pk)
     data = {}
     data['object_list'] = roles
@@ -112,7 +118,8 @@ def rol_list(request, pk, template_name='roles/rol_list.html'):
     return render(request, template_name, data)
 
 
-""" @login_required
+"""
+@login_required
 def fase_list(request, pk ,  template_name='fases/fase_list.html'):
     fases = Fase.objects.filter(proyecto=pk)
     data = {}
@@ -130,6 +137,7 @@ def fase_list(request, pk ,  template_name='fases/fase_list.html'):
 
 @login_required
 def rol_create(request, pk, template_name='roles/rol_form.html'):
+    """pk= es el primary key del  """
     request.POST = request.POST.copy()
     request.POST.__setitem__('fase', pk)
     fase = Fase.objects.get(pk=pk)
@@ -147,7 +155,8 @@ def rol_create(request, pk, template_name='roles/rol_form.html'):
      #   return render(request, 'roles/rol_list_sin_permisos.html', {})
 
 
-""" @login_required
+"""
+@login_required
 def fase_create(request,pk, template_name='fases/fase_form.html'):
 
     request.POST=request.POST.copy()
@@ -170,7 +179,7 @@ def rol_update(request, pk, template_name='roles/rol_form.html'):
     form = RolForm(request.POST or None, instance=rol)
     if form.is_valid():
         form.save()
-        return redirect('lista_proyecto')
+        return redirect('lista_proyecto')           # falta redirigir a la parte de '/proyectos/fases/roles/'+str(....)
     return render(request, template_name, {'form': form})
 
 

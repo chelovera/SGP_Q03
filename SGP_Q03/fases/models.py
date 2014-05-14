@@ -64,8 +64,8 @@ class Fase(models.Model):
                               choices=ESTADOS,
                               default='Abierta')
     proyecto = models.ForeignKey(Proyecto, related_name='proyecto')
-    fecha_ini = models.DateField(default=date.today, null=True)
-    fecha_fin = models.DateField(default=date.today, null=True)
+    fecha_ini = models.DateField(null=True, default=date.today)
+    fecha_fin = models.DateField(null=True, default=date.today)
     costo_temporal = models.PositiveIntegerField(default=0, null=True)
     costo_monetario = models.PositiveIntegerField(default=0, null=True)
     orden = models.PositiveIntegerField(auto_created=True, default=0)

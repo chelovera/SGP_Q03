@@ -61,7 +61,7 @@ class UsuarioEditForm(ModelForm):
 
 @login_required
 def usuario_list(request, template_name='usuarios/usuario_list.html'):
-    usuarios = Usuario.objects.all()
+    usuarios = Usuario.objects.all().order_by('codigo')
     data = {}
     data['object_list'] = usuarios
     return render(request, template_name, data)
