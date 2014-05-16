@@ -6,7 +6,7 @@ Ingeniería de Software II
 Año: 2014
 """
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
 from django.forms import ModelForm
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Button
@@ -35,29 +35,8 @@ class RolForm(ModelForm):
         model = Rol
         exclude = ("fase", "usuario",)
 
-class RolFormAsignar(ModelForm):
-    def __init__(self, *args, **kwargs):
-        super(RolFormAsignar, self).__init__(*args, **kwargs)
 
-        # If you pass FormHelper constructor a form instance
-        # It builds a default layout with all its fields
-        self.helper = FormHelper(self)
-        self.helper.help_text_inline = True
-        # You can dynamically adjust your layout
-        self.helper.layout.append(Submit('guardar', 'guardar', css_class='btn btn-large btn-success pull-left'))
-        self.helper.add_input(Button('cancelar', 'cancelar', css_class='btn btn-large btn-danger', onclick='window.history.back()'))
-
-    class Meta:
-        model = RolAsignar
-        fields = (
-            #"nombre",
-            #"fase",
-            "codigo",
-            #"usuario",
-            "confirmar",
-
-        )
-
+""" Con este metodo listamos todos los usuarios para que se les pueda asignar roles"""
 @login_required
 def rol_asignar(request, pk, template_name='roles/roles_asignar.html'):
     """
@@ -72,26 +51,58 @@ def rol_asignar(request, pk, template_name='roles/roles_asignar.html'):
     data['rol'] = rol
     #proyecto = fase.proyecto.nombre
     #data['proyecto'] = proyecto
-    return render(request, template_name, data)  #falta setear usuario y rol
+    return render(request, template_name, data)
 
 
-
+""" con esta funcion asignamos los roles a los usuarios
 @login_required
 def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/rol_form.html'):
+
+    cod_usuario = request.user.id       # estoy tratando de traer el id del usuario que esta llamando a esta funcion, es decir el que esta tratando de asignar rol
+    verificar = RolAsignar.objects.all()
+    rol = Rol.objects.get(pk=pk)
+    #verificar = get_list_or_404(RolAsignar, codigo=codigo)
+    data = {}
+    data['object_list'] = verificar
+    data['rol'] = rol               #este es el rol que estamos tratando de asignar
+    tiene_permiso = buscar(cod_usuario, data)
+    if tiene_permiso:
+
+        #verificar = get_list_or_404(RolAsignar, codigo=codigo)           # traigo de la BD los roles asignados a cada usuario
+        #if verificar.rol:
+        rol = Rol.objects.get(pk=pk)
+        usuario = Usuario.objects.get(codigo=codigo)
+        form=RolFormAsignar(request.POST or None)
+        if form.is_valid():
+            asignar = RolAsignar(rol=rol, usuario=usuario, confirmar=request.POST['confirmar'])
+            asignar.save()
+            #return redirect('lista_proyecto')
+            return redirect('/proyectos/fases/roles/asignar/'+str(pk))
+        return render(request, template_name, {'form': form})
+    else:
+        return render(request, 'fases/fase_list_sin_permisos.html', {})"""
+
+@login_required
+def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignacion_correcta.html'):
     """
      pk= primary key de rol
      codigo=primary key de usuario
     """
     rol = Rol.objects.get(pk=pk)
     usuario = Usuario.objects.get(codigo=codigo)
-    form=RolFormAsignar(request.POST or None)
-    if form.is_valid():
-        asignar = RolAsignar(rol=rol, usuario=usuario, confirmar=request.POST['confirmar'])
-        asignar.save()
-        #return redirect('lista_proyecto')
-        return redirect('/proyectos/fases/roles/asignar/'+str(pk))
-    return render(request, template_name, {'form': form})
+    r = RolAsignar(usuario=usuario, rol=rol, confirmar=True)      #guardamos en la tabla RolAsignar el numero de usuario y el rol elegido
+    r.save()
+    return render(request, template_name, {})
 
+
+"""
+
+def buscar (cod_usuario, object_list):
+    for buscando in object_list['object_list'].usuario:
+        if cod_usuario == buscando:                 #si ingresa en este if quiere decir que hemos encontrado al usuario en la tabla de roles asignados
+           # if object_list['object_list'].rol==
+            return True
+    return False"""
 
 """ def atributo_create(request, pk, template_name='tipos/atributo_form.html'):
     tipo_item = Tipo_Item.objects.get(pk=pk)
@@ -117,23 +128,6 @@ def rol_list(request, pk, template_name='roles/rol_list.html'):
     data['fase'] = fase
     return render(request, template_name, data)
 
-
-"""
-@login_required
-def fase_list(request, pk ,  template_name='fases/fase_list.html'):
-    fases = Fase.objects.filter(proyecto=pk)
-    data = {}
-    data['object_list'] = fases
-    #arreglo temporal
-    #recuperamos el proyecto, ahi usamos el lider para que pueda ver las opciones de configurar fases y demas
-    proyecto = Proyecto.objects.get(pk=pk)
-    usuario = Usuario.objects.get(pk=proyecto.lider.pk)
-    request_user= Usuario.objects.get(nombre=request.user.username)
-    data['proyecto']=proyecto
-    if request_user.pk == usuario.pk:
-        return render(request, template_name, data)
-    else:
-        return render(request, 'fases/fase_list_sin_permisos.html', {}) """
 
 @login_required
 def rol_create(request, pk, template_name='roles/rol_form.html'):
@@ -210,3 +204,4 @@ def fase_delete(request, pk, template_name='fases/fase_confirm_delete.html'):
         server.delete()
         return redirect('lista_fase')
     return render(request, template_name, {'object': server})"""
+
