@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SGP_Q03</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+    </style>
+    <link rel="stylesheet"
+          href="{{STATIC_URL}}jquery-ui-1.10.4/development-bundle/themes/ui-lightness/jquery.ui.all.css">
+
+</head>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/proyectos">SGP Q03</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                {% if user.is_authenticated %}
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Proyectos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'proyectos.views.proyecto_list' %}">ver proyectos</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li><a href="logout/">Logout</a></li>
+
+                <li><a class="name"> usuario: {{ user.username }} </a></li>
+
+                {% endif %}
+            </ul>
+
+        </div>
+    </div>
+    <div>
+    </div>
+</div>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+{% block js %}
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+<script src="{{STATIC_URL}}jquery-ui-1.10.4/development-bundle/ui/jquery-ui.js"></script>
+<script src="{{STATIC_URL}}jquery-ui-1.10.4/development-bundle/ui/jquery.ui.core.js"></script>
+<script src="{{STATIC_URL}}jquery-ui-1.10.4/development-bundle/ui/jquery.ui.widget.js"></script>
+<script src="{{STATIC_URL}}jquery-ui-1.10.4/development-bundle/ui/jquery.ui.datepicker.js"></script>
+<script>
+    $(function () {
+        $("#id_fecha_ini").datepicker({ dateFormat: 'dd/mm/yy' }).val();
+    });
+</script>
+<script>
+    $(function () {
+        $("#id_fecha_fin").datepicker({ dateFormat: 'dd/mm/yy' }).val();
+    });
+</script>
+{% endblock %}
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
