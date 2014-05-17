@@ -1,4 +1,4 @@
-{% extends "base_usuario.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 <div class="row">
@@ -23,6 +23,7 @@
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Atributos</th>
+                        <th>Editar</th>
                         <th>Eliminar</th>
                     </tr>
                     <ul>
@@ -37,6 +38,7 @@
                                         href="{% url 'tipo_item.views.atributo_list' tipo.codigo %}"> configurar </a></li>
                                 </ul>
                             </td>
+                               <td><a href="{% url "editar_tipo" tipo.codigo %}" class="btn btn-primary btn-sm btn-warning" >Editar</a></td>
 
                                <td><a href="{% url "borrar_tipo" tipo.codigo %}" class="btn btn-primary btn-sm btn-warning" >Eliminar</a></td>
 
