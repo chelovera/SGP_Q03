@@ -34,12 +34,14 @@ class RolForm(ModelForm):
     class Meta:
         model = Rol
         exclude = ("fase", "usuario",)
-
+""" Funcion rol_asignar lista todos los usuarios para que se pueda realizar la asignacion de roles a estos"""
 
 @login_required
 def rol_asignar(request, pk, template_name='roles/roles_asignar.html'):
     """
-    pk= es el primary key de la fase
+    @param pk
+    @value es el primary key de la fase
+
     """
     usuarios = Usuario.objects.all().order_by('codigo')       # traigo a todos los usuarios para poder asignarles el rol elegido
     #rolesasignados=RolAsignar.objects.filter(pk=pk)
@@ -63,56 +65,14 @@ def rol_asignar(request, pk, template_name='roles/roles_asignar.html'):
     return render(request, template_name, data)
 
 
-""" con esta funcion asignamos los roles a los usuarios
-@login_required
-def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/rol_form.html'):
-    # pk= primary key de rol
-     #codigo=primary key de usuario
-    cod_usuario = request.user.id       # estoy tratando de traer el id del usuario que esta llamando a esta funcion, es decir el que esta tratando de asignar rol
-    #verificar = Rol.objects.filter(usuario= Usuario.objects.get(id= cod_usuario))
-
-    rol_actual=Rol.objects.get(pk=pk)
-    fase_actual=rol_actual.fase
-    proyecto= fase_actual.proyecto
-    es_lider=proyecto.lider
-    if request.user.id==es_lider  #si el usuario es administrador entonces tiene que poder asignar rol
-
-    data = {}
-    data['object_list'] = verificar
-    data['rol']  = rol               #este es el rol que estamos tratando de asignar
-    tiene_permiso = buscar(cod_usuario, data)
-    if tiene_permiso:
-
-        #verificar = get_list_or_404(RolAsignar, codigo=codigo)           # traigo de la BD los roles asignados a cada usuario
-        #if verificar.rol:
-        rol = Rol.objects.get(pk=pk)
-        usuario = Usuario.objects.get(codigo=codigo)
-        form=RolFormAsignar(request.POST or None)
-        if form.is_valid():
-            asignar = RolAsignar(rol=rol, usuario=usuario, confirmar=request.POST['confirmar'])
-            asignar.save()
-            #return redirect('lista_proyecto')
-            return redirect('/proyectos/fases/roles/asignar/'+str(pk))
-        return render(request, template_name, {'form': form})
-    else:
-        return render(request, 'fases/fase_list_sin_permisos.html', {})"""
-"""
+""" Funcion rol_asignar_usuario_create asignamos los roles a los usuarios elegidos
+    @param pk
+    @value es el primary key de rol
+    @param codigo
+    @value primary key de usuario """
 @login_required
 def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignacion_correcta.html'):
 
-     #pk= primary key de rol
-     #codigo=primary key de usuario
-
-    rol = Rol.objects.get(pk=pk)
-    usuario = Usuario.objects.get(codigo=codigo)
-    r = RolAsignar(usuario=usuario, rol=rol, confirmar=True)      #guardamos en la tabla RolAsignar el numero de usuario y el rol elegido
-    r.save()
-    return render(request, template_name, {})"""
-
-@login_required
-def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignacion_correcta.html'):
-    # pk= primary key de rol
-     #codigo=primary key de usuario
     cod_usuario = request.user.id       #  id del usuario que esta tratando de asignar rol
     rol_actual = Rol.objects.get(pk=pk)
     fase_actual = rol_actual.fase
@@ -132,12 +92,14 @@ def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignac
         return render(request, 'roles/rol_list_sin_permisos.html', data)
 
 
-
+""" Funcion rol_list simplemente se listan los roles correspondientes a la fase que se esta procesando
+    @param pk
+    @value es el primary key de la fase
+ """
 
 @login_required
 def rol_list(request, pk, template_name='roles/rol_list.html'):
-    """ pk= es el primary key de la fase
-    """
+
     roles = Rol.objects.filter(fase=pk)
     data = {}
     data['object_list'] = roles
@@ -145,10 +107,13 @@ def rol_list(request, pk, template_name='roles/rol_list.html'):
     data['fase'] = fase
     return render(request, template_name, data)
 
-
+""" Funcion rol_create sirve para la creacion de un rol, dentro de la fase del proyecto
+    @param pk
+    @value es el primary key de la fase
+ """
 @login_required
 def rol_create(request, pk, template_name='roles/rol_form.html'):
-    """pk= es el primary key de la fase"""
+
     cod_usuario = request.user.id
     proyecto_actual=Fase.objects.get(pk=pk).proyecto
     es_lider=proyecto_actual.lider.codigo+1
@@ -169,13 +134,15 @@ def rol_create(request, pk, template_name='roles/rol_form.html'):
         return render(request, 'roles/rol_sin_permisos_create.html', data)
 
 
-
+""" Funcion rol_update sirve para la editar algunos campos en los roles
+    @param pk
+    @value es el codigo del rol
+ """
 
 @login_required
 def rol_update(request, pk, template_name='roles/rol_form.html'):
-    #pk=es el codigo del rol
+
     rol = get_object_or_404(Rol, pk=pk)
-    #fase = Fase.objects.get(pk=pk)
     form = RolForm(request.POST or None, instance=rol)
     if form.is_valid():
         form.save()
@@ -183,12 +150,14 @@ def rol_update(request, pk, template_name='roles/rol_form.html'):
         return redirect('/proyectos/fases/roles/'+str(fase))         #redirect a listarRoles
     return render(request, template_name, {'form': form})
 
-
+""" Funcion rol_delete sirve para la editar algunos campos en los roles
+    @param pk
+    @value es el codigo del rol  a eliminar
+ """
 
 
 @login_required
 def rol_delete(request, pk, template_name='roles/rol_confirm_delete.html'):
-     #pk=es el codigo del rol a eliminar
     server = get_object_or_404(Rol, pk=pk)
 
     if request.method == 'POST':

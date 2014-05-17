@@ -27,4 +27,5 @@ urlpatterns = patterns('',
                        url(r'^proyectos/fases/', include('fases.urls')),
                        url(r'^proyectos/fases/roles/', include('roles.urls')),
                        url(r'^proyectos/fases/tipo_item/', include('tipo_item.urls')),
+                       #url(r'^proyectos/fases/comite/', include('comite.urls')),
 )

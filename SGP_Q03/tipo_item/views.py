@@ -45,6 +45,12 @@ class AtributoForm(ModelForm):
 
 @login_required
 def tipo_create(request, pk, template_name='tipos/tipo_form.html'):
+    """
+    Funcion tipo_create con la cual creamos tipo de item
+    @param pk
+    @value es el primary key de la fase
+
+    """
     fase=Fase.objects.get(pk=pk)
     form = TipoForm(request.POST or None)
 
@@ -56,6 +62,12 @@ def tipo_create(request, pk, template_name='tipos/tipo_form.html'):
 
 @login_required
 def tipo_list(request, pk, template_name='tipos/tipos_list.html'):
+    """
+    Funcion tipo_list con la cual listamos los tipo de item
+    @param pk
+    @value es el primary key de la fase
+
+    """
     tipos = Tipo_Item.objects.filter(fase=pk).order_by('codigo')
     data = {}
     data['object_list'] = tipos
@@ -71,6 +83,12 @@ def tipo_list(request, pk, template_name='tipos/tipos_list.html'):
 
 @login_required
 def atributo_list(request, pk, template_name='tipos/atributos_list.html'):
+    """
+    Funcion atributo_list con la cual listamos los atributos de cada tipo de item
+    @param pk
+    @value es el primary key del tipo de item
+
+    """
     atributos = Atributo.objects.filter(tipo_item=pk).order_by('codigo')
     data = {}
     data['object_list'] = atributos
@@ -88,6 +106,12 @@ def atributo_list(request, pk, template_name='tipos/atributos_list.html'):
 
 @login_required
 def atributo_create(request, pk, template_name='tipos/atributo_form.html'):
+    """
+    Funcion atributo_create con la cual creamos tipo de atributo
+    @param pk
+    @value es el primary key del tipo de item
+
+    """
     tipo_item = Tipo_Item.objects.get(pk=pk)
     form = AtributoForm(request.POST or None)
 
@@ -99,6 +123,12 @@ def atributo_create(request, pk, template_name='tipos/atributo_form.html'):
 
 @login_required
 def tipo_delete(request, pk, template_name='tipos/tipo_confirm_delete.html'):
+    """
+    Funcion tipo_delete con la cual eliminamos tipo de item
+    @param pk
+    @value es el primary key del tipo de item
+
+    """
     server = get_object_or_404(Tipo_Item, pk=pk)
     fase = get_object_or_404(Fase, pk=server.fase.codigo)
     if request.method == 'POST':
@@ -108,6 +138,12 @@ def tipo_delete(request, pk, template_name='tipos/tipo_confirm_delete.html'):
 
 @login_required
 def atributo_delete(request, pk, template_name='tipos/tipo_confirm_delete.html'):
+    """
+    Funcion atributo_delete con la cual eliminamos tipo de atributo
+    @param pk
+    @value es el primary key del tipo de item
+
+    """
     server = get_object_or_404(Atributo, pk=pk)
     tipo_item = get_object_or_404(Tipo_Item, pk=server.tipo_item.codigo)
     if request.method == 'POST':

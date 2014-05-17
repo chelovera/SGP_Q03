@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>proyectos.views</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="proyectos-module.html">Package&nbsp;proyectos</a> ::
+        Module&nbsp;views
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="proyectos.views-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="proyectos.views-module.html">Module proyectos.views</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: ISO-8859-1</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">""" Sistema de Gesti&#243;n de Proyectos SGP</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">Grupo Q03</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">Ingenier&#237;a de Software II</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring">@author: Mabel Pe&#241;a - Alvaro Rodr&#237;guez</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring">A&#241;o: 2014</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">contrib</tt><tt class="py-op">.</tt><tt class="py-name">auth</tt><tt class="py-op">.</tt><tt class="py-name">decorators</tt> <tt class="py-keyword">import</tt> <tt class="py-name">login_required</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">shortcuts</tt> <tt class="py-keyword">import</tt> <tt class="py-name">render</tt><tt class="py-op">,</tt> <tt class="py-name">redirect</tt><tt class="py-op">,</tt> <tt class="py-name">get_object_or_404</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">django</tt><tt class="py-op">.</tt><tt class="py-name">forms</tt> <tt class="py-keyword">import</tt> <tt class="py-name">ModelForm</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">crispy_forms</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt> <tt class="py-keyword">import</tt> <tt class="py-name">FormHelper</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">crispy_forms</tt><tt class="py-op">.</tt><tt class="py-name">layout</tt> <tt class="py-keyword">import</tt> <tt class="py-name">Submit</tt><tt class="py-op">,</tt> <tt class="py-name">Button</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Module fases.models=fases.models-module.html,Module login.models=login.models-module.html,Module proyectos.models=proyectos.models-module.html,Module roles.models=roles.models-module.html,Module tipo_item.models=tipo_item.models-module.html,Module usuarios.models=usuarios.models-module.html"><a title="fases.models
+login.models
+proyectos.models
+roles.models
+tipo_item.models
+usuarios.models" class="py-name" href="#" onclick="return doclink('link-0', 'models', 'link-0');">models</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class proyectos.models.Proyecto=proyectos.models.Proyecto-class.html"><a title="proyectos.models.Proyecto" class="py-name" href="#" onclick="return doclink('link-1', 'Proyecto', 'link-1');">Proyecto</a></tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-string">""" login/views</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-string">Se controla lo que va a ser enviado al template para ser mostrado</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="ProyectoForm"></a><div id="ProyectoForm-def"><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt> <a class="py-toggle" href="#" id="ProyectoForm-toggle" onclick="return toggle('ProyectoForm');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="proyectos.views.ProyectoForm-class.html">ProyectoForm</a><tt class="py-op">(</tt><tt class="py-base-class">ModelForm</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ProyectoForm-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ProyectoForm-expanded"><a name="ProyectoForm.__init__"></a><div id="ProyectoForm.__init__-def"><a name="L21"></a><tt class="py-lineno">21</tt> <a class="py-toggle" href="#" id="ProyectoForm.__init__-toggle" onclick="return toggle('ProyectoForm.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="proyectos.views.ProyectoForm-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">*</tt><tt class="py-param">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ProyectoForm.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="ProyectoForm.__init__-expanded"><a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-2" class="py-name" targets="Class proyectos.views.ProyectoForm=proyectos.views.ProyectoForm-class.html"><a title="proyectos.views.ProyectoForm" class="py-name" href="#" onclick="return doclink('link-2', 'ProyectoForm', 'link-2');">ProyectoForm</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method fases.views.FaseForm.__init__()=fases.views.FaseForm-class.html#__init__,Method proyectos.views.ProyectoForm.__init__()=proyectos.views.ProyectoForm-class.html#__init__,Method roles.views.RolForm.__init__()=roles.views.RolForm-class.html#__init__,Method tipo_item.views.AtributoForm.__init__()=tipo_item.views.AtributoForm-class.html#__init__,Method tipo_item.views.TipoForm.__init__()=tipo_item.views.TipoForm-class.html#__init__,Method usuarios.views.UsuarioEditForm.__init__()=usuarios.views.UsuarioEditForm-class.html#__init__,Method usuarios.views.UsuarioForm.__init__()=usuarios.views.UsuarioForm-class.html#__init__"><a title="fases.views.FaseForm.__init__
+proyectos.views.ProyectoForm.__init__
+roles.views.RolForm.__init__
+tipo_item.views.AtributoForm.__init__
+tipo_item.views.TipoForm.__init__
+usuarios.views.UsuarioEditForm.__init__
+usuarios.views.UsuarioForm.__init__" class="py-name" href="#" onclick="return doclink('link-3', '__init__', 'link-3');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-op">*</tt><tt class="py-name">args</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">        <tt class="py-comment"># If you pass FormHelper constructor a form instance</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-comment"># It builds a default layout with all its fields</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt> <tt class="py-op">=</tt> <tt class="py-name">FormHelper</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt><tt class="py-op">.</tt><tt class="py-name">help_text_inline</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">        <tt class="py-comment"># You can dynamically adjust your layout</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt><tt class="py-op">.</tt><tt class="py-name">layout</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">Submit</tt><tt class="py-op">(</tt><tt class="py-string">'guardar'</tt><tt class="py-op">,</tt> <tt class="py-string">'guardar'</tt><tt class="py-op">,</tt> <tt class="py-name">css_class</tt><tt class="py-op">=</tt><tt class="py-string">'btn btn-large btn-success pull-left'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">helper</tt><tt class="py-op">.</tt><tt class="py-name">add_input</tt><tt class="py-op">(</tt><tt class="py-name">Button</tt><tt class="py-op">(</tt><tt class="py-string">'cancelar'</tt><tt class="py-op">,</tt> <tt class="py-string">'cancelar'</tt><tt class="py-op">,</tt> <tt class="py-name">css_class</tt><tt class="py-op">=</tt><tt class="py-string">'btn btn-large btn-danger'</tt><tt class="py-op">,</tt> <tt class="py-name">onclick</tt><tt class="py-op">=</tt><tt class="py-string">'window.location.href="/proyectos/"'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"> </tt>
+<a name="ProyectoForm.Meta"></a><div id="ProyectoForm.Meta-def"><a name="L32"></a><tt class="py-lineno">32</tt> <a class="py-toggle" href="#" id="ProyectoForm.Meta-toggle" onclick="return toggle('ProyectoForm.Meta');">-</a><tt class="py-line">    <tt class="py-keyword">class</tt> <a class="py-def-name" href="proyectos.views.ProyectoForm.Meta-class.html">Meta</a><tt class="py-op">:</tt> </tt>
+</div><div id="ProyectoForm.Meta-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="ProyectoForm.Meta-expanded"><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">        <tt id="link-4" class="py-name" targets="Variable fases.views.FaseForm.Meta.model=fases.views.FaseForm.Meta-class.html#model,Variable proyectos.views.ProyectoForm.Meta.model=proyectos.views.ProyectoForm.Meta-class.html#model,Variable roles.views.RolForm.Meta.model=roles.views.RolForm.Meta-class.html#model,Variable tipo_item.views.AtributoForm.Meta.model=tipo_item.views.AtributoForm.Meta-class.html#model,Variable tipo_item.views.TipoForm.Meta.model=tipo_item.views.TipoForm.Meta-class.html#model,Variable usuarios.views.UsuarioEditForm.Meta.model=usuarios.views.UsuarioEditForm.Meta-class.html#model,Variable usuarios.views.UsuarioForm.Meta.model=usuarios.views.UsuarioForm.Meta-class.html#model"><a title="fases.views.FaseForm.Meta.model
+proyectos.views.ProyectoForm.Meta.model
+roles.views.RolForm.Meta.model
+tipo_item.views.AtributoForm.Meta.model
+tipo_item.views.TipoForm.Meta.model
+usuarios.views.UsuarioEditForm.Meta.model
+usuarios.views.UsuarioForm.Meta.model" class="py-name" href="#" onclick="return doclink('link-4', 'model', 'link-4');">model</a></tt> <tt class="py-op">=</tt> <tt id="link-5" class="py-name"><a title="proyectos.models.Proyecto" class="py-name" href="#" onclick="return doclink('link-5', 'Proyecto', 'link-1');">Proyecto</a></tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">        <tt id="link-6" class="py-name" targets="Variable fases.views.FaseForm.Meta.fields=fases.views.FaseForm.Meta-class.html#fields,Variable proyectos.views.ProyectoForm.Meta.fields=proyectos.views.ProyectoForm.Meta-class.html#fields,Variable usuarios.views.UsuarioEditForm.Meta.fields=usuarios.views.UsuarioEditForm.Meta-class.html#fields,Variable usuarios.views.UsuarioForm.Meta.fields=usuarios.views.UsuarioForm.Meta-class.html#fields"><a title="fases.views.FaseForm.Meta.fields
+proyectos.views.ProyectoForm.Meta.fields
+usuarios.views.UsuarioEditForm.Meta.fields
+usuarios.views.UsuarioForm.Meta.fields" class="py-name" href="#" onclick="return doclink('link-6', 'fields', 'link-6');">fields</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">            <tt class="py-string">"nombre"</tt><tt class="py-op">,</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">            <tt class="py-string">"descripcion"</tt><tt class="py-op">,</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">            <tt class="py-string">"fecha_ini"</tt><tt class="py-op">,</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">            <tt class="py-string">"fecha_fin"</tt><tt class="py-op">,</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">            <tt class="py-string">"costo_temporal"</tt><tt class="py-op">,</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">            <tt class="py-string">"costo_monetario"</tt><tt class="py-op">,</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">            <tt class="py-string">"lider"</tt><tt class="py-op">,</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-op">)</tt> </tt>
+</div></div><a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-string">""" proyecto_list es la funcion que llama al template proyecto_list y se encarga de listar</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"><tt class="py-string">todos los proyectos existentes"""</tt> </tt>
+<a name="proyecto_list"></a><div id="proyecto_list-def"><a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">login_required</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt> <a class="py-toggle" href="#" id="proyecto_list-toggle" onclick="return toggle('proyecto_list');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="proyectos.views-module.html#proyecto_list">proyecto_list</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">template_name</tt><tt class="py-op">=</tt><tt class="py-string">'proyectos/proyecto_list.html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="proyecto_list-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="proyecto_list-expanded"><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">    <tt id="link-7" class="py-name" targets="Package proyectos=proyectos-module.html"><a title="proyectos" class="py-name" href="#" onclick="return doclink('link-7', 'proyectos', 'link-7');">proyectos</a></tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name"><a title="proyectos.models.Proyecto" class="py-name" href="#" onclick="return doclink('link-8', 'Proyecto', 'link-1');">Proyecto</a></tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method fases.models.Fase.objects()=fases.models.Fase-class.html#objects,Method proyectos.models.Proyecto.objects()=proyectos.models.Proyecto-class.html#objects,Method roles.models.Rol.objects()=roles.models.Rol-class.html#objects,Method roles.models.RolAsignar.objects()=roles.models.RolAsignar-class.html#objects,Method tipo_item.models.Atributo.objects()=tipo_item.models.Atributo-class.html#objects,Method tipo_item.models.Tipo_Item.objects()=tipo_item.models.Tipo_Item-class.html#objects,Method usuarios.models.Usuario.objects()=usuarios.models.Usuario-class.html#objects"><a title="fases.models.Fase.objects
+proyectos.models.Proyecto.objects
+roles.models.Rol.objects
+roles.models.RolAsignar.objects
+tipo_item.models.Atributo.objects
+tipo_item.models.Tipo_Item.objects
+usuarios.models.Usuario.objects" class="py-name" href="#" onclick="return doclink('link-9', 'objects', 'link-9');">objects</a></tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">order_by</tt><tt class="py-op">(</tt><tt class="py-string">'codigo'</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">    <tt class="py-name">data</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">    <tt class="py-name">data</tt><tt class="py-op">[</tt><tt class="py-string">'object_list'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-10" class="py-name"><a title="proyectos" class="py-name" href="#" onclick="return doclink('link-10', 'proyectos', 'link-7');">proyectos</a></tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">template_name</tt><tt class="py-op">,</tt> <tt class="py-name">data</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"> </tt>
+<a name="proyecto_create"></a><div id="proyecto_create-def"><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">login_required</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt> <a class="py-toggle" href="#" id="proyecto_create-toggle" onclick="return toggle('proyecto_create');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="proyectos.views-module.html#proyecto_create">proyecto_create</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">template_name</tt><tt class="py-op">=</tt><tt class="py-string">'proyectos/proyecto_form.html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="proyecto_create-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="proyecto_create-expanded"><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">    <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="proyectos.views.ProyectoForm" class="py-name" href="#" onclick="return doclink('link-11', 'ProyectoForm', 'link-2');">ProyectoForm</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt> <tt class="py-keyword">or</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">is_valid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">        <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">save</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">redirect</tt><tt class="py-op">(</tt><tt class="py-string">'lista_proyecto'</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">template_name</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'form'</tt><tt class="py-op">:</tt> <tt class="py-name">form</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"> </tt>
+<a name="proyecto_update"></a><div id="proyecto_update-def"><a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">login_required</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt> <a class="py-toggle" href="#" id="proyecto_update-toggle" onclick="return toggle('proyecto_update');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="proyectos.views-module.html#proyecto_update">proyecto_update</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">pk</tt><tt class="py-op">,</tt> <tt class="py-param">template_name</tt><tt class="py-op">=</tt><tt class="py-string">'proyectos/proyecto_form.html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="proyecto_update-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="proyecto_update-expanded"><a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">    <tt id="link-12" class="py-name" targets="Variable fases.models.Fase.proyecto=fases.models.Fase-class.html#proyecto,Variable proyectos.models.Proyecto.proyecto=proyectos.models.Proyecto-class.html#proyecto"><a title="fases.models.Fase.proyecto
+proyectos.models.Proyecto.proyecto" class="py-name" href="#" onclick="return doclink('link-12', 'proyecto', 'link-12');">proyecto</a></tt> <tt class="py-op">=</tt> <tt class="py-name">get_object_or_404</tt><tt class="py-op">(</tt><tt id="link-13" class="py-name"><a title="proyectos.models.Proyecto" class="py-name" href="#" onclick="return doclink('link-13', 'Proyecto', 'link-1');">Proyecto</a></tt><tt class="py-op">,</tt> <tt class="py-name">pk</tt><tt class="py-op">=</tt><tt class="py-name">pk</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">    <tt class="py-name">form</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="proyectos.views.ProyectoForm" class="py-name" href="#" onclick="return doclink('link-14', 'ProyectoForm', 'link-2');">ProyectoForm</a></tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">POST</tt> <tt class="py-keyword">or</tt> <tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-name">instance</tt><tt class="py-op">=</tt><tt id="link-15" class="py-name"><a title="fases.models.Fase.proyecto
+proyectos.models.Proyecto.proyecto" class="py-name" href="#" onclick="return doclink('link-15', 'proyecto', 'link-12');">proyecto</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">is_valid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">        <tt class="py-name">form</tt><tt class="py-op">.</tt><tt class="py-name">save</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">redirect</tt><tt class="py-op">(</tt><tt class="py-string">'lista_proyecto'</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">template_name</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'form'</tt><tt class="py-op">:</tt> <tt class="py-name">form</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"> </tt>
+<a name="proyecto_delete"></a><div id="proyecto_delete-def"><a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">login_required</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt> <a class="py-toggle" href="#" id="proyecto_delete-toggle" onclick="return toggle('proyecto_delete');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="proyectos.views-module.html#proyecto_delete">proyecto_delete</a><tt class="py-op">(</tt><tt class="py-param">request</tt><tt class="py-op">,</tt> <tt class="py-param">pk</tt><tt class="py-op">,</tt> <tt class="py-param">template_name</tt><tt class="py-op">=</tt><tt class="py-string">'proyectos/proyecto_confirm_delete.html'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="proyecto_delete-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="proyecto_delete-expanded"><a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line">    <tt class="py-name">server</tt> <tt class="py-op">=</tt> <tt class="py-name">get_object_or_404</tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="proyectos.models.Proyecto" class="py-name" href="#" onclick="return doclink('link-16', 'Proyecto', 'link-1');">Proyecto</a></tt><tt class="py-op">,</tt> <tt class="py-name">pk</tt><tt class="py-op">=</tt><tt class="py-name">pk</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">request</tt><tt class="py-op">.</tt><tt class="py-name">method</tt><tt class="py-op">==</tt><tt class="py-string">'POST'</tt><tt class="py-op">:</tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">        <tt class="py-name">server</tt><tt class="py-op">.</tt><tt class="py-name">delete</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">redirect</tt><tt class="py-op">(</tt><tt class="py-string">'lista_proyecto'</tt><tt class="py-op">)</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">render</tt><tt class="py-op">(</tt><tt class="py-name">request</tt><tt class="py-op">,</tt> <tt class="py-name">template_name</tt><tt class="py-op">,</tt> <tt class="py-op">{</tt><tt class="py-string">'object'</tt><tt class="py-op">:</tt> <tt class="py-name">server</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat May 17 06:35:51 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
