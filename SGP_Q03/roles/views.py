@@ -6,11 +6,11 @@ Ingeniería de Software II
 Año: 2014
 """
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Button
-from django.views.generic import TemplateView
+
 from usuarios.models import Usuario
 from fases.models import Fase
 from .models import Rol, RolAsignar
@@ -36,35 +36,50 @@ class RolForm(ModelForm):
         exclude = ("fase", "usuario",)
 
 
-""" Con este metodo listamos todos los usuarios para que se les pueda asignar roles"""
 @login_required
 def rol_asignar(request, pk, template_name='roles/roles_asignar.html'):
     """
-    pk= es el primary key del rol
+    pk= es el primary key de la fase
     """
     usuarios = Usuario.objects.all().order_by('codigo')       # traigo a todos los usuarios para poder asignarles el rol elegido
+    #rolesasignados=RolAsignar.objects.filter(pk=pk)
+    rolesasignados = RolAsignar.objects.filter(pk=pk)
+    lista_rolesasignados=[]
+    for rol in rolesasignados:
+        lista_rolesasignados.append(rol.usuario)        # guardamos los usuarios con el rol numero pk que recibimos (el que queremos asignar)
+    lista_no_miembros = []
+    for usuario in usuarios:
+        if not usuario in lista_rolesasignados:
+            lista_no_miembros.append(usuario)
+    print(rolesasignados)
+    print(lista_rolesasignados)
+    print(lista_no_miembros)
     data = {}
-    data['object_list'] = usuarios
+    data['object_list'] = lista_no_miembros
     fase = Fase.objects.all()
     data['fase'] = fase
     rol = Rol.objects.get(pk=pk)
     data['rol'] = rol
-    #proyecto = fase.proyecto.nombre
-    #data['proyecto'] = proyecto
     return render(request, template_name, data)
 
 
 """ con esta funcion asignamos los roles a los usuarios
 @login_required
 def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/rol_form.html'):
-
+    # pk= primary key de rol
+     #codigo=primary key de usuario
     cod_usuario = request.user.id       # estoy tratando de traer el id del usuario que esta llamando a esta funcion, es decir el que esta tratando de asignar rol
-    verificar = RolAsignar.objects.all()
-    rol = Rol.objects.get(pk=pk)
-    #verificar = get_list_or_404(RolAsignar, codigo=codigo)
+    #verificar = Rol.objects.filter(usuario= Usuario.objects.get(id= cod_usuario))
+
+    rol_actual=Rol.objects.get(pk=pk)
+    fase_actual=rol_actual.fase
+    proyecto= fase_actual.proyecto
+    es_lider=proyecto.lider
+    if request.user.id==es_lider  #si el usuario es administrador entonces tiene que poder asignar rol
+
     data = {}
     data['object_list'] = verificar
-    data['rol'] = rol               #este es el rol que estamos tratando de asignar
+    data['rol']  = rol               #este es el rol que estamos tratando de asignar
     tiene_permiso = buscar(cod_usuario, data)
     if tiene_permiso:
 
@@ -81,39 +96,41 @@ def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/rol_for
         return render(request, template_name, {'form': form})
     else:
         return render(request, 'fases/fase_list_sin_permisos.html', {})"""
-
+"""
 @login_required
 def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignacion_correcta.html'):
-    """
-     pk= primary key de rol
-     codigo=primary key de usuario
-    """
+
+     #pk= primary key de rol
+     #codigo=primary key de usuario
+
     rol = Rol.objects.get(pk=pk)
     usuario = Usuario.objects.get(codigo=codigo)
     r = RolAsignar(usuario=usuario, rol=rol, confirmar=True)      #guardamos en la tabla RolAsignar el numero de usuario y el rol elegido
     r.save()
-    return render(request, template_name, {})
+    return render(request, template_name, {})"""
 
+@login_required
+def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignacion_correcta.html'):
+    # pk= primary key de rol
+     #codigo=primary key de usuario
+    cod_usuario = request.user.id       #  id del usuario que esta tratando de asignar rol
+    rol_actual = Rol.objects.get(pk=pk)
+    fase_actual = rol_actual.fase
+    proyecto = fase_actual.proyecto
+    es_lider = proyecto.lider.codigo+1          #porque el usuario admin no se lista en la tabla user_user
+    print(es_lider)
+    if cod_usuario == es_lider:  #si el usuario es administrador entonces tiene que poder asignar rol
+        usuario = Usuario.objects.get(codigo=codigo)
+        r = RolAsignar(usuario=usuario, rol=rol_actual, confirmar=True)      #guardamos en la tabla RolAsignar el numero de usuario y el rol elegido
+        r.save()# aca guardar que es miembro
+        data={}
+        data['rol']=rol_actual
+        return render(request, template_name, data)
+    else:
+        data={}
+        data['rol']=rol_actual
+        return render(request, 'roles/rol_list_sin_permisos.html', data)
 
-"""
-
-def buscar (cod_usuario, object_list):
-    for buscando in object_list['object_list'].usuario:
-        if cod_usuario == buscando:                 #si ingresa en este if quiere decir que hemos encontrado al usuario en la tabla de roles asignados
-           # if object_list['object_list'].rol==
-            return True
-    return False"""
-
-""" def atributo_create(request, pk, template_name='tipos/atributo_form.html'):
-    tipo_item = Tipo_Item.objects.get(pk=pk)
-    form = AtributoForm(request.POST or None)
-
-    if form.is_valid():
-        atributo = Atributo(nombre=request.POST['nombre'], tipo=request.POST['tipo'], tipo_item=tipo_item,)
-        atributo.save()
-        return redirect('/proyectos/fases/tipo_item/atributos/'+pk)
-    return render(request, template_name, {'form': form})
-"""
 
 
 
@@ -131,77 +148,54 @@ def rol_list(request, pk, template_name='roles/rol_list.html'):
 
 @login_required
 def rol_create(request, pk, template_name='roles/rol_form.html'):
-    """pk= es el primary key del  """
-    request.POST = request.POST.copy()
-    request.POST.__setitem__('fase', pk)
-    fase = Fase.objects.get(pk=pk)
-    form = RolForm(request.POST or None)
-    #proyecto = Proyecto.objects.get(pk=pk) #traigo de la BD el proyecto, para utilizar el campo 'lider'
-    #usuario = Usuario.objects.get(pk=proyecto.lider.pk) # traigo los datos del lider del proyecto
-    #request_user = Usuario.objects.get(nombre=request.user.username)  # traigo los datos del usuario actual
-    #if request_user.pk == usuario.pk:                                   #comparo si el usuario actual es realmente el lider del proyecto
-    if form.is_valid():
-        f = Rol(nombre=request.POST['nombre'], fase=fase,)
-        f.save()
-        return redirect('/proyectos/fases/roles/'+str(fase.codigo))
-    return render(request, template_name, {'form': form})
-    #else:
-     #   return render(request, 'roles/rol_list_sin_permisos.html', {})
+    """pk= es el primary key de la fase"""
+    cod_usuario = request.user.id
+    proyecto_actual=Fase.objects.get(pk=pk).proyecto
+    es_lider=proyecto_actual.lider.codigo+1
+    if cod_usuario == es_lider:
+        request.POST = request.POST.copy()
+        request.POST.__setitem__('fase', pk)
+        fase = Fase.objects.get(pk=pk)
+        form = RolForm(request.POST or None)
+        if form.is_valid():
+            f = Rol(nombre=request.POST['nombre'], fase=fase,)
+            f.save()
+            return redirect('/proyectos/fases/roles/'+str(fase.codigo))
+        return render(request, template_name, {'form': form})
+    else:
+        data = {}
+        fase = Fase.objects.get(pk=pk)
+        data['fase'] = fase
+        return render(request, 'roles/rol_sin_permisos_create.html', data)
 
 
-"""
-@login_required
-def fase_create(request,pk, template_name='fases/fase_form.html'):
 
-    request.POST=request.POST.copy()
-    request.POST.__setitem__('proyecto',pk)
-    proyecto=Proyecto.objects.get(pk=pk)
-    form = FaseForm(request.POST or None)
-
-    if form.is_valid():
-        #form.save()
-        f = Fase(nombre=request.POST['nombre'], descripcion=request.POST['descripcion'],proyecto=proyecto,)
-        f.save()
-        return redirect('lista_proyecto')
-    return render(request, template_name, {'form':form})
-"""
 
 @login_required
 def rol_update(request, pk, template_name='roles/rol_form.html'):
+    #pk=es el codigo del rol
     rol = get_object_or_404(Rol, pk=pk)
     #fase = Fase.objects.get(pk=pk)
     form = RolForm(request.POST or None, instance=rol)
     if form.is_valid():
         form.save()
-        return redirect('lista_proyecto')           # falta redirigir a la parte de '/proyectos/fases/roles/'+str(....)
+        fase = Rol.objects.get(pk=pk).fase.codigo
+        return redirect('/proyectos/fases/roles/'+str(fase))         #redirect a listarRoles
     return render(request, template_name, {'form': form})
 
 
-""" @login_required
-def fase_update(request, pk, template_name='fases/fase_form.html'):
 
-    fase = get_object_or_404(Fase, pk=pk)
-    form = FaseForm(request.POST or None, instance=fase)
-    if form.is_valid():
-        form.save()
-        return redirect('lista_proyecto')
-    return render(request, template_name, {'form':form})"""
 
 @login_required
 def rol_delete(request, pk, template_name='roles/rol_confirm_delete.html'):
+     #pk=es el codigo del rol a eliminar
     server = get_object_or_404(Rol, pk=pk)
-    #fase = Fase.objects.get(pk=pk)
+
     if request.method == 'POST':
+        fase = Rol.objects.get(pk=pk).fase.codigo  #quitamos el codigo de la fase
         server.delete()
-        return redirect('lista_proyecto')  # cambiar aca cuando sepa pasar el parametro necesario
+        return redirect('/proyectos/fases/roles/'+str(fase))  #redirect a listarRoles
     return render(request, template_name, {'object': server})
 
 
-""" @login_required
-def fase_delete(request, pk, template_name='fases/fase_confirm_delete.html'):
-    server = get_object_or_404(Fase, pk=pk)
-    if request.method=='POST':
-        server.delete()
-        return redirect('lista_fase')
-    return render(request, template_name, {'object': server})"""
 

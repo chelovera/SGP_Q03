@@ -2,223 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04522db-fd6f-4e5d-b469-0b69b9ce6315" name="Default" comment="abm roles, documentacion completita, ya no explota proyecto cuando accede uno que no es lider!!!!">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/api-objects.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/class-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/crarr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/epydoc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/epydoc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.admin-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.models-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.models.Fase-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.tests-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.urls-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.views-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.views.FaseForm-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/fases.views.FaseForm.Meta-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/frames.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/help.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/identifier-index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/module-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/redirect.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/toc-everything.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/toc-fases-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/toc-fases.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/toc-fases.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/toc-fases.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/toc-fases.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/toc-fases.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/FASES_DOC/toc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/api-objects.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/class-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/crarr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/epydoc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/epydoc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/frames.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/help.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/identifier-index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.admin-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.models-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.tests-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.tests.TestLogin-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.urls-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/login.views-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/module-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/redirect.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/toc-everything.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/toc-login-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/toc-login.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/toc-login.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/toc-login.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/toc-login.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/toc-login.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/LOGIN_DOC/toc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/api-objects.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/class-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/crarr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/epydoc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/epydoc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/frames.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/help.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/identifier-index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/module-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.admin-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.models-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.models.Proyecto-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.models.Proyecto.Meta-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.tests-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.urls-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.views-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.views.ProyectoForm-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/proyectos.views.ProyectoForm.Meta-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/redirect.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/toc-everything.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/toc-proyectos-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/toc-proyectos.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/toc-proyectos.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/toc-proyectos.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/toc-proyectos.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/toc-proyectos.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/PROYECTOS_DOC/toc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/api-objects.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/class-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/crarr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/epydoc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/epydoc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/frames.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/help.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/identifier-index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/module-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/redirect.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.admin-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.models-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.models.Rol-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.tests-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.tests.CustomUserTests-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.urls-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.views-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.views.RolForm-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/roles.views.RolForm.Meta-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/toc-everything.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/toc-roles-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/toc-roles.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/toc-roles.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/toc-roles.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/toc-roles.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/toc-roles.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/ROLES_DOC/toc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/SGP_Q03-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/SGP_Q03-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/SGP_Q03.settings-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/SGP_Q03.settings-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/SGP_Q03.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/SGP_Q03.urls-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/SGP_Q03.wsgi-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/SGP_Q03.wsgi-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/api-objects.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/crarr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/epydoc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/epydoc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/frames.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/help.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/identifier-index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/module-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/redirect.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/toc-SGP_Q03-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/toc-SGP_Q03.settings-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/toc-SGP_Q03.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/toc-SGP_Q03.wsgi-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/toc-everything.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/SGP_Q03_DOC/toc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/api-objects.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/class-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/crarr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/django.contrib.auth.models.User.Meta-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/epydoc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/epydoc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/frames.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/help.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/identifier-index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/module-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/redirect.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/toc-everything.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/toc-usuarios-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/toc-usuarios.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/toc-usuarios.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/toc-usuarios.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/toc-usuarios.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/toc-usuarios.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/toc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.admin-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.admin-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.models-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.models-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.models.Usuario-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.tests-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.tests-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.urls-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.urls-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.views-module.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.views-pysrc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.views.UsuarioEditForm-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.views.UsuarioEditForm.Meta-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.views.UsuarioForm-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/documentacion/USUARIOS_DOC/usuarios.views.UsuarioForm.Meta-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/templates/roles/asignar_permisos.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/SGP_Q03/templates/roles/hol.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/roles/asignacion_correcta.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/roles/asignacion_correcta.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/tipos/atributo_confirm_delete.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/tipos/atributo_confirm_delete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/tipos/atributo_form.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/tipos/atributo_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/tipos/atributos_list.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/tipos/atributos_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/base.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/fases/fase_confirm_delete.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/fases/fase_confirm_delete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/fases/fase_form.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/fases/fase_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/fases/fase_list.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/fases/fase_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/fases/fase_list_sin_permisos.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/fases/fase_list_sin_permisos.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/roles/models.py" afterPath="$PROJECT_DIR$/SGP_Q03/roles/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_confirm_delete.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_confirm_delete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_list.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/roles/rol_confirm_delete.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/roles/rol_confirm_delete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/roles/rol_form.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/roles/rol_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/roles/rol_list.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/roles/rol_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/roles/rol_list_sin_permisos.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/roles/rol_list_sin_permisos.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/roles/roles_asignar.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/roles/roles_asignar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/tipos/tipo_confirm_delete.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/tipos/tipo_confirm_delete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/tipos/tipo_form.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/tipos/tipo_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/templates/tipos/tipos_list.html" afterPath="$PROJECT_DIR$/SGP_Q03/templates/tipos/tipos_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/fases/views.py" afterPath="$PROJECT_DIR$/SGP_Q03/fases/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SGP_Q03/roles/views.py" afterPath="$PROJECT_DIR$/SGP_Q03/roles/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SGP_Q03.iws" />
@@ -740,6 +532,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -761,9 +556,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -872,7 +664,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.260574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26435044" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38694268" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -881,12 +673,12 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1" y="401" width="1160" height="490" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32643312" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32643312" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56369424" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -906,9 +698,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42987806" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1073,170 +865,122 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/search_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
+        <state line="11" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/comite.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/usuarios/usuario_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="53" selection-start="1385" selection-end="1385" vertical-scroll-proportion="1.7647059" vertical-offset="0" max-vertical-offset="1155">
-          <folding />
-        </state>
+        <state line="42" column="53" selection-start="1385" selection-end="1385" vertical-scroll-proportion="1.7647059" vertical-offset="0" max-vertical-offset="1155" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/usuarios/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="24" selection-start="3598" selection-end="3598" vertical-scroll-proportion="3.5786803" vertical-offset="0" max-vertical-offset="1605">
-          <folding />
-        </state>
+        <state line="102" column="24" selection-start="3598" selection-end="3598" vertical-scroll-proportion="3.5786803" vertical-offset="0" max-vertical-offset="1605" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/fases/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="51" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.7791878" vertical-offset="458" max-vertical-offset="1755">
-          <folding />
-        </state>
+        <state line="59" column="51" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.7791878" vertical-offset="458" max-vertical-offset="1755" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/roles/rol_list_sin_permisos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/proyectos/proyecto_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/roles/roles_asignar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1005">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1005" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/roles/rol_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/roles/rol_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="370">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="370" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/roles/rol_confirm_delete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/roles/asignacion_correcta.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="141" selection-end="141" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="960">
-          <folding />
-        </state>
+        <state line="9" column="9" selection-start="141" selection-end="141" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="960" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/tipos/atributo_confirm_delete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/tipos/atributo_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/tipos/atributos_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="840">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="840" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/tipos/tipo_confirm_delete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/tipos/tipo_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/tipos/tipos_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="54" selection-end="54" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="900">
-          <folding />
-        </state>
+        <state line="2" column="19" selection-start="54" selection-end="54" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="900" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/fases/fase_list_sin_permisos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="900">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="900" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/fases/fase_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/fases/fase_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/fases/fase_confirm_delete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="264" selection-end="264" vertical-scroll-proportion="0.2837838" vertical-offset="0" max-vertical-offset="370">
-          <folding />
-        </state>
+        <state line="7" column="14" selection-start="264" selection-end="264" vertical-scroll-proportion="0.2837838" vertical-offset="0" max-vertical-offset="370" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base_usuario.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-1.7567568" vertical-offset="1100" max-vertical-offset="1470">
-          <folding />
-        </state>
+        <state line="30" column="0" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-1.7567568" vertical-offset="1100" max-vertical-offset="1470" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SGP_Q03/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="0" selection-start="3108" selection-end="3108" vertical-scroll-proportion="2.9189188" vertical-offset="405" max-vertical-offset="1575">
-          <folding />
-        </state>
+        <state line="99" column="0" selection-start="3108" selection-end="3108" vertical-scroll-proportion="2.9189188" vertical-offset="405" max-vertical-offset="1575" />
       </provider>
     </entry>
   </component>

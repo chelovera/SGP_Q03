@@ -63,19 +63,19 @@ class Rol(models.Model):
     #usuario=models.ForeignKey(Usuario, related_name='usuario_rol')      #!!!
     fase = models.ForeignKey(Fase, related_name='fase')
     #usuario=models.ManyToManyField(Usuario, related_name='usuario', blank=True, null=True)
-    crear_tipo_item = models.NullBooleanField(null=True, blank=True)
-    editar_tipo_item = models.NullBooleanField(null=True, blank=True)
-    eliminar_tipo_item = models.NullBooleanField(null=True, blank=True)
-    crear_linea_base = models.NullBooleanField(null=True, blank=True)
-    abrir_linea_base = models.NullBooleanField(null=True, blank=True)
-    crear_item = models.NullBooleanField(null=True, blank=True)
-    editar_item=models.NullBooleanField(null=True, blank=True)
-    eliminar_item=models.NullBooleanField(null=True, blank=True)
-    aprobar=models.NullBooleanField(null=True, blank=True)
-    revivir=models.NullBooleanField(null=True, blank=True)
-    reversionar=models.NullBooleanField(null=True, blank=True)
-    asignar_padre=models.NullBooleanField(null=True, blank=True)
-    asignar_antecesor=models.NullBooleanField(null=True, blank=True)
+    crear_tipo_item = models.BooleanField(default=False)
+    editar_tipo_item = models.BooleanField(default=False)
+    eliminar_tipo_item = models.BooleanField(default=False)
+    crear_linea_base = models.BooleanField(default=False)
+    abrir_linea_base = models.BooleanField(default=False)
+    crear_item = models.BooleanField(default=False)
+    editar_item=models.BooleanField(default=False)
+    eliminar_item=models.BooleanField(default=False)
+    aprobar=models.BooleanField(default=False)
+    revivir=models.BooleanField(default=False)
+    reversionar=models.BooleanField(default=False)
+    asignar_padre=models.BooleanField(default=False)
+    asignar_antecesor=models.BooleanField(default=False)
     def __unicode__(self):
         return self.nombre
 
@@ -91,4 +91,4 @@ class RolAsignar (models.Model):
     confirmar = models.BooleanField(max_length=50)
 
     def __unicode__(self):
-        return self.codigo
+        return self.usuario.nombre + self.rol.nombre

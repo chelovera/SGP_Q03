@@ -47,13 +47,14 @@ class FaseForm(ModelForm):
 
 @login_required
 def fase_list(request, pk, template_name='fases/fase_list.html'):
+    #pk= es el primary key del proyecto
     fases = Fase.objects.filter(proyecto=pk).order_by('codigo')
     data = {}
     data['object_list'] = fases
     #arreglo temporal
     #recuperamos el proyecto, ahi usamos el lider para que pueda ver las opciones de configurar fases y demas
     proyecto = Proyecto.objects.get(pk=pk)
-    usuario = Usuario.objects.get(pk=proyecto.lider.pk)
+    usuario = Usuario.objects.get(pk=proyecto.lider.pk) #este es el usuario lider
     request_user = Usuario.objects.get(username=request.user.username)
     data['proyecto'] = proyecto
     if request_user.pk == usuario.pk:
@@ -64,7 +65,7 @@ def fase_list(request, pk, template_name='fases/fase_list.html'):
 
 @login_required
 def fase_create(request, pk, template_name='fases/fase_form.html'):
-   
+   #pk= es el primary key del proyecto
     request.POST = request.POST.copy()
     request.POST.__setitem__('proyecto', pk)
     proyecto = Proyecto.objects.get(pk=pk)
@@ -80,7 +81,8 @@ def fase_create(request, pk, template_name='fases/fase_form.html'):
 
 @login_required
 def fase_update(request, pk, template_name='fases/fase_form.html'):
-   
+
+
     fase = get_object_or_404(Fase, pk=pk)
     form = FaseForm(request.POST or None, instance=fase)
     if form.is_valid():
