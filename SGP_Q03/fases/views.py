@@ -8,7 +8,7 @@ from crispy_forms.layout import Submit, Button, Hidden
 from .models import Fase
 from usuarios.models import Usuario
 from proyectos.models import Proyecto
-
+from roles.models import RolAsignar
 
 class FaseForm(ModelForm):
     def __init__(self, *args, **kwargs):
@@ -46,6 +46,22 @@ class FaseForm(ModelForm):
 
 
 @login_required
+def es_miembro(usu, proyectito):
+    """
+     se devuelve true si es miembro del proyecto
+    """
+    todo_rol_asignar = RolAsignar.objects.filter(usuario=usu.id-1)
+    lista_de_proyectos_del_usuario = []
+    for rol_a in todo_rol_asignar:
+        lista_de_proyectos_del_usuario.append(rol_a.proyecto)
+    for verificar in lista_de_proyectos_del_usuario:
+        if verificar.codigo == proyectito.codigo:         #entonces es miembro del proyecto
+            return True
+        return False
+
+
+"""
+@login_required
 def fase_list(request, pk, template_name='fases/fase_list.html'):
     #pk= es el primary key del proyecto
     fases = Fase.objects.filter(proyecto=pk).order_by('codigo')
@@ -54,10 +70,80 @@ def fase_list(request, pk, template_name='fases/fase_list.html'):
     #arreglo temporal
     #recuperamos el proyecto, ahi usamos el lider para que pueda ver las opciones de configurar fases y demas
     proyecto = Proyecto.objects.get(pk=pk)
+    usuario_actual = request.user
+    print "request-user"
+    print usuario_actual
+    #ver_miembro = miembro(usuario_actual, proyecto)
+
+    usuario = Usuario.objects.get(pk=proyecto.lider.pk) #este es el usuario lider
+    print "usuario-lider"
+    print usuario
+    request_user = Usuario.objects.get(username=request.user.username)
+    print "request-user-2"
+    print request_user
+    data['proyecto'] = proyecto
+
+    #aca empieza------------------
+    todo_rol_asignar = RolAsignar.objects.filter(usuario=usuario_actual.id-1)
+    print "todos los roles"
+    print todo_rol_asignar
+    print "usuario_actual_id"
+    print usuario_actual.id
+    lista_de_proyectos_del_usuario = []
+    for rol_a in todo_rol_asignar:
+        lista_de_proyectos_del_usuario.append(rol_a.proyecto)
+    print "lista_de_proyectos"
+    print lista_de_proyectos_del_usuario
+    for verificar in lista_de_proyectos_del_usuario:
+        print  "verificar! y proyecto.codigo"
+        print verificar.codigo, proyecto.codigo
+        if verificar.codigo == proyecto.codigo:
+            miembro = True
+            break
+        miembro = False
+    #aca termina------------------
+    #if request_user.pk == usuario.pk:
+    print "miembro"
+    print miembro
+    print "request_user=="
+    print request_user.pk == usuario.pk
+    if miembro is True or request_user.pk == usuario.pk:
+        return render(request, template_name, data)
+    else:
+        return render(request, 'fases/fase_list_sin_permisos.html', {})
+"""
+
+@login_required
+def fase_list(request, pk, template_name='fases/fase_list.html'):
+    #pk= es el primary key del proyecto, YA ESTA
+    miembro=False
+    fases = Fase.objects.filter(proyecto=pk).order_by('codigo')
+    data = {}
+    data['object_list'] = fases
+    #arreglo temporal
+    #recuperamos el proyecto, ahi usamos el lider para que pueda ver las opciones de configurar fases y demas
+    proyecto = Proyecto.objects.get(pk=pk)
+    usuario_actual = request.user
+
+    #ver_miembro = es_miembro(usuario_actual, proyecto)
+
     usuario = Usuario.objects.get(pk=proyecto.lider.pk) #este es el usuario lider
     request_user = Usuario.objects.get(username=request.user.username)
     data['proyecto'] = proyecto
-    if request_user.pk == usuario.pk:
+
+    #aca empieza------------------
+    todo_rol_asignar = RolAsignar.objects.filter(usuario=usuario_actual.id-1)#esto por el tema que user_admin tiene id=1 y no esta en esa tabla
+    lista_de_proyectos_del_usuario = []
+    for rol_a in todo_rol_asignar:
+        lista_de_proyectos_del_usuario.append(rol_a.proyecto)
+    for verificar in lista_de_proyectos_del_usuario:
+        if verificar.codigo == proyecto.codigo:
+            miembro = True
+            break
+        miembro = False
+    #aca termina------------------
+    #if request_user.pk == usuario.pk:
+    if miembro is True or request_user.pk == usuario.pk:
         return render(request, template_name, data)
     else:
         return render(request, 'fases/fase_list_sin_permisos.html', {})

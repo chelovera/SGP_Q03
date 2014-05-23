@@ -53,9 +53,9 @@ def rol_asignar(request, pk, template_name='roles/roles_asignar.html'):
     for usuario in usuarios:
         if not usuario in lista_rolesasignados:
             lista_no_miembros.append(usuario)
-    print(rolesasignados)
-    print(lista_rolesasignados)
-    print(lista_no_miembros)
+    #print(rolesasignados)
+    #print(lista_rolesasignados)
+    #print(lista_no_miembros)
     data = {}
     data['object_list'] = lista_no_miembros
     fase = Fase.objects.all()
@@ -77,20 +77,21 @@ def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignac
     rol_actual = Rol.objects.get(pk=pk)
     fase_actual = rol_actual.fase
     proyecto = fase_actual.proyecto
+    print "proyecto = fase_actual.proyecto....despues proyecto = proyecto.codigo"
+    print proyecto
     es_lider = proyecto.lider.codigo+1          #porque el usuario admin no se lista en la tabla user_user
-    print(es_lider)
+    #print(es_lider)
     if cod_usuario == es_lider:  #si el usuario es administrador entonces tiene que poder asignar rol
         usuario = Usuario.objects.get(codigo=codigo)
-        r = RolAsignar(usuario=usuario, rol=rol_actual, confirmar=True)      #guardamos en la tabla RolAsignar el numero de usuario y el rol elegido
-        r.save()# aca guardar que es miembro
+        r = RolAsignar(usuario=usuario, rol=rol_actual, confirmar=True, proyecto=proyecto)      #guardamos en la tabla RolAsignar el numero de usuario y el rol elegido
+        r.save()# con el numero de proyecto ya sabemos que es miembro
         data={}
-        data['rol']=rol_actual
+        data['rol'] = rol_actual
         return render(request, template_name, data)
     else:
         data={}
         data['rol']=rol_actual
         return render(request, 'roles/rol_list_sin_permisos.html', data)
-
 
 """ Funcion rol_list simplemente se listan los roles correspondientes a la fase que se esta procesando
     @param pk

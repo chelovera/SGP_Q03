@@ -10,6 +10,7 @@ from django.core.urlresolvers import reverse
 from django.db import models
 from usuarios.models import Usuario
 from fases.models import Fase
+from proyectos.models import Proyecto
 
 """ MODEL/ROL
 Estos campos representan los permisos que se podran utilizar dentro de cada Proyecto.
@@ -89,6 +90,7 @@ class RolAsignar (models.Model):
     usuario = models.ForeignKey(Usuario)
     rol = models.ForeignKey(Rol)
     confirmar = models.BooleanField(max_length=50)
+    proyecto = models.ForeignKey(Proyecto)
 
     def __unicode__(self):
-        return self.usuario.nombre + self.rol.nombre
+        return self.usuario.nombre + self.rol.nombre+str(self.proyecto)
