@@ -69,19 +69,23 @@ def es_miembro(usu, proyectito):
 @login_required
 def fase_list(request, pk, template_name='fases/fase_list.html'):
     #pk= es el primary key del proyecto, YA ESTA ESTO
+    request_user = Usuario.objects.get(username=request.user.username)
+    proyecto = Proyecto.objects.get(pk=pk) #recuperamos el proyecto
+    usuario_lider = Usuario.objects.get(pk=proyecto.lider.pk) #este es el usuario lider
+    aux_proyecto = proyecto  #asignamos para poder recuperar todos los campos ingresados anteriormente
+    if proyecto.estado == "Pendiente" and request_user.pk == usuario_lider.pk:    #si es lider y se listan las fases por primera vez, entonces el estado del proyecto = iniciado
+        p = Proyecto(codigo=aux_proyecto.codigo, nombre=aux_proyecto.nombre, descripcion=aux_proyecto.descripcion, estado="Iniciado", fecha_ini=aux_proyecto.fecha_ini, fecha_fin=aux_proyecto.fecha_fin, costo_temporal=aux_proyecto.costo_temporal, costo_monetario=aux_proyecto.costo_monetario, lider=request_user)
+        p.save()
+        #Proyecto.estado = "Iniciado"
     miembro=False
     fases = Fase.objects.filter(proyecto=pk).order_by('codigo')
     data = {}
     data['object_list'] = fases
-    #arreglo temporal
-    #recuperamos el proyecto, ahi usamos el lider para que pueda ver las opciones de configurar fases y demas
-    proyecto = Proyecto.objects.get(pk=pk)
+
     usuario_actual = request.user
 
     #ver_miembro = es_miembro(usuario_actual, proyecto)
 
-    usuario_lider = Usuario.objects.get(pk=proyecto.lider.pk) #este es el usuario lider
-    request_user = Usuario.objects.get(username=request.user.username)
     data['proyecto'] = proyecto
 
     #aca empieza------------------
@@ -108,7 +112,7 @@ def fase_list(request, pk, template_name='fases/fase_list.html'):
     Descripción: Solo el usuario Lider del proyecto puede crear una fase en el proyecto"""
 @login_required
 def fase_create(request, pk, template_name='fases/fase_form.html'):
-   #pk= es el primary key del proyecto YA ESTA ESTO
+    #pk= es el primary key del proyecto YA ESTA ESTO
     request.POST = request.POST.copy()
     request.POST.__setitem__('proyecto', pk)
     proyecto = Proyecto.objects.get(pk=pk)

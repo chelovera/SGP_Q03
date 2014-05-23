@@ -55,6 +55,8 @@ def proyecto_list(request, template_name='proyectos/proyecto_list.html'):
 def proyecto_create(request, template_name='proyectos/proyecto_form.html'):
     form = ProyectoForm(request.POST or None)
     if form.is_valid():
+        #f = Proyecto(nombre=request.POST['nombre'], estado="Pendiente",) #estado pendiente por defecto
+        #f.save()
         form.save()
         return redirect('lista_proyecto')
     return render(request, template_name, {'form': form})
