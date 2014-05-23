@@ -74,7 +74,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
-        'USER': 'postgresql',
+        'USER': 'postgres',
 	    'PASSWORD': 'postgres',
         'HOST': 'localhost',
         'PORT':'5432',
@@ -126,3 +126,7 @@ EMAIL_HOST_PASSWORD = '$alvaroLevel23$'
 
 CRISPY_TEMPLATE_PACK ='bootstrap3'
 CRISPY_FAIL_SILENTLY = not DEBUG
+
+#configuracion para los archivos
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/home/alfaro/PycharmProjects/SGP_Q03/SGP_Q03/media/'

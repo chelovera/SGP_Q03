@@ -1,0 +1,15 @@
+Django==1.6
+argparse==1.2.1
+django-admin-bootstrapped==1.6.4
+django-crispy-forms==1.4.0
+-e git://github.com/mvpdev/django-eav.git@7aae3e0bfb083467320dc31b92665cec026663dc#egg=django_eav-dev
+django-guardian==1.2.0
+django-rosetta==0.7.3
+django-sencha==1.3.55555
+docutils==0.11
+mock==1.0.1
+mutant==0.1
+psycopg2==2.5.2
+requests==2.2.1
+six==1.6.1
+wsgiref==0.1.2

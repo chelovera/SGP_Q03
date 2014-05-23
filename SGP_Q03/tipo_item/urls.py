@@ -1,7 +1,7 @@
 __author__ = 'alfaro'
 
 from django.conf.urls import patterns, url
-from .views import tipo_create, tipo_list, atributo_list, atributo_create, tipo_delete, atributo_delete, tipo_update, item_create, item_list
+from .views import tipo_create, tipo_list, atributo_list, atributo_create, tipo_delete, atributo_delete, tipo_update, item_create, item_list, subir_archivos
 
 
 """ fases/urls
@@ -18,6 +18,7 @@ urlpatterns = patterns('',
                        url(r'^editar/(?P<pk>\d+)$', tipo_update, name='editar_tipo'),
                        url(r'^items/(?P<pk>\d+)$', item_list, name='lista_item'),
                        url(r'^items/nuevo/(?P<pk>\d+)$', item_create, name='nuevo_item'),
+                       url(r'^items/archivos/(?P<pk>\d+)$',subir_archivos, name='subir_archivos')
 
 
 )

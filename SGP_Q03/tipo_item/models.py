@@ -42,3 +42,8 @@ class Atributo(models.Model):
 
     def __unicode__(self):
         return self.nombre
+
+class Archivo(models.Model):
+    codigo=models.AutoField(primary_key=True)
+    item= models.ForeignKey(Item, related_name='item_archivo')
+    archivo=models.FileField(upload_to='archivos/%Y/%m/%d',null=True)

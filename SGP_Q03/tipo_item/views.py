@@ -4,9 +4,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Button
-from .models import Atributo, Tipo_Item, Item
+from .models import Atributo, Tipo_Item, Item, Archivo
 from usuarios.models import Usuario
 from fases.models import Fase
+from django import forms
+
 
 # Create your views here.
 
@@ -24,7 +26,7 @@ class TipoForm(ModelForm):
 
     class Meta:
         model = Tipo_Item
-        exclude=("fase",)
+        exclude=('fase',)
 
 class AtributoForm(ModelForm):
     def __init__(self, *args, **kwargs):
@@ -41,6 +43,27 @@ class AtributoForm(ModelForm):
     class Meta:
         model = Atributo
         exclude=("tipo_item",)
+
+class ArchivoForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ArchivoForm, self).__init__(*args, **kwargs)
+
+        # If you pass FormHelper constructor a form instance
+        # It builds a default layout with all its fields
+        self.helper = FormHelper(self)
+        self.helper.help_text_inline = True
+        # You can dynamically adjust your layout
+        self.helper.layout.append(Submit('guardar', 'guardar', css_class='btn btn-large btn-success pull-left'))
+        self.helper.add_input(Button('cancelar', 'cancelar', css_class='btn btn-large btn-danger', onclick='window.;'))
+
+    class Meta:
+        model = Archivo
+        exclude = ('item',)
+"""
+class ArchivoForm(forms.ModelForm):
+    class Meta:
+        model=Archivo
+"""
 
 class ItemForm(ModelForm):
     def __init__(self, *args, **kwargs):
@@ -178,3 +201,42 @@ def item_list(request, pk, template_name='tipos/item_list.html'):
         return render(request, template_name, data)
     else:
         return render(request, '500.html', {})
+
+@login_required
+def subir_archivos(request, pk, template_name='tipos/archivo_form.html'):
+    # Handle file upload
+    item=Item.objects.get(pk=pk)
+    form = ArchivoForm(request.POST, request.FILES)
+    if request.method == 'POST':
+
+        if form.is_valid():
+            newdoc = Archivo(archivo = request.FILES['archivo'])
+            newdoc.item=item
+            newdoc.save()
+
+            # Redirect to the document list after POST
+            return redirect('/proyectos/fases/tipo_item/items/'+str(item.fase.pk))
+    return render(request, template_name, {'form': form, 'item':item})
+"""    item = Item.objects.get(pk=pk)
+    form = ArchivoForm(request.POST or None)
+    if form.is_valid():
+        newdoc = Archivo(item=item, archivo = request.FILES['archivo'])
+        newdoc.save()
+        return redirect()
+
+
+
+        else:
+        form = DocumentForm() # A empty, unbound form
+
+    # Load documents for the list page
+    documents = Document.objects.all()
+
+    # Render list page with the documents and the form
+    return render_to_response(
+        'myapp/list.html',
+        {'documents': documents, 'form': form},
+        context_instance=RequestContext(request)
+    )
+
+"""
