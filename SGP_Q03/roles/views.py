@@ -41,7 +41,6 @@ def rol_asignar(request, pk, template_name='roles/roles_asignar.html'):
     """
     @param pk
     @value es el primary key de la fase
-
     """
     usuarios = Usuario.objects.all().order_by('codigo')       # traigo a todos los usuarios para poder asignarles el rol elegido
     #rolesasignados=RolAsignar.objects.filter(pk=pk)
