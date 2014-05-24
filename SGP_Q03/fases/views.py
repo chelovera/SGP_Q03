@@ -103,7 +103,9 @@ def fase_list(request, pk, template_name='fases/fase_list.html'):
     if miembro is True or request_user.pk == usuario_lider.pk:
         return render(request, template_name, data)
     else:
-        return render(request, 'fases/fase_list_sin_permisos.html', {})
+        data={}
+        data['mensaje'] = "Lo sentimos, Usted no es lider de este proyecto"
+        return render(request, 'proyectos/proyecto_list.html', data)
 
 """ Función: fase_create
     Parametros que recibe

@@ -64,11 +64,14 @@ def rol_asignar(request, pk, template_name='roles/roles_asignar.html'):
     return render(request, template_name, data)
 
 
-""" Funcion rol_asignar_usuario_create asignamos los roles a los usuarios elegidos
+""" Función: rol_asignar_usuario_create
+    Parámetros que recibe
     @param pk
     @value es el primary key de rol
     @param codigo
-    @value primary key de usuario """
+    @value primary key de usuario
+    Descripción: Solo el usuario lider puede asignar roles a usuarios, una vez que se asignan algún rol al usuario dentro de alguna
+    fase del proyecto automáticamente el usuario se hace miembro del proyecto y puede ingresar al proyecto"""
 @login_required
 def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignacion_correcta.html'):
 
@@ -76,8 +79,7 @@ def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignac
     rol_actual = Rol.objects.get(pk=pk)
     fase_actual = rol_actual.fase
     proyecto = fase_actual.proyecto
-    print "proyecto = fase_actual.proyecto....despues proyecto = proyecto.codigo"
-    print proyecto
+
     es_lider = proyecto.lider.codigo+1          #porque el usuario admin no se lista en la tabla user_user
     #print(es_lider)
     if cod_usuario == es_lider:  #si el usuario es administrador entonces tiene que poder asignar rol
@@ -92,9 +94,10 @@ def rol_asignar_usuario_create(request, pk, codigo, template_name='roles/asignac
         data['rol']=rol_actual
         return render(request, 'roles/rol_list_sin_permisos.html', data)
 
-""" Funcion rol_list simplemente se listan los roles correspondientes a la fase que se esta procesando
+""" Función rol_list
     @param pk
     @value es el primary key de la fase
+    Descripción: simplemente se listan los roles correspondientes a la fase que se esta procesando
  """
 
 @login_required
