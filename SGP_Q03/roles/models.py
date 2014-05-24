@@ -90,7 +90,8 @@ class RolAsignar (models.Model):
     usuario = models.ForeignKey(Usuario)
     rol = models.ForeignKey(Rol)
     confirmar = models.BooleanField(max_length=50)
-    proyecto = models.ForeignKey(Proyecto)
+    proyecto = models.ForeignKey(Proyecto)  # con esto vemos que el usuario sea miembro de un proyecto, tiene que tener algun rol en ese proyecto
+    #fase = models.ForeignKey(Fase) #porque hay roles por fase
 
     def __unicode__(self):
         return self.usuario.nombre + self.rol.nombre+str(self.proyecto)

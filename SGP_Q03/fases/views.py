@@ -104,8 +104,9 @@ def fase_list(request, pk, template_name='fases/fase_list.html'):
         return render(request, template_name, data)
     else:
         data={}
-        data['mensaje'] = "Lo sentimos, Usted no es lider de este proyecto"
-        return render(request, 'proyectos/proyecto_list.html', data)
+        data['mensaje'] = "Lo sentimos, Usted no es miembro de este proyecto"
+        data['proyecto']=proyecto
+        return render(request, 'fases/fase_list_sin_permisos.html', data)
 
 """ Función: fase_create
     Parametros que recibe
@@ -134,7 +135,7 @@ def fase_create(request, pk, template_name='fases/fase_form.html'):
 
 @login_required
 def fase_update(request, pk, template_name='fases/fase_form.html'):
-
+    #esta funcion no se usa
 
     fase = get_object_or_404(Fase, pk=pk)
     form = FaseForm(request.POST or None, instance=fase)

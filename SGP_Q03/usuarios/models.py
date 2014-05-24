@@ -48,7 +48,7 @@ class Usuario(User):
 
 
     def __unicode__(self):
-        return self.nombre
+        return self.nombre+str(self.codigo)
 
     def get_absolute_url(self):
         return reverse('editar_usuario', kwargs={'pk': self.pk})

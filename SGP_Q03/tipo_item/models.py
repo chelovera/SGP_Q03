@@ -19,6 +19,7 @@ class Item(models.Model):
     tipo_item = models.ForeignKey(Tipo_Item, related_name='tipo_item')
     fase= models.ForeignKey(Fase, related_name='fase_item')
     actual = models.BooleanField(default=True)
+    #estado_item = models
 
     def __unicode__(self):
         return self.nombre
