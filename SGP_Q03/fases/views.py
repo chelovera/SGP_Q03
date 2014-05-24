@@ -143,15 +143,54 @@ def fase_update(request, pk, template_name='fases/fase_form.html'):
         return redirect('lista_proyecto')
     return render(request, template_name, {'form': form})
 
+""" Función: fase_finalizar
+    Parametros que recibe
+    @param: pk
+    @value: es el primary key de la fase
+    Descripción: Solo el lider puede finalizar un proyecto"""
+@login_required
+def fase_finalizar(request, pk, template_name='proyectos/proyecto_list.html'):
+    #Todavia falta con lo que despues implementemos, cambiar la redireccion del template
+    server = get_object_or_404(Fase, pk=pk)
+    usuario_lider=server.proyecto.lider
+    usuario_actual=request.user.id
 
+    if usuario_lider.pk+1== usuario_actual:
+        aux_fase=server
+        p = Fase(codigo=aux_fase.codigo, nombre=aux_fase.nombre, descripcion=aux_fase.descripcion, estado="Cerrada", proyecto=aux_fase.proyecto, fecha_ini=aux_fase.fecha_ini, fecha_fin=aux_fase.fecha_fin, costo_temporal=aux_fase.costo_temporal, costo_monetario=aux_fase.costo_monetario, orden=aux_fase.orden)
+        p.save()
+        return redirect('lista_proyecto')
+    else:
+        data={}
+        data['mensaje'] = "Lo sentimos, Usted no es lider de este proyecto"
+        return render(request, template_name, data)
+
+
+""" Función: fase_delete
+    Parametros que recibe
+    @param: pk
+    @value: es el primary key de la fase
+    Descripción: Solo el lider puede eliminar una fase siempre y cuando la fase este en estado abierta"""
 @login_required
 def fase_delete(request, pk, template_name='fases/fase_confirm_delete.html'):
+    #volver a mirar la logica del borrado
     server = get_object_or_404(Fase, pk=pk)
-    proyecto = get_object_or_404(Proyecto,pk=server.proyecto.codigo)
-    if request.method == 'POST':
-        server.delete()
-        return redirect('/proyectos/fases/'+str(proyecto.pk))
-    return render(request, template_name, {'object': server})
+
+    usuario_lider = server.proyecto.lider
+    print usuario_lider
+
+    usuario_actual = Usuario.objects.get(username=request.user.username)
+    print usuario_actual
+    if server.estado=="Abierta" and usuario_actual.pk==usuario_lider.pk:
+        proyecto = get_object_or_404(Proyecto,pk=server.proyecto.codigo)
+        if request.method == 'POST':
+            server.delete()
+            return redirect('/proyectos/fases/'+str(proyecto.pk))
+        return render(request, template_name, {'object': server})
+    else:
+        data = {}
+        data['mensaje']="lo siento, no puede realizar esta accion"
+        return render(request, 'fases/fase_list_sin_permisos.html', data)
 
 @login_required
 def fase_search(request, pk):

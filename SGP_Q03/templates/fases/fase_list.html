@@ -37,6 +37,7 @@
                         <th>Inicio</th>
                         <th>Finalización</th>
                         <th>Estado</th>
+                        <th>Finalizar</th>
                         <th>Tipos de Items</th>
                         <th>Items</th>
                         <th>Roles</th>
@@ -53,6 +54,7 @@
                             <td>{{ fases.fecha_ini}}</td>
                             <td>{{ fases.fecha_fin}}</td>
                             <td>{{ fases.estado}}</td>
+                            <td><ul class="nav nav-sidebar"><a href="/proyectos/fases/finalizar/{{fases.codigo}}"> Finalizar </a></li></ul></td>
                             <td>
                                 <ul class="nav nav-sidebar"><a
                                         href="{% url 'tipo_item.views.tipo_list' fases.codigo %}"> Configurar </a></li>
@@ -65,13 +67,11 @@
                                 <ul class="nav nav-sidebar"><a href="{% url 'roles.views.rol_list' fases.codigo %}">
                                     Configurar </a></li></ul>
                             </td>
-                            {% ifequal proyecto.estado "Pendiente" %}
+
 
                             <td><a href="{% url "borrar_fase" fases.codigo %}" class="btn btn-primary btn-sm
                                 btn-warning" >Eliminar</a></td>
-                            {% else %}
-                            <td></td>
-                            {% endifequal %}
+
 
                         </tr>
                         {% endfor %}
