@@ -61,13 +61,16 @@ def es_miembro(usu, proyectito):
 
 
 
-""" Función: fase_list
-    Parámetros que recibe
-    @param: pk
-    @value: es el primary key del proyecto
-    Descripción: Solo los usuarios Lider y miembros del proyecto pueden tener acceso a las funcionalidades del proyecto"""
 @login_required
 def fase_list(request, pk, template_name='fases/fase_list.html'):
+    """
+    Función: fase_list
+        Parámetros que recibe
+    @param: pk
+    @value: es el primary key del proyecto
+        Descripción: Solo los usuarios Lider y miembros del proyecto pueden tener acceso a las funcionalidades del proyecto
+    """
+
     #pk= es el primary key del proyecto, YA ESTA ESTO
     request_user = Usuario.objects.get(username=request.user.username)
     proyecto = Proyecto.objects.get(pk=pk) #recuperamos el proyecto
@@ -108,13 +111,17 @@ def fase_list(request, pk, template_name='fases/fase_list.html'):
         data['proyecto']=proyecto
         return render(request, 'fases/fase_list_sin_permisos.html', data)
 
-""" Función: fase_create
-    Parametros que recibe
-    @param: pk
-    @value: es el primary key del proyecto
-    Descripción: Solo el usuario Lider del proyecto puede crear una fase en el proyecto"""
 @login_required
 def fase_create(request, pk, template_name='fases/fase_form.html'):
+    """
+    Función: fase_create
+        Parametros que recibe
+    @param: pk
+    @value: es el primary key del proyecto
+        Descripción: Solo el usuario Lider del proyecto puede crear una fase en el proyecto
+
+    """
+
     #pk= es el primary key del proyecto YA ESTA ESTO
     request.POST = request.POST.copy()
     request.POST.__setitem__('proyecto', pk)
@@ -144,13 +151,17 @@ def fase_update(request, pk, template_name='fases/fase_form.html'):
         return redirect('lista_proyecto')
     return render(request, template_name, {'form': form})
 
-""" Función: fase_finalizar
-    Parametros que recibe
-    @param: pk
-    @value: es el primary key de la fase
-    Descripción: Solo el lider puede finalizar un proyecto"""
+
 @login_required
 def fase_finalizar(request, pk, template_name='proyectos/proyecto_list.html'):
+    """
+    Función: fase_finalizar
+        Parametros que recibe
+    @param fase_finalizar: pk
+    @value: es el primary key de la fase
+    @return Descripción: Solo el lider puede finalizar un proyecto
+    """
+
     #Todavia falta con lo que despues implementemos, cambiar la redireccion del template
     server = get_object_or_404(Fase, pk=pk)
     usuario_lider=server.proyecto.lider
@@ -167,13 +178,16 @@ def fase_finalizar(request, pk, template_name='proyectos/proyecto_list.html'):
         return render(request, template_name, data)
 
 
-""" Función: fase_delete
-    Parametros que recibe
-    @param: pk
-    @value: es el primary key de la fase
-    Descripción: Solo el lider puede eliminar una fase siempre y cuando la fase este en estado abierta"""
+
 @login_required
 def fase_delete(request, pk, template_name='fases/fase_confirm_delete.html'):
+    """
+    Función: fase_delete
+        Parametros que recibe
+    @param: pk
+    @value: es el primary key de la fase
+        Descripción: Solo el lider puede eliminar una fase siempre y cuando la fase este en estado abierta
+    """
     #volver a mirar la logica del borrado
     server = get_object_or_404(Fase, pk=pk)
 

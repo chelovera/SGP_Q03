@@ -58,16 +58,20 @@ class ItemForm(ModelForm):
     class Meta:
         model = Item
 
-""" Función: tipo_create
-    Parámetros que recibe
-    @param: pk
-    @value: es el primary key de la fase
-    Descripción: solo los que tengan permisos para crear_tipo_item en esta fase del proyecto pueden acceder ademas del
-    usuario lider"""
+
 
 
 @login_required
 def tipo_create(request, pk, template_name='tipos/tipo_form.html'):
+    """
+    @param tipo_create: Función Crear tipo de item
+        Parámetros que recibe
+        pk:es el primary key de la fase
+    @value: numerico
+        Descripción: solo los que tengan permisos para crear_tipo_item en esta fase del proyecto pueden acceder ademas
+        del usuario lider
+    @return  se crea un tipo de item
+    """
     posee_permiso=0
     #refinar=hacer que sean roles por fase, ahora mismo se manejan en esta funcion roles por proyecto
     fase=Fase.objects.get(pk=pk)
@@ -113,14 +117,17 @@ def tipo_update(request, pk, template_name='tipos/tipo_form.html'):
         return redirect('/proyectos/fases/tipo_item/'+str(fase.codigo))
     return render(request, template_name, {'form':form})
 
-""" Función: tipo_list
-    Parámetros que recibe
-    @param: pk
-    @value: es el primary key de la fase
-    Descripción: solo los que tengan permisos para crear_tipo_item, editar_tipo_item o eliminar_tipo_item pueden ver que tipo de item existen en la fase de manera a informarse para
-    poder utilizarlos """
 @login_required
 def tipo_list(request, pk, template_name='tipos/tipos_list.html'):
+
+    """
+    Función: tipo_list
+    Parámetros que recibe
+    @param pk: es el primary key de la fase
+                Descripción: Solo los que tengan permisos para crear_tipo_item, editar_tipo_item o eliminar_tipo_item
+                pueden ver que tipo de item existen en la fase de manera a informarse para
+                poder utilizarlos
+    """
     posee_permiso=0
     tipos = Tipo_Item.objects.filter(fase=pk).order_by('codigo')
     data = {}

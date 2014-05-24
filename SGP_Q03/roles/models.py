@@ -12,7 +12,8 @@ from usuarios.models import Usuario
 from fases.models import Fase
 from proyectos.models import Proyecto
 
-""" MODEL/ROL
+"""
+MODEL/ROL
 Estos campos representan los permisos que se podran utilizar dentro de cada Proyecto.
 @param crear_tipo_item
 @type models.BooleanField
